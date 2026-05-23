@@ -25,7 +25,7 @@
 <meta name="twitter:title" content="Luis Moraes — Estúdio web | Campinas">
 <meta name="twitter:description" content="Sites sob medida, encontráveis por gente e por IA.">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF5B2E'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23FBFAF6' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235B6DFF'/%3E%3Cstop offset='.6' stop-color='%23A857F0'/%3E%3Cstop offset='1' stop-color='%23FF5B2E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' fill='%23FBFAF6' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,9 +72,13 @@
     --muted:#6B655B;
     --line:rgba(14,12,10,.10);
     --line-strong:rgba(14,12,10,.22);
-    --accent:#FF5B2E;
-    --accent-deep:#C03A12;
-    --accent-soft:#FFE2D2;
+    --accent:#5B6DFF;
+    --accent-deep:#3A4DD9;
+    --accent-soft:#E5E8FF;
+    --warm:#FF5B2E;
+    --warm-deep:#C03A12;
+    --warm-soft:#FFE2D2;
+    --warm-light:#FFB68A;
     --ai-blue:#4F7CFF;
     --ai-violet:#A857F0;
     --ai-grad:linear-gradient(135deg,#4F7CFF 0%,#A857F0 55%,#FF5B2E 100%);
@@ -118,9 +122,9 @@
     cursor:pointer; border:none; white-space:nowrap;
   }
   .btn-primary{background:var(--ink); color:var(--paper); box-shadow:0 10px 24px -10px rgba(14,12,10,.35)}
-  .btn-primary:hover{transform:translateY(-2px); background:var(--accent); box-shadow:0 14px 28px -10px rgba(255,91,46,.5)}
-  .btn-accent{background:var(--accent); color:#fff; box-shadow:0 10px 24px -10px rgba(192,58,18,.6)}
-  .btn-accent:hover{transform:translateY(-2px); background:var(--accent-deep); box-shadow:0 16px 30px -12px rgba(192,58,18,.7)}
+  .btn-primary:hover{transform:translateY(-2px); background:var(--accent); box-shadow:0 14px 28px -10px rgba(91,109,255,.55)}
+  .btn-accent{background:var(--accent); color:#fff; box-shadow:0 10px 24px -10px rgba(58,77,217,.55)}
+  .btn-accent:hover{transform:translateY(-2px); background:var(--accent-deep); box-shadow:0 16px 30px -12px rgba(58,77,217,.7)}
   .btn-ghost{background:transparent; color:var(--ink); border:1.5px solid var(--line-strong)}
   .btn-ghost:hover{border-color:var(--ink); transform:translateY(-2px)}
   .btn svg{width:18px; height:18px; fill:currentColor}
@@ -141,8 +145,8 @@
     display:inline-flex; align-items:center; gap:7px;
   }
   .logo .dot{
-    width:9px; height:9px; border-radius:50%; background:var(--accent);
-    display:inline-block; box-shadow:0 0 0 4px rgba(255,91,46,.15);
+    width:9px; height:9px; border-radius:50%; background:var(--ai-grad);
+    display:inline-block; box-shadow:0 0 0 4px rgba(91,109,255,.18);
   }
   .nav-links{display:flex; align-items:center; gap:32px}
   .nav-links a.lnk{font-weight:500; font-size:.96rem; color:var(--muted); transition:color .2s}
@@ -159,7 +163,7 @@
     font-size:clamp(2.6rem, 5.6vw, 4.6rem);
     margin:18px 0 24px;
   }
-  .hero-copy h1 em{font-style:italic; color:var(--accent); font-weight:500}
+  .hero-copy h1 em{font-style:italic; color:var(--warm); font-weight:500}
   .hero-copy h1 .grad{
     background:var(--ai-grad); -webkit-background-clip:text; background-clip:text; color:transparent;
     font-style:italic;
@@ -282,7 +286,7 @@
     margin-top:8px; font-family:'Fraunces',serif; font-style:italic;
     color:var(--ink); font-size:1.05rem; line-height:1.3;
   }
-  .empty-cta b{color:var(--accent); font-weight:500}
+  .empty-cta b{color:var(--warm); font-weight:500}
 
   /* scene progress dots */
   .scene-dots{
@@ -308,8 +312,8 @@
   }
   .manifesto::after{
     content:""; position:absolute; bottom:-200px; right:-100px; width:400px; height:400px;
-    background:radial-gradient(circle, var(--accent) 0%, transparent 70%);
-    filter:blur(80px); opacity:.25; pointer-events:none;
+    background:radial-gradient(circle, var(--warm) 0%, transparent 70%);
+    filter:blur(80px); opacity:.22; pointer-events:none;
   }
   .manifesto .wrap{position:relative; z-index:1}
   .manifesto blockquote{
@@ -319,7 +323,7 @@
   }
   .manifesto blockquote em{font-style:italic; color:#fff}
   .manifesto blockquote .grad{
-    background:linear-gradient(120deg,#FFB68A,#FF5B2E,#A857F0);
+    background:linear-gradient(120deg,#7E8DFF 0%,#B57BFF 45%,#FFB68A 100%);
     -webkit-background-clip:text; background-clip:text; color:transparent;
     font-style:italic;
   }
@@ -371,7 +375,7 @@
   .case .tagrow{display:flex; gap:8px; align-items:center; margin-bottom:12px; flex-wrap:wrap}
   .case .pill{
     font-size:.72rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
-    background:var(--accent-soft); color:var(--accent-deep);
+    background:var(--warm-soft); color:var(--warm-deep);
     padding:5px 12px; border-radius:999px;
   }
   .case .pill.dark{background:var(--ink); color:var(--paper)}
@@ -429,7 +433,7 @@
   .step::before{
     counter-increment:s; content:"0" counter(s);
     font-family:'Fraunces',serif; font-style:italic; font-weight:500;
-    font-size:2.6rem; color:var(--accent); opacity:.7;
+    font-size:2.6rem; color:var(--warm); opacity:.75;
     display:block; margin-bottom:12px; line-height:1;
   }
   .step h3{font-size:1.22rem; margin-bottom:8px}
@@ -487,7 +491,7 @@
   .about{display:flex; gap:30px; align-items:center; max-width:780px}
   .avatar{
     width:96px; height:96px; border-radius:50%; flex-shrink:0;
-    background:linear-gradient(150deg,#FFB68A,var(--accent));
+    background:linear-gradient(150deg, var(--warm-light), var(--warm));
     display:flex; align-items:center; justify-content:center;
     font-family:'Fraunces',serif; font-size:2.2rem;
     color:#fff; font-weight:600;
@@ -522,18 +526,24 @@
   /* ========== FINAL CTA ========== */
   .final{
     text-align:center; padding:110px 0;
-    background:linear-gradient(160deg, #F4ECDD 0%, #FFB68A 100%);
+    background:linear-gradient(160deg, #F4ECDD 0%, #DCD9FF 60%, #C8C2FF 100%);
     position:relative; overflow:hidden;
   }
   .final::before{
     content:""; position:absolute; top:-100px; left:50%; transform:translateX(-50%);
     width:600px; height:600px; border-radius:50%;
-    background:radial-gradient(circle, rgba(255,91,46,.3) 0%, transparent 70%);
+    background:radial-gradient(circle, rgba(91,109,255,.32) 0%, transparent 70%);
     filter:blur(60px); pointer-events:none;
+  }
+  .final::after{
+    content:""; position:absolute; bottom:-150px; right:-80px; width:380px; height:380px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(255,91,46,.3) 0%, transparent 70%);
+    filter:blur(70px); pointer-events:none;
   }
   .final .wrap{position:relative; z-index:1}
   .final h2{font-size:clamp(2.1rem, 4.6vw, 3.4rem); max-width:20ch; margin:18px auto 16px}
-  .final h2 em{font-style:italic; color:var(--accent-deep)}
+  .final h2 em{font-style:italic; color:var(--warm-deep)}
   .final p{color:var(--ink-soft); font-size:1.15rem; margin-bottom:34px; max-width:42ch; margin-left:auto; margin-right:auto}
 
   /* ========== FOOTER ========== */
@@ -561,7 +571,7 @@
     width:60px; height:60px; border-radius:50%;
     background:var(--accent);
     display:flex; align-items:center; justify-content:center;
-    box-shadow:0 14px 30px -8px rgba(192,58,18,.7);
+    box-shadow:0 14px 30px -8px rgba(58,77,217,.65);
     transition:transform .25s; animation:popin .4s .8s both;
   }
   .float-wa:hover{transform:scale(1.08)}
@@ -803,7 +813,7 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">Serviços</span>
-        <h2>Sites feitos à mão — pra vender <em style="font-style:italic; color:var(--accent)">e</em> pra serem encontrados.</h2>
+        <h2>Sites feitos à mão — pra vender <em style="font-style:italic; color:var(--warm)">e</em> pra serem encontrados.</h2>
       </div>
       <div class="services">
         <div class="svc feature reveal">
