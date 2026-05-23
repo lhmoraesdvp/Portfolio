@@ -262,16 +262,17 @@
   .menu-btn{display:none; background:none; border:none; cursor:pointer; color:var(--ink)}
 
   /* ========== HERO ========== */
-  .hero{padding:36px 0 64px; position:relative; overflow:hidden}
+  .hero{padding:32px 0 56px; position:relative; overflow:hidden}
   @media (min-width:980px){
-    .hero{ min-height:calc(100vh - 80px); display:flex; align-items:center; padding:24px 0 56px }
+    .hero{ min-height:calc(100vh - 80px); display:flex; align-items:center; padding:8px 0 40px }
   }
   .hero-grid{
-    display:grid; grid-template-columns:1.08fr .92fr; gap:56px; align-items:center; width:100%;
+    display:grid; grid-template-columns:1.05fr .95fr; gap:52px; align-items:center; width:100%;
   }
   .hero-copy h1{
-    font-size:clamp(2.3rem, 4.6vw, 3.8rem);
-    margin:18px 0 22px;
+    font-size:clamp(2rem, 4.2vw, 3.2rem);
+    margin:14px 0 18px;
+    line-height:1.05;
   }
   .hero-copy h1 em{font-style:italic; color:var(--warm); font-weight:500}
   .hero-copy h1 .grad{
@@ -279,12 +280,12 @@
     font-style:italic;
   }
   .hero-copy .lead{
-    font-size:1.18rem; color:var(--muted); max-width:36ch; margin-bottom:32px;
+    font-size:1.1rem; color:var(--muted); max-width:38ch; margin-bottom:26px;
   }
   .hero-cta{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
   .hero-trust{
-    display:flex; align-items:center; gap:14px; margin-top:28px;
-    color:var(--muted); font-size:.88rem;
+    display:flex; align-items:center; gap:12px; margin-top:22px;
+    color:var(--muted); font-size:.84rem; flex-wrap:wrap;
   }
   .hero-trust .pills{display:flex; gap:-8px}
   .hero-trust .pill-ai{
@@ -452,23 +453,48 @@
   .why-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px}
   .why-card{
     background:#fff; border:1px solid var(--line); border-radius:var(--radius);
-    padding:30px 28px; position:relative; transition:transform .25s, box-shadow .25s, border-color .25s;
+    padding:34px 30px; position:relative;
+    transition:transform .25s, box-shadow .25s, border-color .25s;
+    display:flex; flex-direction:column; min-height:280px;
   }
   .why-card:hover{transform:translateY(-4px); border-color:var(--line-strong);
     box-shadow:0 20px 40px -24px rgba(14,12,10,.25)}
-  .why-card .stat{
-    font-family:'Fraunces',serif; font-style:italic; font-size:2.6rem;
-    color:var(--accent); line-height:1; margin-bottom:14px; font-weight:500;
+  .why-ico{
+    width:54px; height:54px; border-radius:14px;
+    background:var(--accent-soft);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:20px;
   }
-  .why-card h3{font-size:1.22rem; margin-bottom:8px}
-  .why-card p{color:var(--muted); font-size:.97rem; line-height:1.55}
+  .why-ico svg{
+    width:26px; height:26px;
+    stroke:var(--accent-deep); fill:none;
+    stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round;
+  }
+  .why-card .meta{
+    font-family:'Fraunces',serif; font-style:italic;
+    font-size:1.05rem; color:var(--accent-deep); font-weight:500;
+    margin-bottom:6px;
+  }
+  .why-card h3{font-size:1.26rem; margin-bottom:10px; line-height:1.2}
+  .why-card p{color:var(--muted); font-size:.97rem; line-height:1.6; margin-top:auto}
 
   /* ========== TRABALHOS ========== */
   .trabalhos{padding:96px 0; background:var(--cream)}
-  .cases{display:grid; grid-template-columns:1fr 1fr; gap:28px}
+  .trab-head{display:flex; justify-content:space-between; align-items:flex-end; gap:30px; margin-bottom:46px; flex-wrap:wrap}
+  .trab-head .sec-head{margin-bottom:0}
+  .trab-more{
+    display:inline-flex; align-items:center; gap:8px;
+    font-weight:600; font-size:.95rem; color:var(--ink);
+    border-bottom:1.5px solid var(--ink); padding-bottom:3px;
+    transition:color .2s, border-color .2s, gap .2s;
+  }
+  .trab-more:hover{color:var(--accent); border-color:var(--accent); gap:12px}
+  .trab-more svg{width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2}
+  .cases{display:grid; grid-template-columns:repeat(2,1fr); gap:28px}
   .case{
     background:var(--paper); border:1px solid var(--line); border-radius:var(--radius-lg);
     overflow:hidden; transition:transform .3s, box-shadow .3s, border-color .3s;
+    display:flex; flex-direction:column;
   }
   .case:hover{transform:translateY(-6px);
     box-shadow:0 30px 50px -30px rgba(14,12,10,.4); border-color:var(--line-strong)}
@@ -481,7 +507,7 @@
     color:rgba(255,255,255,.95); font-family:'Fraunces',serif;
     font-style:italic; font-size:2.2rem; letter-spacing:-.02em;
   }
-  .case .body{padding:26px 28px 30px}
+  .case .body{padding:24px 26px 28px; flex:1; display:flex; flex-direction:column}
   .case .tagrow{display:flex; gap:8px; align-items:center; margin-bottom:12px; flex-wrap:wrap}
   .case .pill{
     font-size:.72rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
@@ -489,22 +515,56 @@
     padding:5px 12px; border-radius:999px;
   }
   .case .pill.dark{background:var(--ink); color:var(--paper)}
-  .case h3{font-size:1.55rem; margin-bottom:10px}
-  .case p{color:var(--muted); font-size:1rem; margin-bottom:18px}
+  .case .pill.ai{background:var(--accent-soft); color:var(--accent-deep)}
+  .case h3{font-size:1.4rem; margin-bottom:8px; line-height:1.2}
+  .case p{color:var(--muted); font-size:.96rem; margin-bottom:18px; flex:1}
   .case .visit{
     display:inline-flex; align-items:center; gap:7px;
-    font-weight:600; color:var(--accent); font-size:.95rem;
+    font-weight:600; color:var(--accent); font-size:.94rem;
+    align-self:flex-start;
   }
-  .case .visit svg{width:15px; height:15px; stroke:currentColor; fill:none; transition:transform .2s}
+  .case .visit svg{width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; transition:transform .2s}
   .case:hover .visit svg{transform:translate(3px,-3px)}
+
+  /* vaga aberta — cards de prospect */
+  .case.vacancy .thumb{
+    aspect-ratio:16/10; position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    color:#fff;
+  }
+  .case.vacancy .thumb.v1{
+    background:linear-gradient(135deg, #4F7CFF 0%, #A857F0 100%);
+  }
+  .case.vacancy .thumb.v2{
+    background:linear-gradient(135deg, #FF8A5B 0%, #C03A12 100%);
+  }
+  .case.vacancy .thumb-inner{
+    text-align:center; padding:20px; position:relative; z-index:1;
+  }
+  .case.vacancy .thumb-inner .small{
+    font-size:.68rem; letter-spacing:.18em; text-transform:uppercase;
+    font-weight:700; opacity:.85; margin-bottom:10px;
+  }
+  .case.vacancy .thumb-inner .big{
+    font-family:'Fraunces',serif; font-style:italic; font-weight:500;
+    font-size:1.65rem; line-height:1.1;
+  }
+  .case.vacancy .thumb::after{
+    content:""; position:absolute; inset:0;
+    background:radial-gradient(circle at 30% 20%, rgba(255,255,255,.18), transparent 60%);
+    pointer-events:none;
+  }
+  .case.vacancy .visit{color:var(--accent)}
 
   /* ========== SERVIÇOS ========== */
   .svc-wrap{padding:96px 0; background:var(--paper)}
-  .services{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
+  .services{display:grid; grid-template-columns:repeat(2,1fr); gap:22px}
   .svc{
     background:#fff; border:1px solid var(--line); border-radius:var(--radius);
-    padding:30px 28px; transition:transform .25s, box-shadow .25s, border-color .25s;
+    padding:34px 30px;
+    transition:transform .25s, box-shadow .25s, border-color .25s;
     position:relative;
+    display:flex; flex-direction:column; min-height:360px;
   }
   .svc:hover{transform:translateY(-4px);
     box-shadow:0 20px 40px -26px rgba(14,12,10,.3); border-color:var(--line-strong)}
@@ -518,36 +578,73 @@
   }
   .svc.feature > *{position:relative; z-index:1}
   .svc .ftag{
-    display:inline-block; font-size:.7rem; font-weight:700;
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:.68rem; font-weight:700;
     letter-spacing:.1em; text-transform:uppercase;
     background:var(--accent); color:#fff;
-    padding:4px 11px; border-radius:999px; margin-bottom:16px;
+    padding:5px 11px; border-radius:999px; margin-bottom:18px;
+    align-self:flex-start;
+  }
+  .svc .ftag::before{
+    content:""; width:6px; height:6px; border-radius:50%; background:#fff;
   }
   .svc .ico{
-    width:44px; height:44px; border-radius:12px;
+    width:52px; height:52px; border-radius:14px;
     background:var(--accent-soft);
-    display:flex; align-items:center; justify-content:center; margin-bottom:16px;
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
   }
   .svc.feature .ico{background:rgba(255,255,255,.1)}
-  .svc .ico svg{width:22px; height:22px; stroke:var(--accent-deep); fill:none}
+  .svc .ico svg{width:24px; height:24px; stroke:var(--accent-deep); fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round}
   .svc.feature .ico svg{stroke:#fff; fill:none}
-  .svc h3{font-size:1.32rem; margin-bottom:10px}
+  .svc h3{font-size:1.34rem; margin-bottom:10px; line-height:1.2}
   .svc.feature h3{color:#fff}
-  .svc p{color:var(--muted); font-size:.97rem; line-height:1.55}
+  .svc p{color:var(--muted); font-size:.97rem; line-height:1.6}
   .svc.feature p{color:rgba(251,250,246,.74)}
+  .svc-list{
+    list-style:none; margin-top:18px; padding:0;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .svc-list li{
+    display:flex; gap:9px; align-items:flex-start;
+    font-size:.92rem; color:var(--muted);
+  }
+  .svc-list li::before{
+    content:""; flex-shrink:0; width:6px; height:6px; border-radius:50%;
+    background:var(--accent); margin-top:8px;
+  }
+  .svc.feature .svc-list li{color:rgba(251,250,246,.8)}
+  .svc.feature .svc-list li::before{background:#FFB68A}
 
   /* ========== PROCESSO ========== */
   .processo{padding:96px 0; background:var(--cream)}
-  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; counter-reset:s}
-  .step{position:relative; padding-top:18px}
-  .step::before{
-    counter-increment:s; content:"0" counter(s);
-    font-family:'Fraunces',serif; font-style:italic; font-weight:500;
-    font-size:2.6rem; color:var(--warm); opacity:.75;
-    display:block; margin-bottom:12px; line-height:1;
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:28px; counter-reset:s; position:relative}
+  .step{
+    position:relative; padding-top:6px;
+    display:flex; flex-direction:column;
   }
-  .step h3{font-size:1.22rem; margin-bottom:8px}
-  .step p{color:var(--muted); font-size:.97rem; line-height:1.55}
+  .step-head{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom:18px;
+  }
+  .step-num{
+    counter-increment:s;
+    font-family:'Fraunces',serif; font-style:italic; font-weight:500;
+    font-size:2.4rem; color:var(--warm); opacity:.85;
+    line-height:1;
+  }
+  .step-num::before{content:"0" counter(s)}
+  .step-ico{
+    width:46px; height:46px; border-radius:12px;
+    background:#fff; border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .step-ico svg{
+    width:22px; height:22px;
+    stroke:var(--accent-deep); fill:none;
+    stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round;
+  }
+  .step h3{font-size:1.2rem; margin-bottom:8px; line-height:1.2}
+  .step p{color:var(--muted); font-size:.95rem; line-height:1.6}
 
   /* ========== PROVA AO VIVO ========== */
   .proof{padding:96px 0; background:var(--ink); color:var(--paper); position:relative; overflow:hidden}
@@ -701,11 +798,16 @@
   @keyframes up{from{opacity:0; transform:translateY(24px)}to{opacity:1; transform:none}}
 
   /* responsive */
-  @media (max-width:900px){
-    .hero-grid, .proof-grid{grid-template-columns:1fr; gap:44px}
+  @media (max-width:980px){
+    .hero-grid, .proof-grid{grid-template-columns:1fr; gap:40px}
     .hero-stage{max-width:440px; margin:0 auto; width:100%}
-    .cases, .services, .why-grid{grid-template-columns:1fr}
+    .cases{grid-template-columns:1fr 1fr; gap:20px}
+    .services{grid-template-columns:1fr; gap:18px}
+    .svc{min-height:auto}
+    .why-grid{grid-template-columns:1fr; gap:18px}
+    .why-card{min-height:auto}
     .steps{grid-template-columns:1fr 1fr; gap:30px 22px}
+    .trab-head{align-items:flex-start; flex-direction:column; gap:18px}
     .nav-links{display:none}
     .nav-links.show{
       display:flex; position:absolute; top:calc(100% + 8px); left:0; right:0;
@@ -719,12 +821,14 @@
     .why, .trabalhos, .svc-wrap, .processo, .proof, .sobre, .faq-wrap{padding:72px 0}
     .manifesto{padding:78px 0}
     .about{flex-direction:column; text-align:center; align-items:center}
-    .hero{padding:32px 0 70px}
+    .hero{padding:24px 0 60px}
     .copy{flex-direction:column; align-items:flex-start}
   }
-  @media (max-width:560px){
-    .why-card .stat{font-size:2.2rem}
+  @media (max-width:640px){
+    .cases{grid-template-columns:1fr}
+    .case.vacancy .thumb-inner .big{font-size:1.4rem}
     .hero-trust{flex-wrap:wrap}
+    .hero-copy h1{font-size:clamp(1.85rem, 7vw, 2.4rem)}
   }
 
   @media (prefers-reduced-motion:reduce){
@@ -749,7 +853,7 @@
       <a class="lnk" href="#processo">Processo</a>
       <a class="lnk" href="#sobre">Sobre</a>
       <a class="btn btn-primary" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01ZM12.04 20.15a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.39c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.23 8.23Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.99-1.22-.74-.65-1.23-1.46-1.38-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.01 2.57.12.16 1.75 2.68 4.26 3.76.59.25 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg>
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.135.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
         WhatsApp
       </a>
     </nav>
@@ -763,11 +867,11 @@
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <span class="eyebrow">Estúdio web · Campinas/SP</span>
-        <h1>Seu cliente <em>pergunta pra IA</em>. Aparece o <span class="grad">seu nome</span>?</h1>
-        <p class="lead">Sites sob medida, rápidos e bem feitos — estruturados pra ranquear no Google e ser <b>recomendados</b> por ChatGPT, Gemini e Perplexity.</p>
+        <h1>Aparece o <span class="grad">seu nome</span> quando a <em>IA responde</em>?</h1>
+        <p class="lead">Sites sob medida e rápidos — feitos pra ranquear no Google e ser <b>recomendados</b> por ChatGPT, Gemini e Perplexity.</p>
         <div class="hero-cta">
           <a class="btn btn-accent" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01ZM12.04 20.15a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.39c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.23 8.23Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.99-1.22-.74-.65-1.23-1.46-1.38-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.01 2.57.12.16 1.75 2.68 4.26 3.76.59.25 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.135.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
             Quero meu site
           </a>
           <a class="btn btn-ghost" href="#trabalhos">Ver trabalhos</a>
@@ -862,18 +966,21 @@
       </div>
       <div class="why-grid">
         <div class="why-card reveal">
-          <div class="stat">10 → 1</div>
-          <h3>De 10 links a 1 resposta</h3>
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg></div>
+          <div class="meta">10 links → 1 resposta</div>
+          <h3>A busca virou conversa</h3>
           <p>Antes seu cliente rolava resultados. Hoje ele pergunta uma vez e vai direto no nome que a IA citar. Você precisa <b>ser esse nome</b>.</p>
         </div>
         <div class="why-card reveal">
-          <div class="stat">24/7</div>
-          <h3>Seu vendedor que nunca dorme</h3>
-          <p>Um site bem feito atende, qualifica e fecha enquanto você dorme. Sem site profissional, você está dependendo do boca a boca pra crescer.</p>
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="meta">24h por dia, 7 por semana</div>
+          <h3>Um vendedor que nunca dorme</h3>
+          <p>Um site bem feito atende, qualifica e fecha enquanto você dorme. Sem site profissional, você depende só do boca a boca pra crescer.</p>
         </div>
         <div class="why-card reveal">
-          <div class="stat">∞</div>
-          <h3>Confiança antes do primeiro contato</h3>
+          <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 12 2 2 4-4"/><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z"/></svg></div>
+          <div class="meta">Antes do primeiro hello</div>
+          <h3>Confiança no primeiro clique</h3>
           <p>Quando o cliente abre seu site e ele é rápido, bonito e claro — você já ganhou metade da venda. O resto é só conversar.</p>
         </div>
       </div>
@@ -883,9 +990,14 @@
   <!-- ========== TRABALHOS ========== -->
   <section class="trabalhos" id="trabalhos">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <span class="eyebrow">Trabalhos</span>
-        <h2>Negócios que ficaram encontráveis.</h2>
+      <div class="trab-head">
+        <div class="sec-head reveal" style="max-width:48ch">
+          <span class="eyebrow">Trabalhos</span>
+          <h2>Negócios que ficaram encontráveis.</h2>
+        </div>
+        <a class="trab-more reveal" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Quero%20ver%20mais%20cases%20do%20seu%20portf%C3%B3lio.">
+          Ver mais cases <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
       </div>
       <div class="cases">
         <article class="case reveal">
@@ -895,7 +1007,7 @@
           <div class="body">
             <div class="tagrow">
               <span class="pill">Oficina · Campinas</span>
-              <span class="pill dark">Encontrado pela IA</span>
+              <span class="pill ai">Encontrado pela IA</span>
             </div>
             <h3>Stop Car Mecânica</h3>
             <p>Site rápido e transparente, estruturado pra aparecer no Google e nas buscas por IA quando alguém procura oficina na região.</p>
@@ -915,6 +1027,42 @@
             <a class="visit" href="https://www.luciadelucas.com.br/" target="_blank" rel="noopener">Ver o site <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
           </div>
         </article>
+        <article class="case vacancy reveal">
+          <a href="https://wa.me/5519997034272?text=Oi%20Luis!%20Tenho%20um%20restaurante%2Fcaf%C3%A9%20e%20quero%20um%20site." aria-label="Falar sobre projeto pra restaurante ou café">
+            <div class="thumb v1">
+              <div class="thumb-inner">
+                <div class="small">↳ Vaga aberta</div>
+                <div class="big">Restaurantes &amp; cafés</div>
+              </div>
+            </div>
+          </a>
+          <div class="body">
+            <div class="tagrow">
+              <span class="pill dark">Próximo case</span>
+            </div>
+            <h3>Pode ser o seu</h3>
+            <p>Procuro um restaurante ou café pra ser o próximo nome que a IA recomenda quando alguém procurar onde comer na cidade.</p>
+            <a class="visit" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Tenho%20um%20restaurante%2Fcaf%C3%A9%20e%20quero%20um%20site." target="_blank" rel="noopener">Quero conversar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+          </div>
+        </article>
+        <article class="case vacancy reveal">
+          <a href="https://wa.me/5519997034272?text=Oi%20Luis!%20Sou%20aut%C3%B4nomo%2Fcl%C3%ADnica%20e%20quero%20um%20site." aria-label="Falar sobre projeto pra clínica ou autônomo">
+            <div class="thumb v2">
+              <div class="thumb-inner">
+                <div class="small">↳ Vaga aberta</div>
+                <div class="big">Clínicas &amp; autônomos</div>
+              </div>
+            </div>
+          </a>
+          <div class="body">
+            <div class="tagrow">
+              <span class="pill dark">Próximo case</span>
+            </div>
+            <h3>Pode ser o seu</h3>
+            <p>Atende como autônomo, profissional liberal ou tem uma clínica? Você precisa aparecer quando seu paciente perguntar à IA quem chamar.</p>
+            <a class="visit" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Sou%20aut%C3%B4nomo%2Fcl%C3%ADnica%20e%20quero%20um%20site." target="_blank" rel="noopener">Quero conversar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -929,24 +1077,44 @@
       <div class="services">
         <div class="svc feature reveal">
           <span class="ftag">Diferencial</span>
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.13-1.58a.5.5 0 0 1 0-.97L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.13a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.13 1.58a.5.5 0 0 1 0 .97L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.13a.5.5 0 0 1-.96 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></div>
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.13-1.58a.5.5 0 0 1 0-.97L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.13a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.13 1.58a.5.5 0 0 1 0 .97L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.13a.5.5 0 0 1-.96 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></div>
           <h3>Encontrado pela IA (GEO)</h3>
           <p>Estruturo seu site pra que ChatGPT, Gemini e Perplexity entendam e recomendem o seu negócio quando alguém perguntar por ele. É a parte que quase ninguém ainda faz direito.</p>
+          <ul class="svc-list">
+            <li>Schema.org e dados estruturados</li>
+            <li>Otimização pra crawlers de IA</li>
+            <li>Conteúdo escrito pra ser citado</li>
+          </ul>
         </div>
         <div class="svc reveal">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.64 3.64a1.21 1.21 0 0 0-1.72 0L2.36 21.2a1.21 1.21 0 0 0 1.72 1.72L21.64 5.36a1.21 1.21 0 0 0 0-1.72Z"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg></div>
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
           <h3>Sites sob medida</h3>
           <p>Design e construção do zero, com a cara do seu negócio. Nada de template genérico que parece igual ao do concorrente.</p>
+          <ul class="svc-list">
+            <li>Identidade visual única</li>
+            <li>Aprovação antes de cada etapa</li>
+            <li>Layouts pensados pra conversão</li>
+          </ul>
         </div>
         <div class="svc reveal">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></div>
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></div>
           <h3>Rápido de verdade</h3>
           <p>Sites enxutos que abrem na hora — no celular fraco, no 3G ruim. Velocidade não é luxo, é o que faz cliente não desistir antes de te conhecer.</p>
+          <ul class="svc-list">
+            <li>Performance Lighthouse 95+</li>
+            <li>Otimizado pra mobile primeiro</li>
+            <li>Hospedagem grátis na Vercel</li>
+          </ul>
         </div>
         <div class="svc reveal">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
           <h3>Cuido do que já existe</h3>
           <p>Tem site mas ninguém acha? Eu reviso, deixo rápido e otimizo pra busca e pra IA, aproveitando o que já está pronto.</p>
+          <ul class="svc-list">
+            <li>Auditoria de SEO e performance</li>
+            <li>Migração pra estrutura GEO-ready</li>
+            <li>Sem precisar refazer do zero</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -960,10 +1128,38 @@
         <h2>Simples, direto, sem mistério.</h2>
       </div>
       <div class="steps">
-        <div class="step reveal"><h3>Conversa</h3><p>A gente conversa pra eu entender seu negócio e quem são seus clientes. Sem formulário gigante.</p></div>
-        <div class="step reveal"><h3>Design</h3><p>Crio o visual e você aprova antes de qualquer linha de código.</p></div>
-        <div class="step reveal"><h3>Construção</h3><p>Construo leve, rápido e já pensado pra ranquear no Google e ser lido por IA.</p></div>
-        <div class="step reveal"><h3>No ar</h3><p>Publico na Vercel e te mostro o básico pra você tocar o dia a dia sem depender de ninguém.</p></div>
+        <div class="step reveal">
+          <div class="step-head">
+            <span class="step-num"></span>
+            <div class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          </div>
+          <h3>Conversa</h3>
+          <p>A gente conversa pra eu entender seu negócio e quem são seus clientes. Sem formulário gigante.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-head">
+            <span class="step-num"></span>
+            <div class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 3a2.83 2.83 0 1 1 4 4L7 19.5 2 21l1.5-5z"/><path d="M14 6 6 14"/><path d="m17 9-3-3"/></svg></div>
+          </div>
+          <h3>Design</h3>
+          <p>Crio o visual e você aprova antes de qualquer linha de código.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-head">
+            <span class="step-num"></span>
+            <div class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          </div>
+          <h3>Construção</h3>
+          <p>Construo leve, rápido e já pensado pra ranquear no Google e ser lido por IA.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-head">
+            <span class="step-num"></span>
+            <div class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
+          </div>
+          <h3>No ar</h3>
+          <p>Publico na Vercel e te mostro o básico pra você tocar o dia a dia sem depender de ninguém.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1031,7 +1227,7 @@
       <h2>Quer saber se a IA <em>acha</em> o seu negócio?</h2>
       <p>Me manda o nome no WhatsApp que eu testo na hora — sem compromisso, sem vendedor por trás.</p>
       <a class="btn btn-accent" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Quero%20saber%20se%20a%20IA%20acha%20o%20meu%20neg%C3%B3cio.%20Ele%20se%20chama%3A%20" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01ZM12.04 20.15a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.39c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.23 8.23Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.99-1.22-.74-.65-1.23-1.46-1.38-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.01 2.57.12.16 1.75 2.68 4.26 3.76.59.25 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg>
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.135.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
         Mandar pelo WhatsApp
       </a>
     </div>
@@ -1047,7 +1243,7 @@
         <p class="tag">Sites rápidos, encontráveis e feitos à mão. Campinas/SP — atendendo o Brasil todo.</p>
       </div>
       <div class="foot-links">
-        <a href="https://wa.me/5519997034272" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01ZM12.04 20.15a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.39c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.23 8.23Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.99-1.22-.74-.65-1.23-1.46-1.38-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.01 2.57.12.16 1.75 2.68 4.26 3.76.59.25 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg>WhatsApp</a>
+        <a href="https://wa.me/5519997034272" target="_blank" rel="noopener" aria-label="WhatsApp"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.135.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>WhatsApp</a>
         <a href="https://instagram.com/seu_instagram_aqui" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>Instagram</a>
         <a href="mailto:seuemail@exemplo.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>E-mail</a>
       </div>
@@ -1060,7 +1256,7 @@
 </footer>
 
 <a class="float-wa" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Vi%20seu%20site%20e%20quero%20conversar." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01ZM12.04 20.15a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.39c0-4.54 3.7-8.23 8.24-8.23 2.2 0 4.27.86 5.82 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.23 8.23Zm4.52-6.17c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.16-.29.18-.54.06-.25-.12-1.04-.38-1.99-1.22-.74-.65-1.23-1.46-1.38-1.71-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.01 2.57.12.16 1.75 2.68 4.26 3.76.59.25 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.16-.48-.29Z"/></svg>
+  <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.135.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
 </a>
 
 <script>

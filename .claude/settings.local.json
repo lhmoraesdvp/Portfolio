@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"d:\\\\Portfolio\\\\Portfolio\\\\\" 2>&1 | head -20)",
+      "Read(//d/Portfolio/**)"
+    ]
+  }
+}
