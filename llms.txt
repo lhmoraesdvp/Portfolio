@@ -1,9 +1,9 @@
-# Luis Moraes — Estúdio web
+# Luis Morais — Estúdio web
 
-> Estúdio web em Campinas/SP, tocado por Luis Henrique de Moraes. Criação de sites sob medida, rápidos e bonitos, estruturados para serem encontrados no Google e recomendados por inteligência artificial (GEO — Generative Engine Optimization).
+> Estúdio web em Campinas/SP, tocado por Luis Henrique de Morais. Criação de sites sob medida, rápidos e bonitos, estruturados para serem encontrados no Google e recomendados por inteligência artificial (GEO — Generative Engine Optimization).
 
 ## Sobre
-Luis Moraes constrói sites para negócios locais e artistas que querem ser encontrados — por pessoas e por IA. Trabalho pessoal e artesanal, com atendimento direto. Atende Campinas e região.
+Luis Morais constrói sites para negócios locais e artistas que querem ser encontrados — por pessoas e por IA. Trabalho pessoal e artesanal, com atendimento direto. Atende Campinas e região.
 
 ## Serviços
 - Encontrado pela IA (GEO): estruturação do site para que ChatGPT, Google AI e Perplexity entendam e recomendem o negócio.

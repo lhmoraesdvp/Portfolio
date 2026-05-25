@@ -1,4 +1,4 @@
-# Site — Luis Moraes (Estúdio web)
+# Site — Luis Morais (Estúdio web)
 
 Site de uma página, HTML/CSS/JS puro. Sem build, sem dependências. Só subir.
 
@@ -16,7 +16,7 @@ Site de uma página, HTML/CSS/JS puro. Sem build, sem dependências. Só subir.
 ## O que trocar antes (placeholders)
 - **Instagram**: procure `seu_instagram_aqui` no index.html e no llms.txt e troque pelo seu @.
 - **E-mail**: procure `seuemail@exemplo.com` no index.html e troque.
-- **Domínio**: quando tiver um domínio próprio, troque `https://luismoraes.vercel.app/`
+- **Domínio**: quando tiver um domínio próprio, troque `https://luismorais.vercel.app/`
   no index.html (canonical, og:url, schema), no robots.txt e no sitemap.xml.
 - **Texto do "Sobre"**: ajuste a frase pra ficar com a sua voz.
 - **Foto da Lúcia**: hoje o card dela usa um fundo colorido com o nome. Se tiver
