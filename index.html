@@ -177,6 +177,19 @@
   gtag('js', new Date());
   gtag('config', 'G-M7J3X7B0B2');
   gtag('config', 'AW-18184466754');
+
+  // Helper opcional: dispara o evento de conversão e depois navega pra URL.
+  // Usar em links que abrem na mesma aba: <a href="..." onclick="return gtagSendEvent(this.href)">
+  function gtagSendEvent(url){
+    var callback = function(){
+      if (typeof url === 'string') { window.location = url; }
+    };
+    gtag('event', 'ads_conversion_Solicitar_cota_o_1', {
+      'event_callback': callback,
+      'event_timeout': 2000
+    });
+    return false;
+  }
 </script>
 
 <style>
@@ -1304,6 +1317,14 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* Google Ads — conversão "Solicitar cotação" nos cliques de WhatsApp */
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href^="https://wa.me"]');
+    if (a && typeof gtag === 'function') {
+      gtag('event', 'ads_conversion_Solicitar_cota_o_1', {});
+    }
+  }, { passive: true });
 
   /* ============== HERO STAGE: rotating IA scenes with typing ============== */
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
