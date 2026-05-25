@@ -8,7 +8,7 @@ Luis Moraes constrói sites para negócios locais e artistas que querem ser enco
 ## Serviços
 - Encontrado pela IA (GEO): estruturação do site para que ChatGPT, Google AI e Perplexity entendam e recomendem o negócio.
 - Sites sob medida: design e desenvolvimento do zero, sem templates genéricos.
-- Sites no Webflow: no-code editável, hospedado na Vercel sem mensalidade cara.
+- Sites editáveis e leves: hospedagem inclusa, sem mensalidade cara.
 - Otimização de sites existentes: revisão de performance, SEO e legibilidade para IA.
 
 ## Trabalhos
