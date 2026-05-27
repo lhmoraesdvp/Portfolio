@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(ls \"d:\\\\Portfolio\\\\Portfolio\\\\\" 2>&1 | head -20)",
-      "Read(//d/Portfolio/**)"
+      "Read(//d/Portfolio/**)",
+      "Bash(ls \"d:\\\\Lucia\" 2>&1 | head -30)",
+      "Read(//d/Lucia/**)",
+      "PowerShell(Start-Process 'd:\\\\Portfolio\\\\Portfolio\\\\index.html')",
+      "Bash(node _shot.mjs)",
+      "Bash(node _extract.mjs)",
+      "Bash(node _extract2.mjs)",
+      "Bash(node _verify3.mjs)"
     ]
   }
 }

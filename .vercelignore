@@ -1,0 +1,4 @@
+# Arquivos que NÃO devem ir pra produção
+# Backups locais (acessíveis no repo, mas não publicados)
+backup-*.html
+*.backup.html
