@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview · Hero claro estilo Gemini · Luis Morais</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Geist:wght@300..600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* Light editorial base */
+  --bg:#FBFAF7;
+  --surface:#FFFFFF;
+  --ink:#1A1614;
+  --ink-soft:#5A5450;
+  --ink-mute:#928B85;
+  --line:rgba(26,22,20,0.08);
+  --line-strong:rgba(26,22,20,0.16);
+
+  /* Gemini palette */
+  --g-blue:#4796E3;
+  --g-blue-soft:#E8F1FB;
+  --g-violet:#8E5BD9;
+  --g-violet-soft:#F1ECFA;
+  --g-pink:#D63B92;
+  --g-pink-soft:#FBEAF3;
+  --g-warm:#FF8C42;
+  --g-mint:#34B17B;
+
+  /* Master gradient (Gemini-inspired) */
+  --g-grad:linear-gradient(135deg,#4796E3 0%,#7B5DD6 45%,#D63B92 100%);
+  --g-grad-soft:linear-gradient(135deg,rgba(71,150,227,.12) 0%,rgba(123,93,214,.10) 45%,rgba(214,59,146,.12) 100%);
+  --g-grad-text:linear-gradient(135deg,#3A82D1,#7B5DD6 55%,#D63B92);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--bg)}
+body{
+  font-family:'Geist',ui-sans-serif,system-ui,sans-serif;
+  font-weight:300;font-size:16px;line-height:1.55;
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  position:relative;overflow-x:hidden;
+}
+/* Subtle pastel ambient blobs */
+body::before, body::after{
+  content:"";position:fixed;pointer-events:none;z-index:0;
+  border-radius:50%;filter:blur(120px);opacity:.55;
+}
+body::before{
+  width:760px;height:760px;top:-180px;right:-200px;
+  background:radial-gradient(circle, var(--g-blue-soft) 0%, transparent 70%);
+}
+body::after{
+  width:680px;height:680px;bottom:-220px;left:-220px;
+  background:radial-gradient(circle, var(--g-pink-soft) 0%, transparent 70%);
+}
+
+/* Notice banner */
+.notice{
+  background:var(--ink);color:#fff;text-align:center;padding:10px 16px;
+  font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  position:relative;z-index:5;
+}
+.notice b{
+  background:var(--g-grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
+}
+
+.frame{
+  width:100%;max-width:1440px;margin:0 auto;
+  min-height:900px;position:relative;overflow:hidden;isolation:isolate;z-index:1;
+  background:var(--bg);
+}
+
+/* NAV */
+.nav{
+  position:absolute;top:0;left:0;right:0;height:84px;z-index:5;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 56px;border-bottom:1px solid var(--line);
+  backdrop-filter:blur(8px);background:rgba(251,250,247,0.7);
+}
+.logo{
+  font-family:'Fraunces',serif;font-weight:500;font-size:22px;letter-spacing:-.012em;
+  display:flex;align-items:center;gap:10px;color:var(--ink);
+}
+.logo .star{
+  width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;
+}
+.logo .star svg{width:100%;height:100%}
+.links{display:flex;gap:36px;align-items:center;font-size:14px;color:var(--ink-soft);font-weight:400}
+.links a{transition:color .2s;cursor:pointer}
+.links a:hover{color:var(--ink)}
+.wa{
+  background:var(--g-grad);color:#fff;padding:10px 20px;border-radius:999px;
+  font-weight:500;font-size:13.5px;display:inline-flex;align-items:center;gap:8px;
+  box-shadow:0 8px 22px -8px rgba(123,93,214,.45);
+  transition:transform .25s,box-shadow .25s;
+}
+.wa:hover{transform:translateY(-1px);box-shadow:0 14px 30px -10px rgba(214,59,146,.5)}
+
+/* Stage */
+.stage{
+  position:absolute;inset:84px 0 84px 0;
+  display:grid;grid-template-columns: 84px 1fr 560px 56px;column-gap:48px;
+  padding:0 56px 0 0;align-items:stretch;
+}
+.spine{
+  padding:44px 0 36px 56px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  border-right:1px solid var(--line);
+  font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-mute);letter-spacing:.18em;text-transform:uppercase;
+}
+.spine .vlabel{writing-mode:vertical-rl;transform:rotate(180deg);align-self:center;letter-spacing:.32em}
+.spine .coords{line-height:1.6;font-size:10px}
+
+/* CENTER (editorial) */
+.center{padding:54px 0 36px;display:flex;flex-direction:column}
+.kicker{
+  display:inline-flex;align-items:center;gap:14px;
+  font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-mute);letter-spacing:.22em;text-transform:uppercase;
+  margin-bottom:30px;
+}
+.kicker .tick{width:7px;height:7px;border-radius:50%;background:var(--g-grad);box-shadow:0 0 0 5px var(--g-blue-soft)}
+.kicker b{color:var(--ink);font-weight:500}
+
+.h1{
+  font-family:'Fraunces',serif;font-weight:300;letter-spacing:-.028em;
+  line-height:.96;font-size:90px;color:var(--ink);
+  margin:0 0 30px;max-width:13ch;
+}
+.h1 .qt{color:var(--ink-mute);font-style:italic;font-weight:300}
+.h1 .grad{
+  background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;
+  font-style:italic;font-weight:400;
+}
+.h1 sup{
+  font-family:'Geist Mono',monospace;font-size:18px;color:var(--g-violet);
+  font-style:normal;font-weight:500;vertical-align:super;line-height:0;
+  margin-left:4px;top:-.5em;position:relative;
+}
+
+.sub{
+  font-size:17px;line-height:1.6;color:var(--ink-soft);max-width:42ch;margin-bottom:34px;font-weight:400;
+}
+.sub b{color:var(--ink);font-weight:500}
+.sub .fn{
+  font-family:'Geist Mono',monospace;font-size:11px;color:var(--g-violet);
+  vertical-align:super;line-height:0;margin-right:3px;
+}
+
+.cta{display:flex;gap:14px;margin-bottom:auto;align-items:center}
+.btn{
+  font-size:14.5px;font-weight:500;text-decoration:none;
+  padding:14px 24px;border-radius:999px;
+  display:inline-flex;align-items:center;gap:10px;
+  transition:transform .25s,box-shadow .25s,background .25s,color .25s,border-color .25s;
+  cursor:pointer;
+}
+.btn-1{background:var(--g-grad);color:#fff;box-shadow:0 12px 28px -10px rgba(123,93,214,.5)}
+.btn-1:hover{transform:translateY(-2px);box-shadow:0 18px 36px -10px rgba(214,59,146,.5)}
+.btn-2{color:var(--ink);border:1px solid var(--line-strong);background:transparent}
+.btn-2:hover{border-color:var(--ink);transform:translateY(-2px)}
+
+/* RIGHT — AI panel (light, Gemini) */
+.right{padding:44px 0 36px;display:flex;flex-direction:column;gap:14px;position:relative}
+.tabs{
+  display:flex;gap:6px;
+  font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+}
+.tab{
+  padding:8px 14px;border:1px solid var(--line-strong);border-radius:999px;
+  color:var(--ink-soft);background:transparent;cursor:pointer;
+  transition:color .2s,border-color .2s,background .2s;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.tab .pt{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.5}
+.tab.on{
+  color:var(--ink);border-color:transparent;
+  background:linear-gradient(white,white) padding-box, var(--g-grad) border-box;
+  border:1.5px solid transparent;
+}
+.tab.on .pt{background:var(--g-grad);opacity:1;box-shadow:0 0 0 3px var(--g-violet-soft)}
+
+/* Panel — white card with gradient border */
+.panel{
+  flex:1;background:var(--surface);border-radius:16px;overflow:hidden;
+  position:relative;display:flex;flex-direction:column;
+  border:1px solid var(--line);
+  box-shadow:0 40px 80px -36px rgba(26,22,20,.18), 0 1px 0 rgba(255,255,255,.8) inset;
+}
+.panel::before{
+  content:"";position:absolute;inset:0;padding:1.5px;border-radius:16px;
+  background:var(--g-grad);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  opacity:.0;transition:opacity .4s;pointer-events:none;
+}
+.panel-head{
+  display:flex;align-items:center;gap:10px;padding:14px 18px;
+  border-bottom:1px solid var(--line);
+  font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-mute);letter-spacing:.06em;
+}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--g-mint);box-shadow:0 0 0 0 rgba(52,177,123,.55);animation:p 1.8s infinite}
+@keyframes p{0%{box-shadow:0 0 0 0 rgba(52,177,123,.55)}70%{box-shadow:0 0 0 8px rgba(52,177,123,0)}100%{box-shadow:0 0 0 0 rgba(52,177,123,0)}}
+.panel-head b{color:var(--ink);font-weight:500}
+.panel-head .right-meta{margin-left:auto;color:var(--ink-mute)}
+
+.pane{padding:18px 20px;display:flex;flex-direction:column;gap:14px;flex:1;min-height:0}
+
+.msg{display:flex;gap:12px}
+.av{
+  flex:0 0 30px;width:30px;height:30px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Geist Mono',monospace;font-size:11px;font-weight:600;
+  border:1px solid var(--line);
+}
+.msg.u .av{background:var(--g-blue-soft);color:var(--g-blue);border-color:transparent}
+.msg.a .av{
+  background:var(--g-grad);color:#fff;border:0;
+  position:relative;
+}
+.msg.a .av svg{width:14px;height:14px;fill:#fff}
+.bd{flex:1;min-width:0}
+.who{
+  font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-mute);margin-bottom:5px;
+}
+.who .gradtag{
+  background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
+}
+.txt{font-size:14.5px;color:var(--ink);line-height:1.55}
+.cur{display:inline-block;width:6px;height:13px;background:var(--g-violet);margin-left:2px;vertical-align:-2px;animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+
+/* Recommendation card */
+.rec{
+  background:linear-gradient(180deg,#FCFAFF,#FFFFFF);
+  border:1px solid var(--line);border-radius:12px;padding:14px 16px;
+  display:flex;align-items:center;gap:14px;position:relative;overflow:hidden;
+}
+.rec::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--g-grad);
+}
+.rec .mark{
+  font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.18em;
+  color:#fff;padding:4px 9px;border-radius:6px;
+  background:var(--g-grad);
+  display:inline-flex;align-items:center;gap:5px;flex-shrink:0;
+}
+.rec .mark .st{font-family:'Fraunces',serif;font-style:italic}
+.rec .body{flex:1;min-width:0}
+.rec .name{font-family:'Fraunces',serif;font-size:22px;color:var(--ink);line-height:1.1;margin-bottom:3px;letter-spacing:-.012em;font-weight:400}
+.rec .name em{font-style:italic;color:var(--g-violet);font-weight:400}
+.rec .meta{font-size:12.5px;color:var(--ink-mute);display:flex;gap:8px;align-items:center}
+.rec .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--ink-mute)}
+.rec .meta .open{color:var(--g-mint);font-weight:500}
+.rec .built{
+  font-family:'Geist Mono',monospace;font-size:9.5px;
+  letter-spacing:.16em;text-transform:uppercase;margin-top:7px;
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
+}
+.rec .built::before{content:"";width:14px;height:1px;background:var(--g-violet)}
+
+.others{padding:0 2px;display:flex;flex-direction:column;gap:7px}
+.others .lbl{
+  font-family:'Geist Mono',monospace;font-size:10px;color:var(--ink-mute);
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:2px;
+}
+.other{
+  display:flex;align-items:center;gap:10px;padding:8px 12px;
+  border:1px solid var(--line);border-radius:8px;background:#FAFAFA;
+  font-size:13px;color:var(--ink-soft);
+}
+.other .gr{flex:1;height:3px;background:var(--line);border-radius:2px;position:relative;overflow:hidden;max-width:140px}
+.other .gr::after{content:"";position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--g-blue),var(--g-violet));border-radius:2px}
+.other.n1 .gr::after{width:62%}
+.other.n2 .gr::after{width:46%}
+.other.n3 .gr::after{width:34%}
+
+.cites{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.cite{
+  font-family:'Geist Mono',monospace;font-size:10px;
+  padding:5px 9px;border:1px solid var(--line);border-radius:6px;
+  color:var(--ink-soft);letter-spacing:.04em;
+  display:inline-flex;align-items:center;gap:5px;background:#fff;
+}
+.cite::before{content:"⌕";color:var(--g-violet);font-size:11px;font-weight:600}
+
+/* Bottom strip */
+.bottom{
+  position:absolute;left:0;right:0;bottom:0;height:84px;z-index:4;
+  display:grid;grid-template-columns: 84px 1fr 1fr 1fr;align-items:center;
+  padding:0 56px 0 0;border-top:1px solid var(--line);background:rgba(251,250,247,.85);backdrop-filter:blur(8px);
+}
+.bottom .left{padding-left:56px;display:flex;flex-direction:column;gap:4px}
+.bottom .left .l1{font-family:'Geist Mono',monospace;font-size:10px;color:var(--ink-mute);letter-spacing:.18em;text-transform:uppercase}
+.bottom .left .l2{font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:var(--ink)}
+.cell{padding:0 28px;height:100%;display:flex;flex-direction:column;justify-content:center;gap:6px;border-left:1px solid var(--line)}
+.cell:first-of-type{border-left:0}
+.cell .lbl{font-family:'Geist Mono',monospace;font-size:10px;color:var(--ink-mute);letter-spacing:.18em;text-transform:uppercase}
+.cell .val{font-size:14.5px;color:var(--ink)}
+.cell .val .sep{color:var(--ink-mute);margin:0 7px}
+.meter{display:flex;align-items:center;gap:12px}
+.meter .bar{flex:1;height:4px;background:var(--line);border-radius:2px;position:relative;overflow:hidden}
+.meter .bar::after{content:"";position:absolute;inset:0;right:8%;background:var(--g-grad);border-radius:2px}
+.meter .pct{font-family:'Fraunces',serif;font-style:italic;font-size:22px;background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:400}
+.meter .pct .small{font-family:'Geist Mono',monospace;font-size:10px;color:var(--ink-mute);font-style:normal;margin-left:2px;vertical-align:2px;background:none;-webkit-text-fill-color:var(--ink-mute)}
+
+/* Mobile sizing */
+@media(max-width:1100px){
+  .frame{min-height:auto}
+  .stage{position:relative;inset:auto;grid-template-columns:1fr;column-gap:0;padding:40px 24px 32px;gap:40px}
+  .spine{display:none}
+  .right{padding:0}
+  .h1{font-size:54px}
+  .bottom{position:relative;height:auto;grid-template-columns:1fr 1fr;padding:24px 0;border-top:1px solid var(--line);background:transparent;backdrop-filter:none}
+  .bottom .left{padding-left:24px}
+  .cell{padding:14px 24px}
+  .nav{position:relative;padding:0 24px}
+  .links{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="notice">Preview · Hero claro estilo <b>Gemini</b> · não é o site final, só uma sugestão pra aprovação</div>
+
+<div class="frame">
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#" class="logo">
+      <span class="star" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4796E3"/><stop offset=".5" stop-color="#7B5DD6"/><stop offset="1" stop-color="#D63B92"/></linearGradient></defs><path fill="url(#g1)" d="M12 2c.6 5.7 4.3 9.4 10 10-5.7.6-9.4 4.3-10 10-.6-5.7-4.3-9.4-10-10 5.7-.6 9.4-4.3 10-10z"/></svg>
+      </span>
+      Luis <em style="font-style:italic;font-weight:400;color:var(--ink-soft)">Morais</em>
+    </a>
+    <div class="links">
+      <a>Trabalhos</a><a>Serviços</a><a>Sobre</a><a>Notas</a>
+      <a class="wa">WhatsApp <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </nav>
+
+  <!-- STAGE -->
+  <div class="stage">
+
+    <!-- SPINE -->
+    <div class="spine">
+      <div class="vlabel">Portfolio</div>
+      <div class="coords">22°54′S<br>47°03′W</div>
+    </div>
+
+    <!-- CENTER (editorial) -->
+    <div class="center">
+      <div class="kicker"><span class="tick"></span><span>Estúdio web independente</span><span style="opacity:.4">·</span><b>Campinas / SP</b></div>
+      <h1 class="h1">Faço sites <span class="qt">que o</span><br>Google <span class="grad">ranqueia</span><br><span class="qt">— e a IA</span> <span class="grad">recomenda.</span><sup>01</sup></h1>
+      <p class="sub"><span class="fn">01</span>Sites sob medida, <b>ultra-rápidos</b> e feitos à mão. Bonitos pra quem vê, estruturados pra quem busca — humanos ou máquinas.</p>
+      <div class="cta">
+        <a class="btn btn-1">Quero meu site <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-2">Ver trabalhos</a>
+      </div>
+    </div>
+
+    <!-- RIGHT (AI panel — light Gemini) -->
+    <div class="right">
+      <div class="tabs">
+        <button class="tab on"><span class="pt"></span>Clínica de estética</button>
+        <button class="tab"><span class="pt"></span>Escritório</button>
+        <button class="tab"><span class="pt"></span>Comércio local</button>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <span class="pulse"></span>
+          <span>conversa com IA · <b>estética</b></span>
+          <span class="right-meta">resposta gerada · agora</span>
+        </div>
+        <div class="pane">
+          <!-- User message -->
+          <div class="msg u">
+            <div class="av">U</div>
+            <div class="bd">
+              <div class="who">prompt</div>
+              <div class="txt">Clínicas de estética perto de mim com bons resultados</div>
+            </div>
+          </div>
+          <!-- AI message -->
+          <div class="msg a">
+            <div class="av"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12 2c.6 5.7 4.3 9.4 10 10-5.7.6-9.4 4.3-10 10-.6-5.7-4.3-9.4-10-10 5.7-.6 9.4-4.3 10-10z"/></svg></div>
+            <div class="bd">
+              <div class="who"><span class="gradtag">resposta · gemini</span></div>
+              <div class="txt" style="margin-bottom:10px">Com base em avaliações e presença online recentes, a melhor opção é:</div>
+              <div class="rec">
+                <div class="mark"><span class="st">✦</span> destaque</div>
+                <div class="body">
+                  <div class="name">Clínica <em>Aurora Estética</em></div>
+                  <div class="meta">
+                    <span>Cambuí · Campinas/SP</span>
+                    <span class="dot"></span>
+                    <span class="open">● aberto agora</span>
+                  </div>
+                  <div class="built">site por Luis Morais</div>
+                </div>
+              </div>
+              <div class="others" style="margin-top:14px">
+                <div class="lbl">também encontrados</div>
+                <div class="other n1"><span style="flex:0 0 auto">Estúdio Belle</span><span class="gr"></span></div>
+                <div class="other n2"><span style="flex:0 0 auto">Spa Lumière</span><span class="gr"></span></div>
+                <div class="other n3"><span style="flex:0 0 auto">Clínica Vida</span><span class="gr"></span></div>
+              </div>
+              <div class="cites">
+                <div class="cite">aurora-estetica.com.br</div>
+                <div class="cite">Google · 4.9★ (213)</div>
+                <div class="cite">Instagram · 18k</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="bottom">
+    <div class="left">
+      <div class="l1">scroll</div>
+      <div class="l2">↓</div>
+    </div>
+    <div class="cell"><div class="lbl">Ferramentas</div><div class="val">Webflow<span class="sep">/</span>Figma<span class="sep">/</span>Shopify</div></div>
+    <div class="cell"><div class="lbl">Especialidades</div><div class="val">SEO<span class="sep">·</span>GEO<span class="sep">·</span>Core Web Vitals</div></div>
+    <div class="cell"><div class="lbl">Discoverability Score</div><div class="meter"><div class="bar"></div><div class="pct">92<span class="small">/100</span></div></div></div>
+  </div>
+
+</div>
+
+</body>
+</html>
