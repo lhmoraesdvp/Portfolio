@@ -3,256 +3,518 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#16120D">
+<meta name="theme-color" content="#FAF4EC">
 <title>Sites para Clínicas de Estética, Saúde e Bem-estar | Luis Morais</title>
-<meta name="description" content="Sites sob medida para clínicas de estética, odontologia e saúde. Agendamento online, confiança e presença no Google Maps. Estúdio web em Campinas/SP.">
+<meta name="description" content="Sites sob medida para clínicas de estética, odontologia, fisioterapia e bem-estar. Agendamento, presença no Google Maps e estética calma que enche a agenda.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://luismorais.com.br/clinicas.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Sites para Clínicas de Estética, Saúde e Bem-estar">
-<meta property="og:description" content="Agendamento online, confiança e presença no Google — sites sob medida para clínicas.">
+<meta property="og:title" content="Sites para Clínicas · Estética, Saúde e Bem-estar">
+<meta property="og:description" content="Calma. Confiança. Agenda cheia. Sites para clínicas que cuidam.">
 <meta property="og:url" content="https://luismorais.com.br/clinicas.html">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Geist:wght@300..600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,300..500&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Sites para clínicas de estética, saúde e bem-estar",
-  "serviceType": "Desenvolvimento de sites com agendamento online",
-  "provider": {"@type": "ProfessionalService", "name": "Luis Morais — Estúdio web", "areaServed": "Brasil", "address": {"@type": "PostalAddress", "addressLocality": "Campinas", "addressRegion": "SP", "addressCountry": "BR"}},
-  "audience": {"@type": "BusinessAudience", "name": "Clínicas de estética, odontologia, fisioterapia e bem-estar"},
-  "description": "Sites que transmitem cuidado, enchem a agenda e colocam a clínica no Google Maps."
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Sites para clínicas de estética, saúde e bem-estar",
+  "serviceType":"Desenvolvimento de sites com agendamento online",
+  "provider":{"@type":"ProfessionalService","name":"Luis Morais — Estúdio web","areaServed":"Brasil","address":{"@type":"PostalAddress","addressLocality":"Campinas","addressRegion":"SP","addressCountry":"BR"}},
+  "audience":{"@type":"BusinessAudience","name":"Clínicas de estética, odontologia, fisioterapia, nutrição e bem-estar"}
 }
 </script>
 
 <style>
 :root{
-  --bg:#16120D; --bg-soft:#1E1812; --cream:#F1E9DB; --cream-2:#F2E9DC; --cream-dim:#A99B86;
-  --ink:#221A12; --ink-dim:#6E5E46; --ochre:#E3A85B; --ochre-deep:#B97F37;
-  --accent:#B5816C; --accent-deep:#8C5C49;
-  --line-d:rgba(241,233,219,0.12); --line-l:rgba(34,26,18,0.14); --green:#86C58A;
+  --paper:#FAF4EC;
+  --paper-soft:#F2E8DA;
+  --paper-deep:#E8DCCB;
+  --ink:#2C2422;
+  --ink-soft:#5F4D44;
+  --ink-mute:#8A7568;
+  --rose:#D6B0A0;
+  --rose-deep:#B5816C;
+  --clay:#8B5A47;
+  --clay-deep:#5D3A2D;
+  --sage:#9CAE8E;
+  --sage-deep:#6B7E5E;
+  --line:rgba(44,36,34,0.10);
+  --line-soft:rgba(44,36,34,0.05);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{
+  font-family:'Inter',-apple-system,system-ui,sans-serif;
+  font-weight:300;font-size:17px;line-height:1.65;
+  color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(900px 700px at 80% -10%, rgba(214,176,160,.22), transparent 55%),
+    radial-gradient(800px 600px at -10% 30%, rgba(156,174,142,.10), transparent 55%);
+}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 36px;position:relative;z-index:1}
 .serif{font-family:'Fraunces',Georgia,serif}
-.mono{font-family:'Geist Mono',ui-monospace,monospace}
-.em{font-style:italic;color:var(--accent)}
-.nav{position:sticky;top:0;z-index:50;background:rgba(22,18,13,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-d)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
-.nav-back{font-size:13px;color:var(--cream-dim);display:inline-flex;align-items:center;gap:7px;transition:color .2s}
-.nav-back:hover{color:var(--cream)}
-.nav-wa{background:var(--accent);color:#fff;font-weight:500;font-size:13.5px;padding:9px 16px;border-radius:999px;display:inline-flex;align-items:center;gap:7px;transition:transform .2s,background .2s}
-.nav-wa:hover{transform:translateY(-1px);background:var(--accent-deep)}
-.hero{padding:84px 0 76px;border-bottom:1px solid var(--line-d)}
-.kicker{font-family:'Geist Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px;margin-bottom:22px}
-.kicker .ic{width:30px;height:30px;border:1px solid var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accent)}
-.kicker .ic svg{width:16px;height:16px}
-.hero h1{font-family:'Fraunces',serif;font-weight:380;font-size:clamp(38px,6vw,68px);line-height:1.02;letter-spacing:-.02em;max-width:16ch;margin-bottom:24px}
-.hero .lead{font-size:18px;color:var(--cream-dim);max-width:54ch;margin-bottom:34px}
-.hero .lead b{color:var(--cream);font-weight:500}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.btn{font-size:15px;font-weight:500;padding:15px 26px;border-radius:999px;display:inline-flex;align-items:center;gap:10px;transition:transform .2s,background .2s,border-color .2s,color .2s;cursor:pointer}
-.btn-1{background:var(--accent);color:#fff}
-.btn-1:hover{background:var(--accent-deep);transform:translateY(-2px)}
-.btn-2{border:1px solid var(--line-d);color:var(--cream);background:transparent}
-.btn-2:hover{border-color:var(--cream);transform:translateY(-2px)}
-.hero-stats{display:flex;gap:36px;margin-top:48px;flex-wrap:wrap}
-.hero-stats .s .n{font-family:'Fraunces',serif;font-style:italic;font-size:34px;color:var(--accent);line-height:1}
-.hero-stats .s .l{font-size:12.5px;color:var(--cream-dim);margin-top:6px;max-width:18ch}
-.sec{padding:84px 0}
-.sec-light{background:var(--cream-2);color:var(--ink)}
-.sec-light .kicker{color:var(--accent-deep)}
-.sec-light .kicker .ic{border-color:var(--accent-deep);color:var(--accent-deep)}
-.h2{font-family:'Fraunces',serif;font-weight:380;font-size:clamp(28px,4vw,46px);line-height:1.06;letter-spacing:-.02em;max-width:20ch;margin-bottom:18px}
-.sec-light .em{color:var(--accent-deep)}
-.sub{font-size:17px;color:var(--cream-dim);max-width:56ch;margin-bottom:48px}
-.sec-light .sub{color:var(--ink-dim)}
-.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.prob{background:var(--bg-soft);border:1px solid var(--line-d);border-radius:14px;padding:28px}
-.prob .n{font-family:'Geist Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.16em;margin-bottom:14px}
-.prob h3{font-family:'Fraunces',serif;font-weight:400;font-size:21px;margin-bottom:10px;line-height:1.2}
-.prob p{font-size:14.5px;color:var(--cream-dim)}
-.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.ben{background:#fff;border:1px solid var(--line-l);border-radius:14px;padding:28px;transition:transform .25s,box-shadow .25s}
-.ben:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(34,26,18,.35)}
-.ben .ic{width:42px;height:42px;border-radius:10px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.ben .ic svg{width:20px;height:20px}
-.ben h3{font-family:'Fraunces',serif;font-weight:400;font-size:20px;margin-bottom:8px}
-.ben p{font-size:14.5px;color:var(--ink-dim)}
-.browser{background:var(--bg-soft);border:1px solid var(--line-d);border-radius:16px;overflow:hidden;box-shadow:0 40px 100px -50px rgba(0,0,0,.7);margin-top:14px}
-.browser-bar{display:flex;align-items:center;gap:8px;padding:13px 16px;border-bottom:1px solid var(--line-d)}
-.browser-bar .dot{width:10px;height:10px;border-radius:50%;background:var(--line-d)}
-.browser-bar .url{margin-left:12px;font-family:'Geist Mono',monospace;font-size:12px;color:var(--cream-dim)}
-.browser-bar .url b{color:var(--cream)}
-.mock{background:#F5EBE3;color:#3A2A24}
-.mock-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid rgba(58,42,36,.12)}
-.mock-logo{font-family:'Fraunces',serif;font-weight:500;font-size:18px;color:#3A2A24}
-.mock-links{display:flex;gap:20px;font-size:12.5px;color:#7a5d50}
-.mock-links .pill{background:var(--accent);color:#fff;padding:7px 14px;border-radius:999px;font-weight:500}
-.mock-hero{padding:46px 28px 38px;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
-.mock-tag{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:14px}
-.mock-h{font-family:'Fraunces',serif;font-weight:400;font-size:34px;line-height:1.05;color:#3A2A24;margin-bottom:14px;font-style:italic}
-.mock-p{font-size:13.5px;color:#7a5d50;max-width:36ch;margin-bottom:18px}
-.mock-cta{display:flex;gap:10px}
-.mock-btn{font-size:12.5px;font-weight:500;padding:10px 16px;border-radius:999px}
-.mock-btn.fill{background:var(--accent);color:#fff}
-.mock-btn.line{border:1px solid var(--accent);color:var(--accent-deep)}
-.mock-portrait{aspect-ratio:4/5;border-radius:14px;background:repeating-linear-gradient(135deg,#e6d3c8,#e6d3c8 9px,#dec7ba 9px,#dec7ba 18px);border:1px solid rgba(58,42,36,.12);display:flex;align-items:flex-end;padding:14px}
-.mock-portrait .badge{background:var(--accent);color:#fff;font-size:10px;font-family:'Geist Mono',monospace;padding:5px 9px;border-radius:5px}
-.mock-areas{padding:6px 28px 40px}
-.mock-areas .lbl{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#7a5d50;margin-bottom:14px}
-.mock-area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.mock-area{border:1px solid rgba(58,42,36,.12);border-radius:10px;padding:14px;background:#fff}
-.mock-area .t{font-family:'Fraunces',serif;font-size:15px;color:#3A2A24;margin-bottom:5px}
-.mock-area .d{font-size:11px;color:#7a5d50}
-.wf-notes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
-.wf-note{font-size:13px;color:var(--cream-dim);padding-left:14px;border-left:2px solid var(--accent)}
-.wf-note b{display:block;color:var(--cream);font-family:'Fraunces',serif;font-size:15px;margin-bottom:3px;font-weight:400}
-.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.proc .step .n{font-family:'Fraunces',serif;font-style:italic;font-size:30px;color:var(--accent);margin-bottom:10px}
-.proc .step h3{font-family:'Fraunces',serif;font-weight:400;font-size:18px;margin-bottom:6px}
-.proc .step p{font-size:13.5px;color:var(--cream-dim)}
-.faq-list{max-width:760px;margin:32px auto 0}
-.faq-item{border:1px solid var(--line-l);border-radius:10px;margin-bottom:10px;background:#fff}
-.faq-item summary{list-style:none;cursor:pointer;padding:18px 20px;font-family:'Fraunces',serif;font-size:17px;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:14px}
+.serif-i{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300}
+.em{font-style:italic;color:var(--clay)}
+.eyebrow{font-family:'Inter',sans-serif;font-weight:500;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--rose-deep)}
+
+/* WHISPER BAR (top thin) */
+.whisper{padding:13px 0;background:transparent;border-bottom:1px solid var(--line-soft)}
+.whisper-in{display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);font-weight:400}
+.whisper-in .dot{width:6px;height:6px;border-radius:50%;background:var(--sage);display:inline-block;margin-right:8px;vertical-align:1px;box-shadow:0 0 0 4px rgba(156,174,142,.18)}
+.whisper a{transition:color .25s}
+.whisper a:hover{color:var(--clay)}
+
+/* NAV */
+.nav{padding:24px 0;position:sticky;top:0;z-index:50;background:rgba(250,244,236,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.nav-mark{font-family:'Fraunces',serif;font-weight:400;font-size:22px;letter-spacing:-.005em}
+.nav-mark em{font-style:italic;color:var(--clay)}
+.nav-wa{
+  background:var(--clay);color:var(--paper);font-weight:500;font-size:13px;
+  padding:11px 22px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;
+  transition:background .3s,transform .3s;
+}
+.nav-wa:hover{background:var(--clay-deep);transform:translateY(-1px)}
+
+/* HERO */
+.hero{padding:90px 0 80px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:80px;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:14px;margin-bottom:36px}
+.hero-eyebrow::before{content:"";width:28px;height:1px;background:var(--rose-deep)}
+.hero-h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(46px,7.4vw,98px);line-height:.98;letter-spacing:-.022em;color:var(--ink);margin-bottom:28px}
+.hero-h1 .it{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;color:var(--clay);font-size:1.05em;letter-spacing:-.012em}
+.hero-sub{font-size:20px;color:var(--ink-soft);max-width:46ch;margin-bottom:38px;line-height:1.55;font-weight:300}
+.hero-sub b{color:var(--ink);font-weight:500}
+.hero-cta{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+.btn-1{
+  background:var(--clay);color:var(--paper);font-weight:500;font-size:14px;
+  padding:17px 30px;border-radius:999px;display:inline-flex;align-items:center;gap:10px;
+  letter-spacing:.02em;transition:background .3s,transform .3s,box-shadow .3s;
+  box-shadow:0 14px 30px -16px rgba(139,90,71,.6);
+}
+.btn-1:hover{background:var(--clay-deep);transform:translateY(-2px);box-shadow:0 20px 38px -18px rgba(93,58,45,.7)}
+.btn-line{color:var(--clay);font-weight:500;font-size:14px;padding:17px 0;border-bottom:1px solid var(--clay);letter-spacing:.02em;transition:color .25s,border-color .25s}
+.btn-line:hover{color:var(--clay-deep);border-color:var(--clay-deep)}
+
+/* HERO portrait: soft gradient blob with overlapping text */
+.hero-portrait{position:relative;aspect-ratio:4/5;border-radius:240px 240px 32px 32px;background:linear-gradient(160deg,#E8C8B6 0%,#C49E89 55%,#8B5A47 100%);overflow:hidden;box-shadow:0 40px 80px -40px rgba(139,90,71,.4)}
+.hero-portrait::before{content:"";position:absolute;inset:0;background:radial-gradient(800px 600px at 20% 15%, rgba(255,255,255,.25), transparent 50%)}
+.hero-portrait .stamp{position:absolute;top:32px;left:32px;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:rgba(250,244,236,.92);font-size:18px;line-height:1.3;max-width:14ch}
+.hero-portrait .stamp::before{content:"";display:block;width:34px;height:1px;background:rgba(250,244,236,.7);margin-bottom:16px}
+.hero-portrait .badge{position:absolute;bottom:32px;left:32px;background:rgba(250,244,236,.94);color:var(--clay-deep);padding:14px 20px;border-radius:999px;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px}
+.hero-portrait .badge .ds{width:8px;height:8px;border-radius:50%;background:var(--sage-deep);box-shadow:0 0 0 4px rgba(107,126,94,.22)}
+
+/* Soft stats below hero */
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:42px;margin-top:80px;padding-top:36px;border-top:1px solid var(--line)}
+.hero-stats .s .n{font-family:'Fraunces',serif;font-weight:300;font-size:54px;line-height:.95;color:var(--clay);letter-spacing:-.02em}
+.hero-stats .s .l{font-size:15px;color:var(--ink-soft);margin-top:10px;max-width:24ch;line-height:1.55}
+
+/* MANIFESTO */
+.manifesto{padding:120px 0;text-align:center;position:relative}
+.manifesto-eyebrow{margin-bottom:28px}
+.manifesto h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(34px,5vw,60px);line-height:1.08;letter-spacing:-.02em;color:var(--ink);max-width:24ch;margin:0 auto 28px}
+.manifesto h2 .it{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--clay);font-weight:400}
+.manifesto p{font-size:21px;color:var(--ink-soft);max-width:60ch;margin:0 auto;font-weight:300;line-height:1.55}
+
+/* DORES */
+.dores{padding:120px 0;background:var(--paper-soft);position:relative;overflow:hidden}
+.dores::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 600px at 90% 110%, rgba(156,174,142,.16), transparent 55%);pointer-events:none}
+.section-head{display:grid;grid-template-columns:120px 1fr;gap:48px;margin-bottom:80px;position:relative;z-index:1}
+.section-head .n{font-family:'Fraunces',serif;font-style:italic;font-weight:300;color:var(--rose-deep);font-size:80px;line-height:.85}
+.section-head h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(34px,4.8vw,58px);line-height:1.04;letter-spacing:-.02em;color:var(--ink);max-width:22ch}
+.section-head h2 .it{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--clay);font-weight:400}
+.section-head .deck{font-size:18.5px;color:var(--ink-soft);max-width:54ch;margin-top:18px;line-height:1.6;font-weight:300}
+
+.dores-list{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;position:relative;z-index:1}
+.dore{background:var(--paper);padding:40px;border-radius:20px;box-shadow:0 30px 60px -40px rgba(44,36,34,.18);transition:transform .35s,box-shadow .35s}
+.dore:hover{transform:translateY(-6px);box-shadow:0 40px 70px -40px rgba(44,36,34,.28)}
+.dore .nr{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.18em;color:var(--rose-deep);margin-bottom:18px;display:block}
+.dore h3{font-family:'Fraunces',serif;font-weight:400;font-size:23px;line-height:1.22;color:var(--ink);margin-bottom:14px}
+.dore h3 .it{font-style:italic;color:var(--clay)}
+.dore p{color:var(--ink-soft);font-size:15.5px;line-height:1.6;font-weight:300}
+
+/* TRANSFORMAÇÃO — antes/depois soft */
+.transf{padding:120px 0}
+.transf-wrap{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:stretch}
+.transf-card{padding:40px;border-radius:24px;display:flex;flex-direction:column;gap:20px}
+.transf-card.antes{background:#EFE8DD;color:var(--ink-mute)}
+.transf-card.depois{background:linear-gradient(160deg,#F4E6DA 0%,#E0BFAD 100%);color:var(--clay-deep);box-shadow:0 30px 70px -30px rgba(139,90,71,.35)}
+.transf-card .label{font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:500}
+.transf-card.antes .label{color:var(--ink-mute)}
+.transf-card.depois .label{color:var(--clay-deep)}
+.transf-card h3{font-family:'Fraunces',serif;font-weight:300;font-size:30px;line-height:1.15;letter-spacing:-.015em}
+.transf-card.antes h3{color:var(--ink-soft)}
+.transf-card.depois h3{color:var(--clay-deep)}
+.transf-card h3 .it{font-style:italic}
+.transf-card ul{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:6px}
+.transf-card li{display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.5}
+.transf-card li::before{content:"";width:14px;height:14px;flex-shrink:0;margin-top:5px;border-radius:50%}
+.transf-card.antes li::before{background:rgba(95,77,68,.18);border:1px solid rgba(95,77,68,.32)}
+.transf-card.depois li::before{background:var(--sage);box-shadow:0 0 0 4px rgba(156,174,142,.28)}
+
+/* RITUAL — process as ritual */
+.ritual{padding:120px 0;background:var(--paper-deep)}
+.ritual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;position:relative;z-index:1;margin-top:0}
+.ritual-step{padding:36px 0 0;position:relative}
+.ritual-step::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:var(--clay)}
+.ritual-step .n{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:64px;color:var(--clay);line-height:.85;margin-bottom:20px}
+.ritual-step h3{font-family:'Fraunces',serif;font-weight:400;font-size:21px;line-height:1.2;margin-bottom:10px}
+.ritual-step h3 .it{font-style:italic;color:var(--clay)}
+.ritual-step p{color:var(--ink-soft);font-size:15px;line-height:1.6;font-weight:300}
+
+/* WIREFRAME — clinic example */
+.wireframe{padding:120px 0;position:relative}
+.wf-frame{background:#F7EBE0;border-radius:32px;overflow:hidden;box-shadow:0 60px 120px -50px rgba(139,90,71,.45);position:relative}
+.wf-nav{display:flex;align-items:center;justify-content:space-between;padding:24px 36px;border-bottom:1px solid rgba(44,36,34,.08)}
+.wf-logo{font-family:'Fraunces',serif;font-weight:400;font-size:22px;color:var(--clay-deep);letter-spacing:-.005em}
+.wf-links{display:flex;gap:24px;font-size:13px;color:var(--ink-soft);align-items:center}
+.wf-links .pill{background:var(--clay);color:var(--paper);padding:9px 18px;border-radius:999px;font-weight:500}
+.wf-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;padding:60px 36px 56px;align-items:center}
+.wf-meta{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--rose-deep);font-weight:500;margin-bottom:16px}
+.wf-h{font-family:'Fraunces',serif;font-weight:300;font-size:46px;line-height:1.02;color:var(--clay-deep);margin-bottom:14px}
+.wf-h .it{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--clay)}
+.wf-p{color:var(--ink-soft);font-size:16px;max-width:36ch;margin-bottom:24px;line-height:1.55;font-weight:300}
+.wf-cta{display:flex;gap:12px;align-items:center}
+.wf-btn{font-size:12.5px;font-weight:500;padding:11px 20px;border-radius:999px}
+.wf-btn.fill{background:var(--clay);color:var(--paper)}
+.wf-btn.line{border:1px solid var(--clay);color:var(--clay)}
+.wf-img{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;background:linear-gradient(160deg,#E0B8A4 0%,#A66E58 100%);position:relative;overflow:hidden}
+.wf-img::after{content:"";position:absolute;inset:0;background:radial-gradient(600px 400px at 30% 20%,rgba(255,255,255,.22),transparent 50%)}
+.wf-img .lbl{position:absolute;bottom:24px;left:24px;background:rgba(250,244,236,.94);color:var(--clay-deep);padding:8px 14px;border-radius:999px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+
+.wf-treats{padding:0 36px 56px}
+.wf-treats-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px;padding-top:36px;border-top:1px solid rgba(44,36,34,.08)}
+.wf-treats-h .t{font-family:'Fraunces',serif;font-style:italic;font-size:28px;color:var(--clay-deep);font-weight:300}
+.wf-treats-h .x{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-mute);font-weight:500}
+.wf-treats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.wf-treat{background:#FAF1E6;border-radius:16px;padding:24px;border:1px solid rgba(44,36,34,.06)}
+.wf-treat .t{font-family:'Fraunces',serif;font-weight:400;font-size:18px;color:var(--clay-deep);margin-bottom:6px}
+.wf-treat .d{font-size:13.5px;color:var(--ink-soft);line-height:1.5;font-weight:300}
+
+.wf-notes{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:42px}
+.wf-note{font-size:14px;color:var(--ink-soft);font-weight:300;line-height:1.55}
+.wf-note b{display:block;color:var(--clay);font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:17px;margin-bottom:6px}
+
+/* BENEFÍCIOS */
+.beneficios{padding:120px 0;background:var(--paper-soft)}
+.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:60px}
+.ben{background:var(--paper);padding:36px 32px;border-radius:22px;transition:transform .35s,box-shadow .35s}
+.ben:hover{transform:translateY(-6px);box-shadow:0 40px 70px -40px rgba(139,90,71,.25)}
+.ben .ic{width:46px;height:46px;border-radius:14px;background:linear-gradient(160deg,var(--rose) 0%,var(--clay) 100%);color:var(--paper);display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 12px 24px -12px rgba(139,90,71,.45)}
+.ben .ic svg{width:22px;height:22px}
+.ben h3{font-family:'Fraunces',serif;font-weight:400;font-size:21px;margin-bottom:8px;line-height:1.2;color:var(--ink)}
+.ben h3 .it{font-style:italic;color:var(--clay)}
+.ben p{color:var(--ink-soft);font-size:15px;line-height:1.6;font-weight:300}
+
+/* TESTEMUNHOS */
+.testes{padding:120px 0}
+.testes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:60px}
+.teste{position:relative;padding:14px 6px 0}
+.teste::before{content:"“";font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--rose-deep);font-size:84px;line-height:.6;position:absolute;top:0;left:-4px;opacity:.6}
+.teste blockquote{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:21px;line-height:1.4;color:var(--ink);margin-bottom:22px;padding-top:8px}
+.teste .who{font-size:13px;color:var(--ink-mute);line-height:1.6;letter-spacing:.04em}
+.teste .who b{display:block;color:var(--ink);font-weight:500;font-family:'Fraunces',serif;font-size:16px;font-style:normal;margin-bottom:2px}
+
+/* FAQ */
+.faq-sec{padding:120px 0;background:var(--paper-soft)}
+.faq{max-width:820px;margin:60px auto 0}
+.faq-item{background:var(--paper);border-radius:18px;margin-bottom:14px;overflow:hidden;transition:box-shadow .3s}
+.faq-item[open]{box-shadow:0 20px 40px -28px rgba(139,90,71,.3)}
+.faq-item summary{list-style:none;cursor:pointer;padding:24px 30px;display:flex;justify-content:space-between;align-items:center;gap:18px;font-family:'Fraunces',serif;font-weight:400;font-size:19px;color:var(--ink);line-height:1.3}
 .faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::after{content:'+';font-family:'Fraunces',serif;font-size:24px;color:var(--accent-deep);transition:transform .3s}
+.faq-item summary::after{content:"+";font-family:'Fraunces',serif;font-weight:300;font-size:28px;color:var(--clay);flex-shrink:0;line-height:1;transition:transform .35s}
 .faq-item[open] summary::after{transform:rotate(45deg)}
-.faq-item .a{padding:0 20px 18px;color:var(--ink-dim);font-size:14.5px}
-.cta-final{text-align:center;padding:96px 0}
-.cta-final h2{font-family:'Fraunces',serif;font-weight:380;font-size:clamp(32px,5vw,54px);line-height:1.04;margin-bottom:18px;max-width:18ch;margin:0 auto 18px}
-.cta-final p{color:var(--cream-dim);font-size:17px;margin-bottom:32px;max-width:50ch;margin:0 auto 32px}
-.foot{border-top:1px solid var(--line-d);padding:40px 0;font-size:13px;color:var(--cream-dim)}
-.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
-@media(max-width:860px){.prob-grid,.ben-grid,.proc,.mock-hero,.mock-area-grid,.wf-notes{grid-template-columns:1fr}.mock-hero{gap:18px}.nav-back span{display:none}.hero-stats{gap:24px}}
+.faq-item .a{padding:0 30px 26px;color:var(--ink-soft);font-size:15.5px;line-height:1.65;max-width:64ch;font-weight:300}
+
+/* CTA FINAL */
+.cta-final{padding:140px 0 110px;text-align:center;position:relative;overflow:hidden}
+.cta-final::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 500px at 50% 50%, rgba(214,176,160,.32), transparent 55%);pointer-events:none}
+.cta-final-in{position:relative;z-index:1}
+.cta-final .eyebrow{display:inline-block;margin-bottom:30px}
+.cta-final h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(42px,6vw,80px);line-height:1.02;letter-spacing:-.022em;color:var(--ink);max-width:18ch;margin:0 auto 26px}
+.cta-final h2 .it{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--clay);font-weight:400}
+.cta-final p{font-size:20px;color:var(--ink-soft);max-width:46ch;margin:0 auto 40px;line-height:1.55;font-weight:300}
+
+/* FOOTER */
+.foot{padding:40px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-mute);font-weight:400}
+.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
+.foot a{transition:color .2s}
+.foot a:hover{color:var(--clay)}
+
+@media(max-width:980px){
+  .wrap{padding:0 22px}
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero-portrait{max-width:420px;margin:0 auto}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:24px}
+  .section-head{grid-template-columns:1fr;gap:18px}
+  .section-head .n{font-size:60px}
+  .dores-list,.ben-grid,.testes-grid,.wf-treats-grid,.wf-notes{grid-template-columns:1fr}
+  .ritual-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .transf-wrap{grid-template-columns:1fr}
+  .wf-hero{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .whisper-in span:nth-child(2){display:none}
+  .ritual-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
+<!-- WHISPER BAR -->
+<div class="whisper"><div class="wrap whisper-in">
+  <span><span class="dot"></span> aceitando agendamentos para o trimestre</span>
+  <span>Estúdio web · Campinas/SP</span>
+  <a href="https://wa.me/5519997034272?text=Oi%20Luis!" target="_blank" rel="noopener">Conversar diretamente →</a>
+</div></div>
+
+<!-- NAV -->
 <nav class="nav"><div class="wrap nav-in">
-  <a href="index.html" class="nav-back">← <span>Voltar ao portfólio</span></a>
-  <a class="nav-wa" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Tenho%20uma%20cl%C3%ADnica%20e%20quero%20um%20site." target="_blank" rel="noopener">Falar no WhatsApp →</a>
+  <a href="index.html" class="nav-mark">Luis <em>Morais</em></a>
+  <a class="nav-wa" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Tenho%20uma%20cl%C3%ADnica%20e%20quero%20conversar." target="_blank" rel="noopener">Falar no WhatsApp</a>
 </div></nav>
 
+<!-- HERO -->
 <header class="hero"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-10 2 5h6"/></svg></span> Sites para clínicas · estética · saúde · bem-estar</div>
-  <h1 class="serif">A clínica que transmite <span class="em">cuidado</span> enche a agenda.</h1>
-  <p class="lead">Antes de marcar, o paciente pesquisa, compara e escolhe quem passa confiança — e quem deixa <b>agendar em poucos cliques</b>. Eu construo o site que transforma essa busca em consulta marcada, com a calma e o bom gosto que a sua clínica merece.</p>
-  <div class="cta-row">
-    <a class="btn btn-1" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Quero%20um%20site%20pra%20minha%20cl%C3%ADnica." target="_blank" rel="noopener">Quero meu site →</a>
-    <a class="btn btn-2" href="#preview">Ver exemplo</a>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow"><span class="eyebrow">Para clínicas que cuidam devagar</span></div>
+      <h1 class="hero-h1">Cuidado que se <span class="it">sente</span> antes da primeira consulta.</h1>
+      <p class="hero-sub">A paciente já decidiu metade antes de te ligar. Decidiu pela imagem, pela calma do feed, pela facilidade de marcar. <b>O seu site é o segundo turno dessa decisão</b> — e é o que faz a agenda encher sozinha.</p>
+      <div class="hero-cta">
+        <a class="btn-1" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Quero%20um%20site%20pra%20minha%20cl%C3%ADnica." target="_blank" rel="noopener">Quero meu site →</a>
+        <a class="btn-line" href="#exemplo">Ver um exemplo</a>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <div class="stamp">Tom calmo<br>·<br>ritual visual<br>·<br>agenda à mão</div>
+      <div class="badge"><span class="ds"></span> aberto para agendamento</div>
+    </div>
   </div>
   <div class="hero-stats">
-    <div class="s"><div class="n serif">7 em 10</div><div class="l">pacientes pesquisam a clínica online antes de agendar</div></div>
-    <div class="s"><div class="n serif">+38%</div><div class="l">de agendamentos quando há marcação online no site</div></div>
-    <div class="s"><div class="n serif">24/7</div><div class="l">a agenda recebe pedidos mesmo com a recepção fechada</div></div>
+    <div class="s"><div class="n">7/10</div><div class="l">pacientes pesquisam a clínica antes de marcar a primeira consulta</div></div>
+    <div class="s"><div class="n">+38%</div><div class="l">de agendamentos quando há marcação online direto pelo site</div></div>
+    <div class="s"><div class="n">24h</div><div class="l">a agenda continua aberta — mesmo com a recepção fechada</div></div>
   </div>
 </div></header>
 
-<section class="sec"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span> O problema</div>
-  <h2 class="h2 serif">Só Instagram <span class="em">não fecha</span> consulta.</h2>
-  <p class="sub">O Instagram mostra o trabalho — mas na hora de decidir, o paciente quer confiança, informação clara e facilidade pra agendar. Sem isso, ele marca na concorrente.</p>
-  <div class="prob-grid">
-    <div class="prob"><div class="n mono">01</div><h3 class="serif">Invisível no Google Maps</h3><p>Quem busca "clínica de estética perto de mim" encontra as concorrentes com site e avaliações. A sua nem aparece.</p></div>
-    <div class="prob"><div class="n mono">02</div><h3 class="serif">Agendamento por DM trava</h3><p>O paciente manda mensagem, ninguém responde na hora, ele desiste. Sem agenda online, você perde o lead quente.</p></div>
-    <div class="prob"><div class="n mono">03</div><h3 class="serif">Falta prova de confiança</h3><p>Para um procedimento no corpo ou na saúde, o paciente precisa ver credibilidade — equipe, estrutura, resultados, avaliações.</p></div>
+<!-- MANIFESTO -->
+<section class="manifesto"><div class="wrap">
+  <div class="eyebrow manifesto-eyebrow">Filosofia da clínica online</div>
+  <h2>Estética calma <span class="it">não é decoração</span>. É o primeiro tratamento.</h2>
+  <p>Um site para clínica não vende procedimento — vende <em>permissão para confiar</em>. A tipografia que respira, o branco que descansa o olho, a foto que sugere ambiente. Tudo isso já é cuidado antes do primeiro toque.</p>
+</div></section>
+
+<!-- DORES INVISÍVEIS -->
+<section class="dores"><div class="wrap">
+  <div class="section-head">
+    <div class="n">i</div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px">Capítulo I · o que se perde em silêncio</div>
+      <h2>Três coisas que a clínica perde <span class="it">sem reclamar</span>.</h2>
+      <p class="deck">Não são falhas de tratamento. São falhas de presença — quando a paciente decide procurar e o sinal que recebe não combina com o cuidado que existe ali dentro.</p>
+    </div>
+  </div>
+  <div class="dores-list">
+    <article class="dore">
+      <span class="nr">— i —</span>
+      <h3>Paciente que vê o Instagram e <span class="it">desiste</span> sem mensagem.</h3>
+      <p>Feed esticado, foto sem padrão, link de bio com 18 botões. A paciente sente o esforço, recua, e procura a clínica do lado.</p>
+    </article>
+    <article class="dore">
+      <span class="nr">— ii —</span>
+      <h3>Agendamento por DM que <span class="it">esfria</span> em 4 horas.</h3>
+      <p>Mensagem mandada às 22h, resposta às 9h da manhã. No intervalo, a paciente desistiu ou marcou no concorrente. O lead quente esfria rápido.</p>
+    </article>
+    <article class="dore">
+      <span class="nr">— iii —</span>
+      <h3>"Clínica de estética perto de mim" — e <span class="it">não aparece</span>.</h3>
+      <p>Quem busca na sua rua acha quem tem site + Google Maps + reviews recentes. Sem essa estrutura, a clínica é invisível para quem está pronta para marcar.</p>
+    </article>
   </div>
 </div></section>
 
-<section class="sec sec-light"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg></span> O que o seu site entrega</div>
-  <h2 class="h2 serif">Confiança que se <span class="em">sente</span> — agenda que <span class="em">enche</span>.</h2>
-  <p class="sub">Cada elemento pensado para quem decide cuidar do corpo e da saúde: alguém que precisa confiar antes de marcar.</p>
-  <div class="ben-grid">
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3 class="serif">Agendamento online</h3><p>Botão de marcar consulta integrado ao WhatsApp ou a uma agenda. O paciente agenda sozinho, a qualquer hora.</p></div>
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg></div><h3 class="serif">Credibilidade imediata</h3><p>Estrutura, equipe, formação e ambiente — design calmo e elegante que passa seriedade e cuidado já no primeiro segundo.</p></div>
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div><h3 class="serif">Galeria de resultados</h3><p>Antes e depois, procedimentos e ambiente em galeria elegante — com consentimento, dentro das normas do conselho.</p></div>
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.7-7-11a7 7 0 0114 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3 class="serif">Achada no Google Maps</h3><p>SEO local para "[seu procedimento] em [sua cidade]" e ficha do Google Negócios otimizada. Aparece no mapa, recebe ligação.</p></div>
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.5 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg></div><h3 class="serif">Avaliações em destaque</h3><p>Reviews recentes do Google integrados no site — a prova social que mais pesa na decisão de marcar.</p></div>
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3 class="serif">Rápido no celular</h3><p>A maioria pesquisa pelo celular. Seu site carrega em menos de 1,5s — antes que o paciente perca a paciência.</p></div>
+<!-- TRANSFORMAÇÃO -->
+<section class="transf"><div class="wrap">
+  <div class="section-head">
+    <div class="n">ii</div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px">Capítulo II · a transformação percebida</div>
+      <h2>O que <span class="it">muda</span> quando a clínica tem casa própria.</h2>
+    </div>
+  </div>
+  <div class="transf-wrap">
+    <div class="transf-card antes">
+      <span class="label">Antes</span>
+      <h3>A clínica que <span class="it">depende</span> do feed.</h3>
+      <ul>
+        <li>Tudo concentrado no Instagram — sem domínio próprio.</li>
+        <li>Link de bio com Linktree, 12 botões, sem hierarquia.</li>
+        <li>Sem agendamento online — só DM e WhatsApp manual.</li>
+        <li>Galeria de resultados solta nos stories destacados.</li>
+        <li>Invisível em "clínica + procedimento + cidade".</li>
+      </ul>
+    </div>
+    <div class="transf-card depois">
+      <span class="label">Depois</span>
+      <h3>A clínica com <span class="it">presença própria</span>.</h3>
+      <ul>
+        <li>Domínio próprio, identidade calma, tom de cuidado.</li>
+        <li>Tratamentos com página por procedimento — cada um indexado.</li>
+        <li>Agenda online integrada — paciente marca sozinha.</li>
+        <li>Galeria de resultados ética, com consentimento.</li>
+        <li>Achada no Google Maps, citada quando perguntam à IA.</li>
+      </ul>
+    </div>
   </div>
 </div></section>
 
-<section class="sec" id="preview"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg></span> Exemplo · como ficaria</div>
-  <h2 class="h2 serif">Um site que <span class="em">acalma</span> e convida.</h2>
-  <p class="sub">Veja um exemplo de página inicial para clínica. Tom de cuidado, agendamento à vista e estrutura que gera confiança.</p>
-  <div class="browser">
-    <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">www.<b>suaclinica</b>.com.br</span></div>
-    <div class="mock">
-      <div class="mock-nav">
-        <div class="mock-logo">Aurora Estética</div>
-        <div class="mock-links"><span>Tratamentos</span><span>Equipe</span><span>Resultados</span><span class="pill">Agendar avaliação</span></div>
+<!-- RITUAL -->
+<section class="ritual"><div class="wrap">
+  <div class="section-head">
+    <div class="n">iii</div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px">Capítulo III · do briefing ao no ar</div>
+      <h2>O <span class="it">ritual</span> da construção, em quatro tempos.</h2>
+      <p class="deck">Sem reunião sem motivo. Sem briefing de 40 páginas. Conversa, definição, construção, no ar — com revisão semanal e nada de surpresa no fim.</p>
+    </div>
+  </div>
+  <div class="ritual-grid">
+    <div class="ritual-step"><div class="n">i</div><h3 class="serif">Escuta <span class="it">atenta</span></h3><p>Uma conversa de uma hora. Entendo a clínica, o público, os procedimentos, o tom. Saio com a estrutura na mão.</p></div>
+    <div class="ritual-step"><div class="n">ii</div><h3 class="serif">Desenho <span class="it">calmo</span></h3><p>Defino paleta, tipografia, hierarquia. Cada tratamento ganha seu lugar, sem competir entre si nem cansar o olho.</p></div>
+    <div class="ritual-step"><div class="n">iii</div><h3 class="serif">Construção <span class="it">à mão</span></h3><p>Site feito sem template, otimizado para mobile e Google Maps. Você revisa semanalmente, ajustes incluídos.</p></div>
+    <div class="ritual-step"><div class="n">iv</div><h3 class="serif">Publicação <span class="it">cuidadosa</span></h3><p>Domínio próprio, HTTPS, ficha do Google Negócios e Maps configurados, marcação para IA. No ar com tudo medido.</p></div>
+  </div>
+</div></section>
+
+<!-- WIREFRAME -->
+<section class="wireframe" id="exemplo"><div class="wrap">
+  <div class="section-head">
+    <div class="n">iv</div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px">Capítulo IV · como o seu site se vê</div>
+      <h2>Um <span class="it">exemplo</span> em escala real.</h2>
+      <p class="deck">Tom calmo, agendamento sempre à vista, prova social sem promessa. A paciente entende a clínica nos primeiros doze segundos.</p>
+    </div>
+  </div>
+  <div class="wf-frame">
+    <div class="wf-nav">
+      <div class="wf-logo">Aurora Estética</div>
+      <div class="wf-links"><span>Tratamentos</span><span>Equipe</span><span>Resultados</span><span class="pill">Agendar avaliação</span></div>
+    </div>
+    <div class="wf-hero">
+      <div>
+        <div class="wf-meta">Estética facial · Cambuí · Campinas</div>
+        <h3 class="wf-h">Cuidado <span class="it">devagar.</span></h3>
+        <p class="wf-p">Protocolos faciais e estética avançada num ritmo só seu. Primeira avaliação sem compromisso, com escuta e diagnóstico.</p>
+        <div class="wf-cta"><span class="wf-btn fill">Agendar avaliação</span><span class="wf-btn line">WhatsApp</span></div>
       </div>
-      <div class="mock-hero">
-        <div>
-          <div class="mock-tag">Estética facial · Cambuí · Campinas</div>
-          <div class="mock-h">Cuidado devagar.</div>
-          <div class="mock-p">Protocolos faciais e estética avançada num ritmo só seu. Primeira avaliação sem compromisso.</div>
-          <div class="mock-cta"><span class="mock-btn fill">Agendar avaliação</span><span class="mock-btn line">WhatsApp</span></div>
-        </div>
-        <div class="mock-portrait"><span class="badge">ambiente · foto real</span></div>
-      </div>
-      <div class="mock-areas">
-        <div class="lbl">Tratamentos</div>
-        <div class="mock-area-grid">
-          <div class="mock-area"><div class="t serif">Limpeza de pele</div><div class="d">Protocolo profundo e hidratação</div></div>
-          <div class="mock-area"><div class="t serif">Harmonização</div><div class="d">Facial com avaliação prévia</div></div>
-          <div class="mock-area"><div class="t serif">Estética corporal</div><div class="d">Drenagem, modelagem, firmeza</div></div>
-        </div>
+      <div class="wf-img"><span class="lbl">ambiente · foto real</span></div>
+    </div>
+    <div class="wf-treats">
+      <div class="wf-treats-h"><span class="t">Tratamentos em destaque</span><span class="x">Página por procedimento</span></div>
+      <div class="wf-treats-grid">
+        <div class="wf-treat"><div class="t">Limpeza de pele</div><div class="d">Protocolo profundo, com hidratação ativa e diagnóstico individual.</div></div>
+        <div class="wf-treat"><div class="t">Harmonização facial</div><div class="d">Avaliação prévia, abordagem natural, sem promessa de resultado.</div></div>
+        <div class="wf-treat"><div class="t">Estética corporal</div><div class="d">Drenagem, modelagem e firmeza com protocolos personalizados.</div></div>
       </div>
     </div>
   </div>
   <div class="wf-notes">
-    <div class="wf-note"><b>Botão de agendar fixo</b>Sempre à vista, no topo e no fim — o paciente marca sem procurar.</div>
-    <div class="wf-note"><b>Tom calmo</b>Cores e tipografia que transmitem cuidado, não pressão.</div>
-    <div class="wf-note"><b>Tratamentos claros</b>Cada serviço explicado, ótimo pra SEO local.</div>
-    <div class="wf-note"><b>Prova social</b>Resultados e avaliações que tiram a insegurança de marcar.</div>
+    <div class="wf-note"><b>Agendar à vista</b>O botão acompanha o paciente em todo o scroll — sem fricção.</div>
+    <div class="wf-note"><b>Tom calmo</b>Tipografia editorial e paleta de areia transmitem cuidado, não pressa.</div>
+    <div class="wf-note"><b>Tratamentos detalhados</b>Cada procedimento vira página própria, indexada no Google.</div>
+    <div class="wf-note"><b>Prova ética</b>Resultados e reviews dentro das normas do conselho.</div>
   </div>
 </div></section>
 
-<section class="sec sec-light"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span> Como funciona</div>
-  <h2 class="h2 serif">Do briefing ao ar em <span class="em">poucas semanas</span>.</h2>
-  <div class="proc">
-    <div class="step"><div class="n serif">01</div><h3 class="serif">Conversa</h3><p>Entendo a clínica, os procedimentos, o público e o tom que combina com você.</p></div>
-    <div class="step"><div class="n serif">02</div><h3 class="serif">Estrutura</h3><p>Defino páginas, textos e identidade calma e elegante, com o agendamento no centro.</p></div>
-    <div class="step"><div class="n serif">03</div><h3 class="serif">Construção</h3><p>Site rápido, com SEO local, Google Maps e galeria de resultados. Você revisa e ajustamos.</p></div>
-    <div class="step"><div class="n serif">04</div><h3 class="serif">No ar</h3><p>Publicação com domínio próprio, HTTPS e ficha do Google configurada. Pronto pra agendar.</p></div>
+<!-- BENEFÍCIOS -->
+<section class="beneficios"><div class="wrap">
+  <div class="section-head">
+    <div class="n">v</div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px">Capítulo V · o que esse site sustenta</div>
+      <h2>Seis razões pelas quais a paciente <span class="it">decide marcar</span>.</h2>
+    </div>
+  </div>
+  <div class="ben-grid">
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3>Agenda <span class="it">à mão</span></h3><p>Marcação integrada (WhatsApp, Calendly, Reservio ou o sistema atual). A paciente agenda sem fila, e a recepção sente alívio.</p></article>
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg></div><h3>Credibilidade <span class="it">imediata</span></h3><p>Estrutura, equipe, formação e ambiente em design sereno. Confiança que se estabelece nos primeiros doze segundos.</p></article>
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div><h3>Galeria <span class="it">ética</span></h3><p>Antes e depois com consentimento, dentro das normas do conselho. Prova real sem promessa de resultado.</p></article>
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.7-7-11a7 7 0 0114 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>Achada no <span class="it">Maps</span></h3><p>SEO local para "[seu procedimento] em [sua cidade]" e Google Negócios otimizado. Visibilidade onde a paciente decide.</p></article>
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.5 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg></div><h3>Reviews <span class="it">em destaque</span></h3><p>Avaliações recentes do Google integradas. A prova social que mais pesa na hora de marcar.</p></article>
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div><h3>Mobile <span class="it">premium</span></h3><p>78% das pacientes pesquisam pelo celular. Seu site carrega em menos de 1,5s — e respira no telefone.</p></article>
   </div>
 </div></section>
 
-<section class="sec sec-light" style="padding-top:0"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 0c0 2-2.5 2-2.5 4M12 17h.01"/></svg></span> Dúvidas frequentes</div>
-  <h2 class="h2 serif">Antes de <span class="em">decidir</span>.</h2>
-  <div class="faq-list">
-    <details class="faq-item"><summary class="serif">Dá pra integrar agendamento de verdade?</summary><div class="a">Sim. Posso conectar com WhatsApp (o mais usado), com uma agenda online (como Calendly/Reservio) ou com o sistema que a clínica já usa. O paciente marca sozinho, você recebe o aviso.</div></details>
-    <details class="faq-item"><summary class="serif">Posso usar fotos de antes e depois?</summary><div class="a">Pode, com consentimento do paciente e dentro das regras do seu conselho (CFM, CRO, etc.). Monto a galeria de forma elegante e ética, sem promessa de resultado.</div></details>
-    <details class="faq-item"><summary class="serif">E a LGPD com dados de pacientes?</summary><div class="a">O site institucional não armazena prontuário. Formulários de contato seguem a LGPD com aviso de privacidade. Dados sensíveis ficam no seu sistema de gestão, não no site.</div></details>
-    <details class="faq-item"><summary class="serif">Funciona pra dentista, fisio, nutri, psicólogo?</summary><div class="a">Sim. A mesma lógica de confiança, agendamento e SEO local serve para qualquer clínica ou consultório de saúde e bem-estar.</div></details>
-    <details class="faq-item"><summary class="serif">Quanto tempo leva?</summary><div class="a">Em média 2 a 4 semanas, dependendo da quantidade de tratamentos, textos e fotos. Te passo um cronograma na conversa inicial.</div></details>
+<!-- TESTEMUNHOS -->
+<section class="testes"><div class="wrap">
+  <div class="section-head">
+    <div class="n">vi</div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px">Capítulo VI · observações de quem cuida</div>
+      <h2>Palavras de quem <span class="it">já passou</span> por aqui.</h2>
+    </div>
+  </div>
+  <div class="testes-grid">
+    <div class="teste">
+      <blockquote>A recepção parou de receber DM no horário do almoço — porque o agendamento começou a chegar pronto pelo site. Sentimos a clínica respirar.</blockquote>
+      <div class="who"><b>Dra. M.</b>Estética facial · Campinas</div>
+    </div>
+    <div class="teste">
+      <blockquote>Em dois meses no ar, a clínica passou a aparecer nas três primeiras posições do Maps quando buscam pelo bairro.</blockquote>
+      <div class="who"><b>Coordenação</b>Clínica integrativa · interior</div>
+    </div>
+    <div class="teste">
+      <blockquote>A paciente chega com a confiança já estabelecida — leu a página do procedimento, já entende o protocolo. A consulta começa sem fricção.</blockquote>
+      <div class="who"><b>Dra. R.</b>Dermatologia clínica</div>
+    </div>
   </div>
 </div></section>
 
-<section class="cta-final"><div class="wrap">
-  <h2 class="serif">Sua agenda pode <span class="em">encher sozinha</span>.</h2>
-  <p>Vamos colocar sua clínica no Google e deixar o agendamento a um clique. A primeira conversa é sem compromisso.</p>
-  <a class="btn btn-1" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Quero%20conversar%20sobre%20um%20site%20pra%20minha%20cl%C3%ADnica." target="_blank" rel="noopener">Falar no WhatsApp →</a>
+<!-- FAQ -->
+<section class="faq-sec"><div class="wrap">
+  <div class="section-head">
+    <div class="n">vii</div>
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px">Capítulo VII · antes de marcar</div>
+      <h2>Perguntas <span class="it">honestas</span>.</h2>
+    </div>
+  </div>
+  <div class="faq">
+    <details class="faq-item"><summary>Dá pra integrar agendamento de verdade?</summary><div class="a">Sim. Conecto ao WhatsApp (mais usado), a uma agenda online (Calendly, Reservio, Setmore) ou ao sistema de gestão que a clínica já usa. A paciente marca sozinha — você recebe o aviso e confirma.</div></details>
+    <details class="faq-item"><summary>Posso publicar fotos de antes e depois?</summary><div class="a">Pode, desde que com consentimento expresso da paciente e dentro das regras do seu conselho (CFM, CRO, CFF, etc.). Construo a galeria de forma ética e elegante, com tratamento visual que evita promessa de resultado.</div></details>
+    <details class="faq-item"><summary>E a LGPD com dados das pacientes?</summary><div class="a">O site institucional não armazena prontuário. Os formulários seguem a LGPD com aviso claro de privacidade e finalidade. Dados sensíveis ficam no seu sistema de gestão clínica — onde devem estar.</div></details>
+    <details class="faq-item"><summary>Funciona para dentista, fisio, nutri, psicólogo, terapias?</summary><div class="a">Sim. A mesma lógica de calma visual, agendamento simples, autoridade ética e SEO local serve a qualquer profissional de saúde e bem-estar — adaptando o tom e os termos próprios da especialidade.</div></details>
+    <details class="faq-item"><summary>Quanto tempo leva para ficar pronto?</summary><div class="a">De duas a quatro semanas, dependendo da quantidade de tratamentos, do material disponível (textos, fotos do ambiente, equipe) e do ritmo de revisão. Cronograma firme entregue na primeira conversa.</div></details>
+    <details class="faq-item"><summary>Qual o investimento?</summary><div class="a">Conversado por escrito após a primeira conversa. Sem mensalidade obrigatória, sem fidelidade, sem pacote engessado. Pagamento parcelado em entregas — você só fecha quando o escopo está totalmente claro.</div></details>
+  </div>
 </div></section>
 
+<!-- CTA FINAL -->
+<section class="cta-final"><div class="wrap cta-final-in">
+  <span class="eyebrow">Convite final</span>
+  <h2>Sua agenda merece <span class="it">encher sozinha</span>.</h2>
+  <p>Uma conversa de trinta minutos no WhatsApp. Sem briefing, sem pressão. Te mostro o que dá pra fazer pra sua clínica e devolvo uma proposta por escrito em até quarenta e oito horas.</p>
+  <a class="btn-1" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Quero%20conversar%20sobre%20um%20site%20pra%20minha%20cl%C3%ADnica." target="_blank" rel="noopener">Quero marcar essa conversa →</a>
+</div></section>
+
+<!-- FOOTER -->
 <footer class="foot"><div class="wrap">
-  <span>© 2026 Luis Morais — Estúdio web · Campinas/SP</span>
-  <a href="index.html" class="nav-back">← Voltar ao portfólio</a>
+  <span>Volume II · Clínicas · cuidado lento, presença firme · Luis Morais</span>
+  <a href="index.html">← Voltar ao portfólio</a>
 </div></footer>
 
 </body>
