@@ -2056,6 +2056,12 @@
       var nh = +active.getAttribute('data-h');
       var scale = cw / nw;
       if (useM && scale > MOBILE_MAX) scale = MOBILE_MAX;
+      // Hero (topo) no desktop: cap pela altura do viewport pra nunca passar de 100vh
+      if (sec.id === 'topo' && !useM) {
+        var vh = window.innerHeight || document.documentElement.clientHeight;
+        var scaleByH = vh / nh;
+        if (scaleByH < scale) scale = scaleByH;
+      }
       var scaledW = nw * scale;
       var left = Math.max(0, (cw - scaledW) / 2);
       active.style.transform = 'scale(' + scale + ')';
