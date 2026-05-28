@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Preview · Hero atual com painel Gemini claro · Luis Morais</title>
+<title>Preview · Hero atual com painel claro (mesma paleta) · Luis Morais</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,34 +13,23 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{background:#E8DCC2}
 .notice{
-  background:#1A1614;color:#fff;text-align:center;padding:10px 16px;
+  background:#221A12;color:#F1E7D5;text-align:center;padding:10px 16px;
   font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
   position:relative;z-index:99;
 }
-.notice b{
-  background:linear-gradient(135deg,#4796E3,#7B5DD6 50%,#D63B92);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
-}
-.scaler{
-  width:100%;overflow-x:auto;background:#E8DCC2;
-}
-.scaler-inner{
-  width:1440px;min-width:1440px;
-  position:relative;margin:0 auto;
-}
-@media(max-width:1480px){
-  .scaler-inner{transform-origin:top center;}
-}
+.notice b{color:#B97F37;font-weight:600}
+.scaler{width:100%;overflow-x:auto;background:#E8DCC2}
+.scaler-inner{width:1440px;min-width:1440px;position:relative;margin:0 auto}
 </style>
 </head>
 <body>
 
-<div class="notice">Preview · sua hero atual com painel <b>Gemini claro</b> · não toca no index — só pra aprovação</div>
+<div class="notice">Preview · hero atual com painel <b>claro / mesma paleta</b> · não toca no index</div>
 
 <div class="scaler">
 <div class="scaler-inner">
 
-<!-- HERO ORIGINAL (copiado do index.html, intacto exceto o painel) -->
-<div class="hAB-root" data-screen-label="Hero · Editorial + AI panel claro Gemini"><style>
+<div class="hAB-root" data-screen-label="Hero · Editorial + AI panel (light brand)"><style>
         .hAB-root{
           --bg:#E8DCC2; --surface:#F1E7D5; --panel:#0F0D0B; --cream:#221A12; --cream-dim:#6E5E46;
           --ochre:#B97F37; --ochre-deep:#8A5E28; --line:rgba(34,26,18,0.16);
@@ -56,84 +45,38 @@ html,body{background:#E8DCC2}
         }
 
         /* nav */
-        .hAB-nav{
-          position:absolute; top:0; left:0; right:0; height:84px; z-index:5;
-          display:flex; align-items:center; justify-content:space-between;
-          padding:0 56px; border-bottom:1px solid var(--line);
-        }
-        .hAB-logo{
-          font-family:'Fraunces',serif; font-weight:500; font-size:22px; letter-spacing:-.012em;
-          display:flex; align-items:baseline; gap:8px;
-        }
+        .hAB-nav{ position:absolute; top:0; left:0; right:0; height:84px; z-index:5; display:flex; align-items:center; justify-content:space-between; padding:0 56px; border-bottom:1px solid var(--line); }
+        .hAB-logo{ font-family:'Fraunces',serif; font-weight:500; font-size:22px; letter-spacing:-.012em; display:flex; align-items:baseline; gap:8px; }
         .hAB-links{ display:flex; gap:34px; align-items:center; font-size:14px; color:var(--cream-dim); }
         .hAB-links a{ color:inherit; text-decoration:none; transition:color .2s; }
         .hAB-links a:hover{ color:var(--cream); }
-        .hAB-wa{
-          color:var(--bg) !important; background:var(--cream);
-          padding:11px 20px 11px 18px; border-radius:999px; font-weight:500; font-size:14px;
-          display:inline-flex; align-items:center; gap:8px; transition:background .2s, transform .2s;
-        }
+        .hAB-wa{ color:var(--bg) !important; background:var(--cream); padding:11px 20px 11px 18px; border-radius:999px; font-weight:500; font-size:14px; display:inline-flex; align-items:center; gap:8px; transition:background .2s, transform .2s; }
         .hAB-wa:hover{ background:var(--ochre); transform:translateY(-1px); }
 
         /* grid */
-        .hAB-stage{
-          position:absolute; inset:84px 0 84px 0;
-          display:grid; grid-template-columns: 84px 1fr 540px 56px; column-gap:44px;
-          padding:0 56px 0 0; align-items:stretch;
-        }
+        .hAB-stage{ position:absolute; inset:84px 0 84px 0; display:grid; grid-template-columns: 84px 1fr 540px 56px; column-gap:44px; padding:0 56px 0 0; align-items:stretch; }
 
         /* spine */
-        .hAB-spine{
-          padding:40px 0 36px 56px;
-          display:flex; flex-direction:column; justify-content:space-between;
-          border-right:1px solid var(--line);
-          font-family:'Geist Mono',ui-monospace,monospace;
-          font-size:11px; color:var(--cream-dim); letter-spacing:.16em; text-transform:uppercase;
-        }
-        .hAB-spine .vlabel{
-          writing-mode:vertical-rl; transform:rotate(180deg); align-self:center;
-          letter-spacing:.32em;
-        }
+        .hAB-spine{ padding:40px 0 36px 56px; display:flex; flex-direction:column; justify-content:space-between; border-right:1px solid var(--line); font-family:'Geist Mono',ui-monospace,monospace; font-size:11px; color:var(--cream-dim); letter-spacing:.16em; text-transform:uppercase; }
+        .hAB-spine .vlabel{ writing-mode:vertical-rl; transform:rotate(180deg); align-self:center; letter-spacing:.32em; }
 
         /* center */
         .hAB-center{ padding:48px 0 36px; display:flex; flex-direction:column; }
-        .hAB-kicker{
-          display:inline-flex; align-items:center; gap:12px;
-          font-family:'Geist Mono',ui-monospace,monospace;
-          font-size:11px; color:var(--cream-dim); letter-spacing:.18em; text-transform:uppercase;
-          margin-bottom:24px;
-        }
-        .hAB-kicker .tick{ width:6px; height:6px; background:var(--ochre); border-radius:50%; box-shadow:0 0 0 4px rgba(227,168,91,.18); }
+        .hAB-kicker{ display:inline-flex; align-items:center; gap:12px; font-family:'Geist Mono',ui-monospace,monospace; font-size:11px; color:var(--cream-dim); letter-spacing:.18em; text-transform:uppercase; margin-bottom:24px; }
+        .hAB-kicker .tick{ width:6px; height:6px; background:var(--ochre); border-radius:50%; box-shadow:0 0 0 4px rgba(185,127,55,.18); }
         .hAB-kicker b{ color:var(--cream); font-weight:500; }
 
-        .hAB-h1{
-          font-family:'Fraunces',serif; font-weight:380; letter-spacing:-.025em;
-          line-height:.96; font-size:88px; color:var(--cream);
-          margin:0 0 28px; max-width:11ch; text-wrap:pretty;
-          font-feature-settings:"ss01","ss03";
-        }
+        .hAB-h1{ font-family:'Fraunces',serif; font-weight:380; letter-spacing:-.025em; line-height:.96; font-size:88px; color:var(--cream); margin:0 0 28px; max-width:11ch; text-wrap:pretty; font-feature-settings:"ss01","ss03"; }
         .hAB-h1 .em{ font-style:italic; color:var(--ochre); font-weight:380; }
         .hAB-h1 .qt{ font-family:'Fraunces',serif; color:var(--cream-dim); font-style:italic; font-weight:380; }
-        .hAB-h1 sup{
-          font-family:'Geist Mono',ui-monospace,monospace; font-size:17px; color:var(--ochre);
-          font-style:normal; font-weight:500; vertical-align:super; line-height:0;
-          margin-left:4px; top:-.5em; position:relative;
-        }
+        .hAB-h1 sup{ font-family:'Geist Mono',ui-monospace,monospace; font-size:17px; color:var(--ochre); font-style:normal; font-weight:500; vertical-align:super; line-height:0; margin-left:4px; top:-.5em; position:relative; }
 
-        .hAB-sub{
-          font-size:16.5px; line-height:1.55; color:var(--cream-dim); max-width:40ch;
-          margin-bottom:32px;
-        }
+        .hAB-sub{ font-size:16.5px; line-height:1.55; color:var(--cream-dim); max-width:40ch; margin-bottom:32px; }
         .hAB-sub b{ color:var(--cream); font-weight:500; }
         .hAB-sub .fn{ font-family:'Geist Mono',ui-monospace,monospace; font-size:11px; color:var(--ochre); vertical-align:super; line-height:0; margin-right:2px; }
 
         .hAB-cta{ display:flex; gap:12px; margin-bottom:auto; }
-        .hAB-btn{
-          font-size:15px; font-weight:500; text-decoration:none;
-          padding:14px 22px; border-radius:999px;
-          display:inline-flex; align-items:center; gap:10px;
-          transition:transform .2s, background .2s, color .2s, border-color .2s;
-        }
+        .hAB-btn{ font-size:15px; font-weight:500; text-decoration:none; padding:14px 22px; border-radius:999px; display:inline-flex; align-items:center; gap:10px; transition:transform .2s, background .2s, color .2s, border-color .2s; }
         .hAB-btn-1{ background:var(--ochre); color:#241608; }
         .hAB-btn-1:hover{ background:#241608; color:var(--bg); transform:translateY(-2px); }
         .hAB-btn-2{ color:var(--cream); border:1px solid var(--line); background:transparent; }
@@ -142,51 +85,42 @@ html,body{background:#E8DCC2}
         /* right — AI panel */
         .hAB-right{ padding:40px 0 36px; display:flex; flex-direction:column; gap:14px; position:relative; }
 
-        .hAB-tabs{
-          display:flex; gap:6px;
-          font-family:'Geist Mono',ui-monospace,monospace; font-size:10.5px;
-          letter-spacing:.14em; text-transform:uppercase;
-        }
-        .hAB-tab{
-          padding:7px 12px; border:1px solid var(--line); border-radius:999px;
-          color:var(--cream-dim); background:transparent; cursor:pointer;
-          transition:color .2s, border-color .2s, background .2s;
-          display:inline-flex; align-items:center; gap:6px;
-        }
+        .hAB-tabs{ display:flex; gap:6px; font-family:'Geist Mono',ui-monospace,monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; }
+        .hAB-tab{ padding:7px 12px; border:1px solid var(--line); border-radius:999px; color:var(--cream-dim); background:transparent; cursor:pointer; transition:color .2s, border-color .2s, background .2s; display:inline-flex; align-items:center; gap:6px; }
         .hAB-tab .pt{ width:5px; height:5px; border-radius:50%; background:currentColor; opacity:.5; }
-        .hAB-tab.on{ color:var(--cream); border-color:var(--ochre); background:rgba(227,168,91,.08); }
-        .hAB-tab.on .pt{ background:var(--ochre); opacity:1; box-shadow:0 0 0 3px rgba(227,168,91,.18); }
+        .hAB-tab.on{ color:var(--cream); border-color:var(--ochre); background:rgba(185,127,55,.10); }
+        .hAB-tab.on .pt{ background:var(--ochre); opacity:1; box-shadow:0 0 0 3px rgba(185,127,55,.20); }
 
         /* ============================================================
-           PAINEL GEMINI CLARO — override do .hAB-panel e seus filhos
+           PAINEL CLARO — mesma paleta, só aclarado
+           Pensar: 'papel cream sobre a toalha cream' — papel mais claro,
+           hairlines marrons sutis, mantém ocre, sem cores estranhas
            ============================================================ */
         .hAB-panel{
-          /* re-declara variáveis em modo claro Gemini */
-          --cream:#1A1614;            /* texto principal escuro */
-          --cream-dim:#6B6660;        /* texto secundário cinza quente */
-          --ochre:#7B5DD6;            /* accent primário = violeta Gemini */
-          --ochre-deep:#5B3DBD;
-          --line:rgba(26,22,20,0.08); /* hairlines sutis */
-          --g-blue:#4796E3;
-          --g-violet:#7B5DD6;
-          --g-pink:#D63B92;
-          --g-grad:linear-gradient(135deg,#4796E3,#7B5DD6 50%,#D63B92);
-          --g-grad-text:linear-gradient(135deg,#3A82D1,#7B5DD6 55%,#D63B92);
+          /* tons de papel quente, mais claros que o bg da hero */
+          --paper:#FBF6E8;          /* base do painel: papel quase branco quente */
+          --paper-2:#F4ECD7;        /* segundo tom (cards internos) */
+          --ink:#2A2018;            /* texto principal: marrom escuro brand */
+          --ink-dim:#7A6447;        /* texto secundário: marrom suave */
+          --hair:rgba(42,32,24,0.12);   /* linhas finas */
+          --hair-soft:rgba(42,32,24,0.06);
+          --moss:#6B7340;           /* verde sálvia (substitui green/blue do tema) */
+
           flex:1;
-          background:#FFFFFF;
-          border:1px solid rgba(26,22,20,0.06);
+          background:var(--paper);
+          border:1px solid var(--hair);
           border-radius:14px;
           display:flex; flex-direction:column; overflow:hidden;
           position:relative;
           box-shadow:
-            0 30px 80px -32px rgba(26,22,20,.22),
-            0 8px 24px -12px rgba(123,93,214,.16),
-            inset 0 1px 0 rgba(255,255,255,1);
+            0 30px 60px -28px rgba(74,55,30,.28),
+            0 6px 18px -8px rgba(74,55,30,.14),
+            inset 0 1px 0 rgba(255,255,255,.6);
         }
-        /* Borda gradient sutil (mask trick) */
+        /* contorno ocre tênue (assinatura da marca) */
         .hAB-panel::before{
-          content:""; position:absolute; inset:0; padding:1.5px; border-radius:14px;
-          background:linear-gradient(135deg,rgba(71,150,227,.7),rgba(123,93,214,.7) 50%,rgba(214,59,146,.7));
+          content:""; position:absolute; inset:0; padding:1px; border-radius:14px;
+          background:linear-gradient(180deg,rgba(185,127,55,.32),rgba(138,94,40,.10));
           -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
           -webkit-mask-composite:xor; mask-composite:exclude;
           pointer-events:none;
@@ -194,18 +128,18 @@ html,body{background:#E8DCC2}
 
         .hAB-pane-head{
           display:flex; align-items:center; gap:10px; padding:14px 18px;
-          border-bottom:1px solid var(--line);
+          border-bottom:1px solid var(--hair);
           font-family:'Geist Mono',ui-monospace,monospace; font-size:11px;
-          color:var(--cream-dim); letter-spacing:.06em;
-          background:linear-gradient(180deg,#FCFBFF,#FFFFFF);
+          color:var(--ink-dim); letter-spacing:.06em;
+          background:linear-gradient(180deg,#FCF8EB,var(--paper));
         }
         .hAB-pane-head .pulse{
-          width:7px; height:7px; border-radius:50%; background:#34B17B;
-          box-shadow:0 0 0 0 rgba(52,177,123,.55); animation:hAB-pulse 1.8s infinite;
+          width:7px; height:7px; border-radius:50%; background:var(--moss);
+          box-shadow:0 0 0 0 rgba(107,115,64,.55); animation:hAB-pulse 1.8s infinite;
         }
-        @keyframes hAB-pulse{ 0%{box-shadow:0 0 0 0 rgba(52,177,123,.55)} 70%{box-shadow:0 0 0 8px rgba(52,177,123,0)} 100%{box-shadow:0 0 0 0 rgba(52,177,123,0)} }
-        .hAB-pane-head b{ color:var(--cream); font-weight:600; }
-        .hAB-pane-head .right{ margin-left:auto; color:var(--cream-dim); }
+        @keyframes hAB-pulse{ 0%{box-shadow:0 0 0 0 rgba(107,115,64,.55)} 70%{box-shadow:0 0 0 8px rgba(107,115,64,0)} 100%{box-shadow:0 0 0 0 rgba(107,115,64,0)} }
+        .hAB-pane-head b{ color:var(--ink); font-weight:600; }
+        .hAB-pane-head .right{ margin-left:auto; color:var(--ink-dim); }
 
         .hAB-pane{ padding:18px 20px; display:flex; flex-direction:column; gap:14px; flex:1; min-height:0; }
 
@@ -214,76 +148,78 @@ html,body{background:#E8DCC2}
           flex:0 0 28px; width:28px; height:28px; border-radius:8px;
           display:flex; align-items:center; justify-content:center;
           font-family:'Geist Mono',monospace; font-size:11px; font-weight:600;
-          border:1px solid transparent;
+          border:1px solid var(--hair);
         }
-        .hAB-msg.u .av{ background:#E8F1FB; color:#3A82D1; border-color:transparent; }
+        .hAB-msg.u .av{
+          background:#F4ECD7; color:var(--ink-dim);
+        }
         .hAB-msg.a .av{
-          background:var(--g-grad); color:#fff; border:0; box-shadow:0 4px 12px -2px rgba(123,93,214,.45);
+          background:linear-gradient(160deg,#C9913F 0%, #8A5E28 100%);
+          color:#FBF6E8; border:0;
+          box-shadow:0 4px 10px -2px rgba(138,94,40,.45);
         }
-        .hAB-msg.a .av svg{ width:14px; height:14px; fill:#fff; }
+        .hAB-msg.a .av .star{
+          font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1;
+        }
         .hAB-msg .bd{ flex:1; min-width:0; }
         .hAB-msg .who{
           font-family:'Geist Mono',monospace; font-size:10.5px; letter-spacing:.14em;
-          text-transform:uppercase; color:var(--cream-dim); margin-bottom:5px;
+          text-transform:uppercase; color:var(--ink-dim); margin-bottom:5px;
         }
-        .hAB-msg.a .who .gradtag{
-          background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
-        }
-        .hAB-msg .txt{ font-size:14.5px; color:var(--cream); line-height:1.55; }
-        .hAB-cur{ display:inline-block; width:7px; height:14px; background:var(--g-violet); margin-left:2px; vertical-align:-2px; animation:hAB-blink 1s steps(2) infinite; }
+        .hAB-msg.a .who b{ color:#8A5E28; font-weight:600; }
+        .hAB-msg .txt{ font-size:14.5px; color:var(--ink); line-height:1.55; }
+        .hAB-cur{ display:inline-block; width:7px; height:14px; background:var(--ochre); margin-left:2px; vertical-align:-2px; animation:hAB-blink 1s steps(2) infinite; }
         @keyframes hAB-blink{ 50%{opacity:0} }
 
-        /* recommendation card (claro Gemini) */
+        /* recommendation card (papel mais leve sobre o painel) */
         .hAB-rec{
-          background:linear-gradient(180deg,#FCFAFF,#FFFFFF);
-          border:1px solid rgba(123,93,214,.20);
-          border-radius:12px; padding:14px 16px; display:flex; align-items:center; gap:14px;
+          background:linear-gradient(180deg,#FFFAEC,#FBF4E0);
+          border:1px solid rgba(185,127,55,.30);
+          border-radius:10px; padding:14px 16px; display:flex; align-items:center; gap:14px;
           position:relative; overflow:hidden;
+          box-shadow:0 6px 18px -10px rgba(138,94,40,.22);
         }
         .hAB-rec::before{
           content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
-          background:var(--g-grad);
+          background:linear-gradient(180deg,#C9913F,#8A5E28);
         }
         .hAB-rec .mark{
           font-family:'Geist Mono',monospace; font-size:9.5px; letter-spacing:.18em;
-          color:#fff; background:var(--g-grad); padding:4px 9px; border-radius:5px;
+          color:#FBF6E8; background:linear-gradient(135deg,#C9913F,#8A5E28); padding:4px 9px; border-radius:5px;
           display:inline-flex; align-items:center; gap:5px; flex-shrink:0;
-          box-shadow:0 4px 12px -2px rgba(123,93,214,.4);
+          box-shadow:0 3px 8px -2px rgba(138,94,40,.35);
         }
         .hAB-rec .mark .st{ font-family:'Fraunces',serif; font-style:italic; }
         .hAB-rec .body{ flex:1; min-width:0; }
-        .hAB-rec .name{ font-family:'Fraunces',serif; font-size:22px; color:var(--cream); line-height:1.1; margin-bottom:3px; letter-spacing:-.012em; font-weight:400; }
-        .hAB-rec .name em{ font-style:italic; color:var(--g-violet); font-weight:400; }
-        .hAB-rec .meta{ font-size:12.5px; color:var(--cream-dim); display:flex; gap:8px; align-items:center; }
-        .hAB-rec .meta .dot{ width:3px; height:3px; border-radius:50%; background:var(--cream-dim); }
-        .hAB-rec .meta .open{ color:#34B17B; font-weight:500; }
+        .hAB-rec .name{ font-family:'Fraunces',serif; font-size:22px; color:var(--ink); line-height:1.1; margin-bottom:3px; letter-spacing:-.012em; font-weight:400; }
+        .hAB-rec .name em{ font-style:italic; color:#8A5E28; font-weight:400; }
+        .hAB-rec .meta{ font-size:12.5px; color:var(--ink-dim); display:flex; gap:8px; align-items:center; }
+        .hAB-rec .meta .dot{ width:3px; height:3px; border-radius:50%; background:var(--ink-dim); }
+        .hAB-rec .meta .open{ color:var(--moss); font-weight:500; }
         .hAB-rec .built{
-          font-family:'Geist Mono',monospace; font-size:9.5px;
-          background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
+          font-family:'Geist Mono',monospace; font-size:9.5px; color:#8A5E28;
           letter-spacing:.16em; text-transform:uppercase; margin-top:7px;
-          display:inline-flex; align-items:center; gap:6px;
+          display:inline-flex; align-items:center; gap:6px; font-weight:600;
         }
-        .hAB-rec .built::before{ content:""; width:14px; height:1px; background:var(--g-violet); }
+        .hAB-rec .built::before{ content:""; width:14px; height:1px; background:#B97F37; }
 
-        .hAB-others{
-          padding:0 2px; display:flex; flex-direction:column; gap:8px;
-        }
+        .hAB-others{ padding:0 2px; display:flex; flex-direction:column; gap:8px; }
         .hAB-others .lbl{
-          font-family:'Geist Mono',monospace; font-size:10px; color:var(--cream-dim);
+          font-family:'Geist Mono',monospace; font-size:10px; color:var(--ink-dim);
           letter-spacing:.16em; text-transform:uppercase; margin-bottom:2px;
         }
         .hAB-other{
           display:flex; align-items:center; gap:10px; padding:8px 12px;
-          border:1px solid rgba(26,22,20,0.08); border-radius:8px;
-          font-size:13px; color:var(--cream-dim); background:#FAFAFB;
+          border:1px solid var(--hair-soft); border-radius:8px;
+          font-size:13px; color:var(--ink-dim); background:#F8F1DD;
         }
         .hAB-other .gr{
-          flex:1; height:3px; background:rgba(26,22,20,0.06); border-radius:2px;
+          flex:1; height:3px; background:rgba(42,32,24,.08); border-radius:2px;
           position:relative; overflow:hidden; max-width:140px;
         }
         .hAB-other .gr::after{
           content:""; position:absolute; left:0; top:0; bottom:0;
-          background:linear-gradient(90deg,#4796E3,#7B5DD6); border-radius:2px;
+          background:linear-gradient(90deg,#B97F37,#8A5E28); border-radius:2px;
         }
         .hAB-other.n1 .gr::after{ width:64%; }
         .hAB-other.n2 .gr::after{ width:48%; }
@@ -292,20 +228,18 @@ html,body{background:#E8DCC2}
         .hAB-cites{ display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
         .hAB-cite{
           font-family:'Geist Mono',monospace; font-size:10px;
-          padding:5px 9px; border:1px solid rgba(26,22,20,0.10); border-radius:6px;
-          color:var(--cream-dim); letter-spacing:.04em; background:#fff;
+          padding:5px 9px; border:1px solid var(--hair); border-radius:6px;
+          color:var(--ink-dim); letter-spacing:.04em; background:#FCF8EB;
           display:inline-flex; align-items:center; gap:5px;
         }
-        .hAB-cite::before{ content:"⌕"; color:var(--g-violet); font-size:11px; font-weight:600; }
+        .hAB-cite::before{ content:"⌕"; color:#8A5E28; font-size:11px; font-weight:600; }
 
-        /* ============================================================
-           bottom strip — sem alteração
-           ============================================================ */
-        .hAB-bottom{
-          position:absolute; left:0; right:0; bottom:0; height:84px; z-index:4;
-          display:grid; grid-template-columns: 84px 1fr 1fr 1fr; align-items:center;
-          padding:0 56px 0 0; border-top:1px solid var(--line);
-        }
+        /* fade */
+        .hAB-flip{ animation: hAB-fade .5s ease; }
+        @keyframes hAB-fade{ from{ opacity:0; transform:translateY(6px); } to{ opacity:1; transform:none; } }
+
+        /* bottom strip — sem alteração */
+        .hAB-bottom{ position:absolute; left:0; right:0; bottom:0; height:84px; z-index:4; display:grid; grid-template-columns: 84px 1fr 1fr 1fr; align-items:center; padding:0 56px 0 0; border-top:1px solid var(--line); }
         .hAB-bottom .cell{ padding:0 28px; height:100%; display:flex; flex-direction:column; justify-content:center; gap:6px; border-right:1px solid var(--line); }
         .hAB-bottom .cell:last-child{ border-right:0; }
         .hAB-bottom .lbl{ font-family:'Geist Mono',ui-monospace,monospace; font-size:10px; color:var(--cream-dim); letter-spacing:.18em; text-transform:uppercase; }
@@ -363,9 +297,9 @@ html,body{background:#E8DCC2}
                 </div>
               </div>
               <div class="hAB-msg a hAB-flip">
-                <div class="av"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12 2c.6 5.7 4.3 9.4 10 10-5.7.6-9.4 4.3-10 10-.6-5.7-4.3-9.4-10-10 5.7-.6 9.4-4.3 10-10z"/></svg></div>
+                <div class="av"><span class="star">✦</span></div>
                 <div class="bd">
-                  <div class="who"><span class="gradtag">resposta · gemini</span></div>
+                  <div class="who"><b>resposta · IA</b></div>
                   <div class="txt" style="margin-bottom:10px">Com base em avaliações e presença online recentes, a melhor opção é:</div>
                   <div class="hAB-rec">
                     <div class="mark"><span class="st">✦</span> destaque</div>
