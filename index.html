@@ -263,84 +263,115 @@
         .hAB-tab.on{ color:var(--cream); border-color:var(--ochre); background:rgba(227,168,91,.08); }
         .hAB-tab.on .pt{ background:var(--ochre); opacity:1; box-shadow:0 0 0 3px rgba(227,168,91,.18); }
 
+        /* AI panel — light brand variant (warm paper on cream tablecloth) */
         .hAB-panel{
-          --cream:#F1E9DB; --cream-dim:#A99B86; --ochre:#E3A85B; --line:rgba(241,233,219,0.10);
-          flex:1; background:var(--panel); border:1px solid var(--line); border-radius:14px;
+          --paper:#FBF6E8;
+          --paper-2:#F4ECD7;
+          --ink:#2A2018;
+          --ink-dim:#7A6447;
+          --hair:rgba(42,32,24,0.12);
+          --hair-soft:rgba(42,32,24,0.06);
+          --moss:#6B7340;
+          flex:1; background:var(--paper);
+          border:1px solid var(--hair); border-radius:14px;
           display:flex; flex-direction:column; overflow:hidden;
-          box-shadow: 0 30px 80px -40px rgba(0,0,0,.6), inset 0 1px 0 rgba(241,233,219,.04);
+          position:relative;
+          box-shadow:
+            0 30px 60px -28px rgba(74,55,30,.28),
+            0 6px 18px -8px rgba(74,55,30,.14),
+            inset 0 1px 0 rgba(255,255,255,.6);
+        }
+        .hAB-panel::before{
+          content:""; position:absolute; inset:0; padding:1px; border-radius:14px;
+          background:linear-gradient(180deg,rgba(185,127,55,.32),rgba(138,94,40,.10));
+          -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+          -webkit-mask-composite:xor; mask-composite:exclude;
+          pointer-events:none;
         }
         .hAB-pane-head{
           display:flex; align-items:center; gap:10px; padding:14px 18px;
-          border-bottom:1px solid var(--line);
+          border-bottom:1px solid var(--hair);
           font-family:'Geist Mono',ui-monospace,monospace; font-size:11px;
-          color:var(--cream-dim); letter-spacing:.06em;
+          color:var(--ink-dim); letter-spacing:.06em;
+          background:linear-gradient(180deg,#FCF8EB,var(--paper));
         }
-        .hAB-pane-head .pulse{ width:6px; height:6px; border-radius:50%; background:var(--green); box-shadow:0 0 0 0 rgba(134,197,138,.55); animation:hAB-pulse 1.8s infinite; }
-        @keyframes hAB-pulse{ 0%{box-shadow:0 0 0 0 rgba(134,197,138,.55)} 70%{box-shadow:0 0 0 8px rgba(134,197,138,0)} 100%{box-shadow:0 0 0 0 rgba(134,197,138,0)} }
-        .hAB-pane-head b{ color:var(--cream); font-weight:500; }
-        .hAB-pane-head .right{ margin-left:auto; color:var(--cream-dim); }
+        .hAB-pane-head .pulse{ width:7px; height:7px; border-radius:50%; background:var(--moss); box-shadow:0 0 0 0 rgba(107,115,64,.55); animation:hAB-pulse 1.8s infinite; }
+        @keyframes hAB-pulse{ 0%{box-shadow:0 0 0 0 rgba(107,115,64,.55)} 70%{box-shadow:0 0 0 8px rgba(107,115,64,0)} 100%{box-shadow:0 0 0 0 rgba(107,115,64,0)} }
+        .hAB-pane-head b{ color:var(--ink); font-weight:600; }
+        .hAB-pane-head .right{ margin-left:auto; color:var(--ink-dim); }
 
         .hAB-pane{ padding:18px 20px; display:flex; flex-direction:column; gap:14px; flex:1; min-height:0; }
 
         .hAB-msg{ display:flex; gap:12px; }
         .hAB-msg .av{
-          flex:0 0 26px; width:26px; height:26px; border-radius:7px;
+          flex:0 0 28px; width:28px; height:28px; border-radius:8px;
           display:flex; align-items:center; justify-content:center;
           font-family:'Geist Mono',monospace; font-size:11px; font-weight:600;
-          border:1px solid var(--line);
+          border:1px solid var(--hair);
         }
-        .hAB-msg.u .av{ background:rgba(143,183,214,.12); color:var(--blue); }
-        .hAB-msg.a .av{ background:rgba(227,168,91,.12); color:var(--ochre); }
+        .hAB-msg.u .av{ background:var(--paper-2); color:var(--ink-dim); }
+        .hAB-msg.a .av{
+          background:linear-gradient(160deg,#C9913F 0%, #8A5E28 100%);
+          color:#FBF6E8; border:0;
+          box-shadow:0 4px 10px -2px rgba(138,94,40,.45);
+        }
+        .hAB-msg.a .av .star{ font-family:'Fraunces',serif; font-style:italic; font-size:14px; line-height:1; }
         .hAB-msg .bd{ flex:1; min-width:0; }
         .hAB-msg .who{
           font-family:'Geist Mono',monospace; font-size:10.5px; letter-spacing:.14em;
-          text-transform:uppercase; color:var(--cream-dim); margin-bottom:5px;
+          text-transform:uppercase; color:var(--ink-dim); margin-bottom:5px;
         }
-        .hAB-msg .txt{ font-size:14.5px; color:var(--cream); line-height:1.5; }
+        .hAB-msg.a .who b{ color:#8A5E28; font-weight:600; }
+        .hAB-msg .txt{ font-size:14.5px; color:var(--ink); line-height:1.55; }
         .hAB-cur{ display:inline-block; width:7px; height:14px; background:var(--ochre); margin-left:2px; vertical-align:-2px; animation:hAB-blink 1s steps(2) infinite; }
         @keyframes hAB-blink{ 50%{opacity:0} }
 
-        /* recommendation card */
+        /* recommendation card — papel mais leve sobre o painel */
         .hAB-rec{
-          background:linear-gradient(180deg, rgba(227,168,91,.10), rgba(227,168,91,.03));
-          border:1px solid rgba(227,168,91,.35);
+          background:linear-gradient(180deg,#FFFAEC,#FBF4E0);
+          border:1px solid rgba(185,127,55,.30);
           border-radius:10px; padding:14px 16px; display:flex; align-items:center; gap:14px;
           position:relative; overflow:hidden;
+          box-shadow:0 6px 18px -10px rgba(138,94,40,.22);
         }
         .hAB-rec::before{
-          content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--ochre);
+          content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+          background:linear-gradient(180deg,#C9913F,#8A5E28);
         }
         .hAB-rec .mark{
           font-family:'Geist Mono',monospace; font-size:9.5px; letter-spacing:.18em;
-          color:var(--ochre); background:rgba(227,168,91,.18); padding:3px 8px; border-radius:4px;
+          color:#FBF6E8; background:linear-gradient(135deg,#C9913F,#8A5E28); padding:4px 9px; border-radius:5px;
           display:inline-flex; align-items:center; gap:5px; flex-shrink:0;
+          box-shadow:0 3px 8px -2px rgba(138,94,40,.35);
         }
         .hAB-rec .mark .st{ font-family:'Fraunces',serif; font-style:italic; }
         .hAB-rec .body{ flex:1; min-width:0; }
-        .hAB-rec .name{ font-family:'Fraunces',serif; font-size:21px; color:var(--cream); line-height:1.1; margin-bottom:3px; letter-spacing:-.012em; }
-        .hAB-rec .meta{ font-size:12px; color:var(--cream-dim); display:flex; gap:8px; align-items:center; }
-        .hAB-rec .meta .dot{ width:3px; height:3px; border-radius:50%; background:var(--cream-dim); }
+        .hAB-rec .name{ font-family:'Fraunces',serif; font-size:22px; color:var(--ink); line-height:1.1; margin-bottom:3px; letter-spacing:-.012em; font-weight:400; }
+        .hAB-rec .name em{ font-style:italic; color:#8A5E28; font-weight:400; }
+        .hAB-rec .meta{ font-size:12.5px; color:var(--ink-dim); display:flex; gap:8px; align-items:center; }
+        .hAB-rec .meta .dot{ width:3px; height:3px; border-radius:50%; background:var(--ink-dim); }
+        .hAB-rec .meta .open{ color:var(--moss); font-weight:500; }
         .hAB-rec .built{
-          font-family:'Geist Mono',monospace; font-size:9.5px; color:var(--ochre);
-          letter-spacing:.16em; text-transform:uppercase; margin-top:6px;
-          display:inline-flex; align-items:center; gap:6px;
+          font-family:'Geist Mono',monospace; font-size:9.5px; color:#8A5E28;
+          letter-spacing:.16em; text-transform:uppercase; margin-top:7px;
+          display:inline-flex; align-items:center; gap:6px; font-weight:600;
         }
-        .hAB-rec .built::before{ content:""; width:14px; height:1px; background:var(--ochre); }
+        .hAB-rec .built::before{ content:""; width:14px; height:1px; background:#B97F37; }
 
         .hAB-others{
-          padding:0 2px; display:flex; flex-direction:column; gap:7px;
+          padding:0 2px; display:flex; flex-direction:column; gap:8px;
         }
         .hAB-others .lbl{
-          font-family:'Geist Mono',monospace; font-size:10px; color:var(--cream-dim);
+          font-family:'Geist Mono',monospace; font-size:10px; color:var(--ink-dim);
           letter-spacing:.16em; text-transform:uppercase; margin-bottom:2px;
         }
         .hAB-other{
-          display:flex; align-items:center; gap:10px; padding:7px 10px;
-          border:1px solid var(--line); border-radius:7px;
-          font-size:13px; color:var(--cream-dim);
+          display:flex; align-items:center; gap:10px; padding:8px 12px;
+          border:1px solid var(--hair-soft); border-radius:8px;
+          font-size:13px; color:var(--ink-dim); background:#F8F1DD;
         }
-        .hAB-other .gr{ flex:1; height:3px; background:rgba(241,233,219,.06); border-radius:2px; position:relative; overflow:hidden; max-width:120px; }
-        .hAB-other .gr::after{ content:""; position:absolute; left:0; top:0; bottom:0; background:rgba(241,233,219,.18); border-radius:2px; }
+        .hAB-other .gr{ flex:1; height:3px; background:rgba(42,32,24,.08); border-radius:2px; position:relative; overflow:hidden; max-width:140px; }
+        .hAB-other .gr::after{ content:""; position:absolute; left:0; top:0; bottom:0; background:linear-gradient(90deg,#B97F37,#8A5E28); border-radius:2px; }
         .hAB-other.n1 .gr::after{ width:64%; }
         .hAB-other.n2 .gr::after{ width:48%; }
         .hAB-other.n3 .gr::after{ width:36%; }
@@ -348,11 +379,11 @@
         .hAB-cites{ display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
         .hAB-cite{
           font-family:'Geist Mono',monospace; font-size:10px;
-          padding:4px 8px; border:1px solid var(--line); border-radius:5px;
-          color:var(--cream-dim); letter-spacing:.04em;
+          padding:5px 9px; border:1px solid var(--hair); border-radius:6px;
+          color:var(--ink-dim); letter-spacing:.04em; background:#FCF8EB;
           display:inline-flex; align-items:center; gap:5px;
         }
-        .hAB-cite::before{ content:"⌕"; color:var(--ochre); font-size:11px; }
+        .hAB-cite::before{ content:"⌕"; color:#8A5E28; font-size:11px; font-weight:600; }
 
         /* fade animation when scenario flips */
         .hAB-flip{ animation: hAB-fade .5s ease; }
@@ -374,7 +405,7 @@
         .hAB-meter .bar::after{ content:""; position:absolute; inset:0; right:8%; background:linear-gradient(90deg, var(--ochre-deep), var(--ochre)); border-radius:2px; }
         .hAB-meter .pct{ font-family:'Fraunces',serif; font-style:italic; font-size:20px; color:var(--ochre); }
         .hAB-meter .pct .small{ font-family:'Geist Mono',ui-monospace,monospace; font-size:10px; color:var(--cream-dim); font-style:normal; margin-left:2px; vertical-align:2px; }
-      </style><nav class="hAB-nav"><div class="hAB-logo"><span>Luis</span><span>Morais</span></div><div class="hAB-links"><a href="#cases">Trabalhos</a><a href="#beneficios">Serviços</a><a href="#design">Sobre</a><a href="#contato">Notas</a><a class="hAB-wa" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">WhatsApp<svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div></nav><div class="hAB-stage"><div class="hAB-spine"><div class="vlabel">Portfolio</div><div style="font-family: &quot;Geist Mono&quot;, monospace; font-size: 10px; color: var(--cream-dim); letter-spacing: 0.16em; line-height: 1.6;">22°54′S<br>47°03′W</div></div><div class="hAB-center"><div class="hAB-kicker"><span class="tick"></span><span>Estúdio web independente</span><span style="opacity: 0.4;">·</span><b>Campinas / SP</b></div><h1 class="hAB-h1">Faço sites <span class="qt">que o</span><br>Google <span class="qt">ranqueia</span><br><span class="em">— e a IA recomenda.</span><sup>01</sup></h1><p class="hAB-sub"><span class="fn">01</span>Sites sob medida, <b>ultra-rápidos</b> e feitos à mão. Bonitos pra quem vê, estruturados pra quem busca — humanos ou máquinas.</p><div class="hAB-cta"><a class="hAB-btn hAB-btn-1" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Quero meu site<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a class="hAB-btn hAB-btn-2" href="#cases">Ver trabalhos</a></div></div><div class="hAB-right"><div class="hAB-tabs"><button class="hAB-tab on"><span class="pt"></span>Clínica de estética</button><button class="hAB-tab"><span class="pt"></span>Escritório de advocacia</button><button class="hAB-tab"><span class="pt"></span>Negócio local</button></div><div class="hAB-panel"><div class="hAB-pane-head"><span class="pulse"></span><span>conversa com IA · <b>estética</b></span><span class="right">resposta gerada · agora</span></div><div class="hAB-pane"><div class="hAB-msg u"><div class="av">U</div><div class="bd"><div class="who">prompt</div><div class="txt">Clínicas de estética perto de mim com bons resultados</div></div></div><div class="hAB-msg a hAB-flip"><div class="av">AI</div><div class="bd"><div class="who">resposta</div><div class="txt" style="margin-bottom: 10px;">Com base em avaliações e presença online recentes, a melhor opção é:</div><div class="hAB-rec"><div class="mark"><span class="st">✦</span> destaque</div><div class="body"><div class="name">Clínica Aurora Estética</div><div class="meta"><span>Cambuí · Campinas/SP</span><span class="dot"></span><span style="color: var(--green);">● aberto agora</span></div><div class="built">site por Luis Morais</div></div></div><div class="hAB-others" style="margin-top: 12px;"><div class="lbl">também encontrados</div><div class="hAB-other n1"><span style="flex: 0 0 auto;">Estúdio Belle</span><span class="gr"></span></div><div class="hAB-other n2"><span style="flex: 0 0 auto;">Spa Lumière</span><span class="gr"></span></div><div class="hAB-other n3"><span style="flex: 0 0 auto;">Clínica Vida</span><span class="gr"></span></div></div><div class="hAB-cites"><div class="hAB-cite">aurora-estetica.com.br</div><div class="hAB-cite">Google · 4.9★ (213)</div><div class="hAB-cite">Instagram · 18k</div></div></div></div></div></div></div><div></div></div><div class="hAB-bottom"><div style="padding-left: 56px;"><div style="font-family: &quot;Geist Mono&quot;, monospace; font-size: 10px; color: var(--cream-dim); letter-spacing: 0.18em;">SCROLL</div><div style="font-family: Fraunces, serif; font-style: italic; font-size: 18px; color: var(--cream); margin-top: 4px;">↓</div></div><div class="cell"><div class="lbl">Ferramentas</div><div class="val">Webflow<span class="sep">/</span>Figma<span class="sep">/</span>Shopify</div></div><div class="cell"><div class="lbl">Especialidades</div><div class="val">SEO<span class="sep">·</span>GEO<span class="sep">·</span>Core Web Vitals</div></div><div class="cell"><div class="lbl">Discoverability Score</div><div class="hAB-meter"><div class="bar"></div><div class="pct">92<span class="small">/100</span></div></div></div></div></div></div><div class="frame frame-m" data-w="390" data-h="780"><div class="mH-root" data-screen-label="01 · Hero (mobile)"><style>
+      </style><nav class="hAB-nav"><div class="hAB-logo"><span>Luis</span><span>Morais</span></div><div class="hAB-links"><a href="#cases">Trabalhos</a><a href="#beneficios">Serviços</a><a href="#design">Sobre</a><a href="#contato">Notas</a><a class="hAB-wa" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">WhatsApp<svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div></nav><div class="hAB-stage"><div class="hAB-spine"><div class="vlabel">Portfolio</div><div style="font-family: &quot;Geist Mono&quot;, monospace; font-size: 10px; color: var(--cream-dim); letter-spacing: 0.16em; line-height: 1.6;">22°54′S<br>47°03′W</div></div><div class="hAB-center"><div class="hAB-kicker"><span class="tick"></span><span>Estúdio web independente</span><span style="opacity: 0.4;">·</span><b>Campinas / SP</b></div><h1 class="hAB-h1">Faço sites <span class="qt">que o</span><br>Google <span class="qt">ranqueia</span><br><span class="em">— e a IA recomenda.</span><sup>01</sup></h1><p class="hAB-sub"><span class="fn">01</span>Sites sob medida, <b>ultra-rápidos</b> e feitos à mão. Bonitos pra quem vê, estruturados pra quem busca — humanos ou máquinas.</p><div class="hAB-cta"><a class="hAB-btn hAB-btn-1" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Vi%20seu%20site%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Quero meu site<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></a><a class="hAB-btn hAB-btn-2" href="#cases">Ver trabalhos</a></div></div><div class="hAB-right"><div class="hAB-tabs"><button class="hAB-tab on"><span class="pt"></span>Clínica de estética</button><button class="hAB-tab"><span class="pt"></span>Escritório de advocacia</button><button class="hAB-tab"><span class="pt"></span>Negócio local</button></div><div class="hAB-panel"><div class="hAB-pane-head"><span class="pulse"></span><span>conversa com IA · <b>estética</b></span><span class="right">resposta gerada · agora</span></div><div class="hAB-pane"><div class="hAB-msg u"><div class="av">U</div><div class="bd"><div class="who">prompt</div><div class="txt">Clínicas de estética perto de mim com bons resultados</div></div></div><div class="hAB-msg a hAB-flip"><div class="av"><span class="star">✦</span></div><div class="bd"><div class="who"><b>resposta · IA</b></div><div class="txt" style="margin-bottom: 10px;">Com base em avaliações e presença online recentes, a melhor opção é:</div><div class="hAB-rec"><div class="mark"><span class="st">✦</span> destaque</div><div class="body"><div class="name">Clínica <em>Aurora Estética</em></div><div class="meta"><span>Cambuí · Campinas/SP</span><span class="dot"></span><span class="open">● aberto agora</span></div><div class="built">site por Luis Morais</div></div></div><div class="hAB-others" style="margin-top: 12px;"><div class="lbl">também encontrados</div><div class="hAB-other n1"><span style="flex: 0 0 auto;">Estúdio Belle</span><span class="gr"></span></div><div class="hAB-other n2"><span style="flex: 0 0 auto;">Spa Lumière</span><span class="gr"></span></div><div class="hAB-other n3"><span style="flex: 0 0 auto;">Clínica Vida</span><span class="gr"></span></div></div><div class="hAB-cites"><div class="hAB-cite">aurora-estetica.com.br</div><div class="hAB-cite">Google · 4.9★ (213)</div><div class="hAB-cite">Instagram · 18k</div></div></div></div></div></div></div><div></div></div><div class="hAB-bottom"><div style="padding-left: 56px;"><div style="font-family: &quot;Geist Mono&quot;, monospace; font-size: 10px; color: var(--cream-dim); letter-spacing: 0.18em;">SCROLL</div><div style="font-family: Fraunces, serif; font-style: italic; font-size: 18px; color: var(--cream); margin-top: 4px;">↓</div></div><div class="cell"><div class="lbl">Ferramentas</div><div class="val">Webflow<span class="sep">/</span>Figma<span class="sep">/</span>Shopify</div></div><div class="cell"><div class="lbl">Especialidades</div><div class="val">SEO<span class="sep">·</span>GEO<span class="sep">·</span>Core Web Vitals</div></div><div class="cell"><div class="lbl">Discoverability Score</div><div class="hAB-meter"><div class="bar"></div><div class="pct">92<span class="small">/100</span></div></div></div></div></div></div><div class="frame frame-m" data-w="390" data-h="780"><div class="mH-root" data-screen-label="01 · Hero (mobile)"><style>
         .mH-root{
           --bg:#16120D; --panel:#0F0D0B; --cream:#F1E9DB; --cream-dim:#A99B86;
           --ochre:#E3A85B; --ochre-deep:#B97F37; --line:rgba(241,233,219,0.10); --green:#86C58A;
