@@ -3,437 +3,415 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Preview · Hero claro estilo Gemini · Luis Morais</title>
+<title>Preview · Hero atual com painel Gemini claro · Luis Morais</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Geist:wght@300..600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  /* Light editorial base */
-  --bg:#FBFAF7;
-  --surface:#FFFFFF;
-  --ink:#1A1614;
-  --ink-soft:#5A5450;
-  --ink-mute:#928B85;
-  --line:rgba(26,22,20,0.08);
-  --line-strong:rgba(26,22,20,0.16);
-
-  /* Gemini palette */
-  --g-blue:#4796E3;
-  --g-blue-soft:#E8F1FB;
-  --g-violet:#8E5BD9;
-  --g-violet-soft:#F1ECFA;
-  --g-pink:#D63B92;
-  --g-pink-soft:#FBEAF3;
-  --g-warm:#FF8C42;
-  --g-mint:#34B17B;
-
-  /* Master gradient (Gemini-inspired) */
-  --g-grad:linear-gradient(135deg,#4796E3 0%,#7B5DD6 45%,#D63B92 100%);
-  --g-grad-soft:linear-gradient(135deg,rgba(71,150,227,.12) 0%,rgba(123,93,214,.10) 45%,rgba(214,59,146,.12) 100%);
-  --g-grad-text:linear-gradient(135deg,#3A82D1,#7B5DD6 55%,#D63B92);
-}
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{background:var(--bg)}
-body{
-  font-family:'Geist',ui-sans-serif,system-ui,sans-serif;
-  font-weight:300;font-size:16px;line-height:1.55;
-  color:var(--ink);
-  -webkit-font-smoothing:antialiased;
-  position:relative;overflow-x:hidden;
-}
-/* Subtle pastel ambient blobs */
-body::before, body::after{
-  content:"";position:fixed;pointer-events:none;z-index:0;
-  border-radius:50%;filter:blur(120px);opacity:.55;
-}
-body::before{
-  width:760px;height:760px;top:-180px;right:-200px;
-  background:radial-gradient(circle, var(--g-blue-soft) 0%, transparent 70%);
-}
-body::after{
-  width:680px;height:680px;bottom:-220px;left:-220px;
-  background:radial-gradient(circle, var(--g-pink-soft) 0%, transparent 70%);
-}
-
-/* Notice banner */
+html,body{background:#E8DCC2}
 .notice{
-  background:var(--ink);color:#fff;text-align:center;padding:10px 16px;
+  background:#1A1614;color:#fff;text-align:center;padding:10px 16px;
   font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
-  position:relative;z-index:5;
+  position:relative;z-index:99;
 }
 .notice b{
-  background:var(--g-grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
+  background:linear-gradient(135deg,#4796E3,#7B5DD6 50%,#D63B92);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
 }
-
-.frame{
-  width:100%;max-width:1440px;margin:0 auto;
-  min-height:900px;position:relative;overflow:hidden;isolation:isolate;z-index:1;
-  background:var(--bg);
+.scaler{
+  width:100%;overflow-x:auto;background:#E8DCC2;
 }
-
-/* NAV */
-.nav{
-  position:absolute;top:0;left:0;right:0;height:84px;z-index:5;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 56px;border-bottom:1px solid var(--line);
-  backdrop-filter:blur(8px);background:rgba(251,250,247,0.7);
+.scaler-inner{
+  width:1440px;min-width:1440px;
+  position:relative;margin:0 auto;
 }
-.logo{
-  font-family:'Fraunces',serif;font-weight:500;font-size:22px;letter-spacing:-.012em;
-  display:flex;align-items:center;gap:10px;color:var(--ink);
-}
-.logo .star{
-  width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;
-}
-.logo .star svg{width:100%;height:100%}
-.links{display:flex;gap:36px;align-items:center;font-size:14px;color:var(--ink-soft);font-weight:400}
-.links a{transition:color .2s;cursor:pointer}
-.links a:hover{color:var(--ink)}
-.wa{
-  background:var(--g-grad);color:#fff;padding:10px 20px;border-radius:999px;
-  font-weight:500;font-size:13.5px;display:inline-flex;align-items:center;gap:8px;
-  box-shadow:0 8px 22px -8px rgba(123,93,214,.45);
-  transition:transform .25s,box-shadow .25s;
-}
-.wa:hover{transform:translateY(-1px);box-shadow:0 14px 30px -10px rgba(214,59,146,.5)}
-
-/* Stage */
-.stage{
-  position:absolute;inset:84px 0 84px 0;
-  display:grid;grid-template-columns: 84px 1fr 560px 56px;column-gap:48px;
-  padding:0 56px 0 0;align-items:stretch;
-}
-.spine{
-  padding:44px 0 36px 56px;
-  display:flex;flex-direction:column;justify-content:space-between;
-  border-right:1px solid var(--line);
-  font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-mute);letter-spacing:.18em;text-transform:uppercase;
-}
-.spine .vlabel{writing-mode:vertical-rl;transform:rotate(180deg);align-self:center;letter-spacing:.32em}
-.spine .coords{line-height:1.6;font-size:10px}
-
-/* CENTER (editorial) */
-.center{padding:54px 0 36px;display:flex;flex-direction:column}
-.kicker{
-  display:inline-flex;align-items:center;gap:14px;
-  font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-mute);letter-spacing:.22em;text-transform:uppercase;
-  margin-bottom:30px;
-}
-.kicker .tick{width:7px;height:7px;border-radius:50%;background:var(--g-grad);box-shadow:0 0 0 5px var(--g-blue-soft)}
-.kicker b{color:var(--ink);font-weight:500}
-
-.h1{
-  font-family:'Fraunces',serif;font-weight:300;letter-spacing:-.028em;
-  line-height:.96;font-size:90px;color:var(--ink);
-  margin:0 0 30px;max-width:13ch;
-}
-.h1 .qt{color:var(--ink-mute);font-style:italic;font-weight:300}
-.h1 .grad{
-  background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;
-  font-style:italic;font-weight:400;
-}
-.h1 sup{
-  font-family:'Geist Mono',monospace;font-size:18px;color:var(--g-violet);
-  font-style:normal;font-weight:500;vertical-align:super;line-height:0;
-  margin-left:4px;top:-.5em;position:relative;
-}
-
-.sub{
-  font-size:17px;line-height:1.6;color:var(--ink-soft);max-width:42ch;margin-bottom:34px;font-weight:400;
-}
-.sub b{color:var(--ink);font-weight:500}
-.sub .fn{
-  font-family:'Geist Mono',monospace;font-size:11px;color:var(--g-violet);
-  vertical-align:super;line-height:0;margin-right:3px;
-}
-
-.cta{display:flex;gap:14px;margin-bottom:auto;align-items:center}
-.btn{
-  font-size:14.5px;font-weight:500;text-decoration:none;
-  padding:14px 24px;border-radius:999px;
-  display:inline-flex;align-items:center;gap:10px;
-  transition:transform .25s,box-shadow .25s,background .25s,color .25s,border-color .25s;
-  cursor:pointer;
-}
-.btn-1{background:var(--g-grad);color:#fff;box-shadow:0 12px 28px -10px rgba(123,93,214,.5)}
-.btn-1:hover{transform:translateY(-2px);box-shadow:0 18px 36px -10px rgba(214,59,146,.5)}
-.btn-2{color:var(--ink);border:1px solid var(--line-strong);background:transparent}
-.btn-2:hover{border-color:var(--ink);transform:translateY(-2px)}
-
-/* RIGHT — AI panel (light, Gemini) */
-.right{padding:44px 0 36px;display:flex;flex-direction:column;gap:14px;position:relative}
-.tabs{
-  display:flex;gap:6px;
-  font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
-}
-.tab{
-  padding:8px 14px;border:1px solid var(--line-strong);border-radius:999px;
-  color:var(--ink-soft);background:transparent;cursor:pointer;
-  transition:color .2s,border-color .2s,background .2s;
-  display:inline-flex;align-items:center;gap:6px;
-}
-.tab .pt{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.5}
-.tab.on{
-  color:var(--ink);border-color:transparent;
-  background:linear-gradient(white,white) padding-box, var(--g-grad) border-box;
-  border:1.5px solid transparent;
-}
-.tab.on .pt{background:var(--g-grad);opacity:1;box-shadow:0 0 0 3px var(--g-violet-soft)}
-
-/* Panel — white card with gradient border */
-.panel{
-  flex:1;background:var(--surface);border-radius:16px;overflow:hidden;
-  position:relative;display:flex;flex-direction:column;
-  border:1px solid var(--line);
-  box-shadow:0 40px 80px -36px rgba(26,22,20,.18), 0 1px 0 rgba(255,255,255,.8) inset;
-}
-.panel::before{
-  content:"";position:absolute;inset:0;padding:1.5px;border-radius:16px;
-  background:var(--g-grad);
-  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor;mask-composite:exclude;
-  opacity:.0;transition:opacity .4s;pointer-events:none;
-}
-.panel-head{
-  display:flex;align-items:center;gap:10px;padding:14px 18px;
-  border-bottom:1px solid var(--line);
-  font-family:'Geist Mono',monospace;font-size:11px;color:var(--ink-mute);letter-spacing:.06em;
-}
-.pulse{width:7px;height:7px;border-radius:50%;background:var(--g-mint);box-shadow:0 0 0 0 rgba(52,177,123,.55);animation:p 1.8s infinite}
-@keyframes p{0%{box-shadow:0 0 0 0 rgba(52,177,123,.55)}70%{box-shadow:0 0 0 8px rgba(52,177,123,0)}100%{box-shadow:0 0 0 0 rgba(52,177,123,0)}}
-.panel-head b{color:var(--ink);font-weight:500}
-.panel-head .right-meta{margin-left:auto;color:var(--ink-mute)}
-
-.pane{padding:18px 20px;display:flex;flex-direction:column;gap:14px;flex:1;min-height:0}
-
-.msg{display:flex;gap:12px}
-.av{
-  flex:0 0 30px;width:30px;height:30px;border-radius:8px;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Geist Mono',monospace;font-size:11px;font-weight:600;
-  border:1px solid var(--line);
-}
-.msg.u .av{background:var(--g-blue-soft);color:var(--g-blue);border-color:transparent}
-.msg.a .av{
-  background:var(--g-grad);color:#fff;border:0;
-  position:relative;
-}
-.msg.a .av svg{width:14px;height:14px;fill:#fff}
-.bd{flex:1;min-width:0}
-.who{
-  font-family:'Geist Mono',monospace;font-size:10.5px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--ink-mute);margin-bottom:5px;
-}
-.who .gradtag{
-  background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
-}
-.txt{font-size:14.5px;color:var(--ink);line-height:1.55}
-.cur{display:inline-block;width:6px;height:13px;background:var(--g-violet);margin-left:2px;vertical-align:-2px;animation:bl 1s steps(2) infinite}
-@keyframes bl{50%{opacity:0}}
-
-/* Recommendation card */
-.rec{
-  background:linear-gradient(180deg,#FCFAFF,#FFFFFF);
-  border:1px solid var(--line);border-radius:12px;padding:14px 16px;
-  display:flex;align-items:center;gap:14px;position:relative;overflow:hidden;
-}
-.rec::before{
-  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--g-grad);
-}
-.rec .mark{
-  font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.18em;
-  color:#fff;padding:4px 9px;border-radius:6px;
-  background:var(--g-grad);
-  display:inline-flex;align-items:center;gap:5px;flex-shrink:0;
-}
-.rec .mark .st{font-family:'Fraunces',serif;font-style:italic}
-.rec .body{flex:1;min-width:0}
-.rec .name{font-family:'Fraunces',serif;font-size:22px;color:var(--ink);line-height:1.1;margin-bottom:3px;letter-spacing:-.012em;font-weight:400}
-.rec .name em{font-style:italic;color:var(--g-violet);font-weight:400}
-.rec .meta{font-size:12.5px;color:var(--ink-mute);display:flex;gap:8px;align-items:center}
-.rec .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--ink-mute)}
-.rec .meta .open{color:var(--g-mint);font-weight:500}
-.rec .built{
-  font-family:'Geist Mono',monospace;font-size:9.5px;
-  letter-spacing:.16em;text-transform:uppercase;margin-top:7px;
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
-}
-.rec .built::before{content:"";width:14px;height:1px;background:var(--g-violet)}
-
-.others{padding:0 2px;display:flex;flex-direction:column;gap:7px}
-.others .lbl{
-  font-family:'Geist Mono',monospace;font-size:10px;color:var(--ink-mute);
-  letter-spacing:.16em;text-transform:uppercase;margin-bottom:2px;
-}
-.other{
-  display:flex;align-items:center;gap:10px;padding:8px 12px;
-  border:1px solid var(--line);border-radius:8px;background:#FAFAFA;
-  font-size:13px;color:var(--ink-soft);
-}
-.other .gr{flex:1;height:3px;background:var(--line);border-radius:2px;position:relative;overflow:hidden;max-width:140px}
-.other .gr::after{content:"";position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--g-blue),var(--g-violet));border-radius:2px}
-.other.n1 .gr::after{width:62%}
-.other.n2 .gr::after{width:46%}
-.other.n3 .gr::after{width:34%}
-
-.cites{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-.cite{
-  font-family:'Geist Mono',monospace;font-size:10px;
-  padding:5px 9px;border:1px solid var(--line);border-radius:6px;
-  color:var(--ink-soft);letter-spacing:.04em;
-  display:inline-flex;align-items:center;gap:5px;background:#fff;
-}
-.cite::before{content:"⌕";color:var(--g-violet);font-size:11px;font-weight:600}
-
-/* Bottom strip */
-.bottom{
-  position:absolute;left:0;right:0;bottom:0;height:84px;z-index:4;
-  display:grid;grid-template-columns: 84px 1fr 1fr 1fr;align-items:center;
-  padding:0 56px 0 0;border-top:1px solid var(--line);background:rgba(251,250,247,.85);backdrop-filter:blur(8px);
-}
-.bottom .left{padding-left:56px;display:flex;flex-direction:column;gap:4px}
-.bottom .left .l1{font-family:'Geist Mono',monospace;font-size:10px;color:var(--ink-mute);letter-spacing:.18em;text-transform:uppercase}
-.bottom .left .l2{font-family:'Fraunces',serif;font-style:italic;font-size:18px;color:var(--ink)}
-.cell{padding:0 28px;height:100%;display:flex;flex-direction:column;justify-content:center;gap:6px;border-left:1px solid var(--line)}
-.cell:first-of-type{border-left:0}
-.cell .lbl{font-family:'Geist Mono',monospace;font-size:10px;color:var(--ink-mute);letter-spacing:.18em;text-transform:uppercase}
-.cell .val{font-size:14.5px;color:var(--ink)}
-.cell .val .sep{color:var(--ink-mute);margin:0 7px}
-.meter{display:flex;align-items:center;gap:12px}
-.meter .bar{flex:1;height:4px;background:var(--line);border-radius:2px;position:relative;overflow:hidden}
-.meter .bar::after{content:"";position:absolute;inset:0;right:8%;background:var(--g-grad);border-radius:2px}
-.meter .pct{font-family:'Fraunces',serif;font-style:italic;font-size:22px;background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:400}
-.meter .pct .small{font-family:'Geist Mono',monospace;font-size:10px;color:var(--ink-mute);font-style:normal;margin-left:2px;vertical-align:2px;background:none;-webkit-text-fill-color:var(--ink-mute)}
-
-/* Mobile sizing */
-@media(max-width:1100px){
-  .frame{min-height:auto}
-  .stage{position:relative;inset:auto;grid-template-columns:1fr;column-gap:0;padding:40px 24px 32px;gap:40px}
-  .spine{display:none}
-  .right{padding:0}
-  .h1{font-size:54px}
-  .bottom{position:relative;height:auto;grid-template-columns:1fr 1fr;padding:24px 0;border-top:1px solid var(--line);background:transparent;backdrop-filter:none}
-  .bottom .left{padding-left:24px}
-  .cell{padding:14px 24px}
-  .nav{position:relative;padding:0 24px}
-  .links{display:none}
+@media(max-width:1480px){
+  .scaler-inner{transform-origin:top center;}
 }
 </style>
 </head>
 <body>
 
-<div class="notice">Preview · Hero claro estilo <b>Gemini</b> · não é o site final, só uma sugestão pra aprovação</div>
+<div class="notice">Preview · sua hero atual com painel <b>Gemini claro</b> · não toca no index — só pra aprovação</div>
 
-<div class="frame">
+<div class="scaler">
+<div class="scaler-inner">
 
-  <!-- NAV -->
-  <nav class="nav">
-    <a href="#" class="logo">
-      <span class="star" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4796E3"/><stop offset=".5" stop-color="#7B5DD6"/><stop offset="1" stop-color="#D63B92"/></linearGradient></defs><path fill="url(#g1)" d="M12 2c.6 5.7 4.3 9.4 10 10-5.7.6-9.4 4.3-10 10-.6-5.7-4.3-9.4-10-10 5.7-.6 9.4-4.3 10-10z"/></svg>
-      </span>
-      Luis <em style="font-style:italic;font-weight:400;color:var(--ink-soft)">Morais</em>
-    </a>
-    <div class="links">
-      <a>Trabalhos</a><a>Serviços</a><a>Sobre</a><a>Notas</a>
-      <a class="wa">WhatsApp <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
-  </nav>
+<!-- HERO ORIGINAL (copiado do index.html, intacto exceto o painel) -->
+<div class="hAB-root" data-screen-label="Hero · Editorial + AI panel claro Gemini"><style>
+        .hAB-root{
+          --bg:#E8DCC2; --surface:#F1E7D5; --panel:#0F0D0B; --cream:#221A12; --cream-dim:#6E5E46;
+          --ochre:#B97F37; --ochre-deep:#8A5E28; --line:rgba(34,26,18,0.16);
+          --green:#86C58A; --blue:#8FB7D6;
+          width:1440px; height:900px; background:var(--bg); color:var(--cream);
+          font-family:'Geist',ui-sans-serif,system-ui,sans-serif;
+          position:relative; overflow:hidden; isolation:isolate;
+        }
+        .hAB-root::after{
+          content:""; position:absolute; inset:0; pointer-events:none; z-index:50;
+          opacity:.045; mix-blend-mode:overlay;
+          background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
 
-  <!-- STAGE -->
-  <div class="stage">
+        /* nav */
+        .hAB-nav{
+          position:absolute; top:0; left:0; right:0; height:84px; z-index:5;
+          display:flex; align-items:center; justify-content:space-between;
+          padding:0 56px; border-bottom:1px solid var(--line);
+        }
+        .hAB-logo{
+          font-family:'Fraunces',serif; font-weight:500; font-size:22px; letter-spacing:-.012em;
+          display:flex; align-items:baseline; gap:8px;
+        }
+        .hAB-links{ display:flex; gap:34px; align-items:center; font-size:14px; color:var(--cream-dim); }
+        .hAB-links a{ color:inherit; text-decoration:none; transition:color .2s; }
+        .hAB-links a:hover{ color:var(--cream); }
+        .hAB-wa{
+          color:var(--bg) !important; background:var(--cream);
+          padding:11px 20px 11px 18px; border-radius:999px; font-weight:500; font-size:14px;
+          display:inline-flex; align-items:center; gap:8px; transition:background .2s, transform .2s;
+        }
+        .hAB-wa:hover{ background:var(--ochre); transform:translateY(-1px); }
 
-    <!-- SPINE -->
-    <div class="spine">
-      <div class="vlabel">Portfolio</div>
-      <div class="coords">22°54′S<br>47°03′W</div>
-    </div>
+        /* grid */
+        .hAB-stage{
+          position:absolute; inset:84px 0 84px 0;
+          display:grid; grid-template-columns: 84px 1fr 540px 56px; column-gap:44px;
+          padding:0 56px 0 0; align-items:stretch;
+        }
 
-    <!-- CENTER (editorial) -->
-    <div class="center">
-      <div class="kicker"><span class="tick"></span><span>Estúdio web independente</span><span style="opacity:.4">·</span><b>Campinas / SP</b></div>
-      <h1 class="h1">Faço sites <span class="qt">que o</span><br>Google <span class="grad">ranqueia</span><br><span class="qt">— e a IA</span> <span class="grad">recomenda.</span><sup>01</sup></h1>
-      <p class="sub"><span class="fn">01</span>Sites sob medida, <b>ultra-rápidos</b> e feitos à mão. Bonitos pra quem vê, estruturados pra quem busca — humanos ou máquinas.</p>
-      <div class="cta">
-        <a class="btn btn-1">Quero meu site <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a class="btn btn-2">Ver trabalhos</a>
-      </div>
-    </div>
+        /* spine */
+        .hAB-spine{
+          padding:40px 0 36px 56px;
+          display:flex; flex-direction:column; justify-content:space-between;
+          border-right:1px solid var(--line);
+          font-family:'Geist Mono',ui-monospace,monospace;
+          font-size:11px; color:var(--cream-dim); letter-spacing:.16em; text-transform:uppercase;
+        }
+        .hAB-spine .vlabel{
+          writing-mode:vertical-rl; transform:rotate(180deg); align-self:center;
+          letter-spacing:.32em;
+        }
 
-    <!-- RIGHT (AI panel — light Gemini) -->
-    <div class="right">
-      <div class="tabs">
-        <button class="tab on"><span class="pt"></span>Clínica de estética</button>
-        <button class="tab"><span class="pt"></span>Escritório</button>
-        <button class="tab"><span class="pt"></span>Comércio local</button>
-      </div>
-      <div class="panel">
-        <div class="panel-head">
-          <span class="pulse"></span>
-          <span>conversa com IA · <b>estética</b></span>
-          <span class="right-meta">resposta gerada · agora</span>
+        /* center */
+        .hAB-center{ padding:48px 0 36px; display:flex; flex-direction:column; }
+        .hAB-kicker{
+          display:inline-flex; align-items:center; gap:12px;
+          font-family:'Geist Mono',ui-monospace,monospace;
+          font-size:11px; color:var(--cream-dim); letter-spacing:.18em; text-transform:uppercase;
+          margin-bottom:24px;
+        }
+        .hAB-kicker .tick{ width:6px; height:6px; background:var(--ochre); border-radius:50%; box-shadow:0 0 0 4px rgba(227,168,91,.18); }
+        .hAB-kicker b{ color:var(--cream); font-weight:500; }
+
+        .hAB-h1{
+          font-family:'Fraunces',serif; font-weight:380; letter-spacing:-.025em;
+          line-height:.96; font-size:88px; color:var(--cream);
+          margin:0 0 28px; max-width:11ch; text-wrap:pretty;
+          font-feature-settings:"ss01","ss03";
+        }
+        .hAB-h1 .em{ font-style:italic; color:var(--ochre); font-weight:380; }
+        .hAB-h1 .qt{ font-family:'Fraunces',serif; color:var(--cream-dim); font-style:italic; font-weight:380; }
+        .hAB-h1 sup{
+          font-family:'Geist Mono',ui-monospace,monospace; font-size:17px; color:var(--ochre);
+          font-style:normal; font-weight:500; vertical-align:super; line-height:0;
+          margin-left:4px; top:-.5em; position:relative;
+        }
+
+        .hAB-sub{
+          font-size:16.5px; line-height:1.55; color:var(--cream-dim); max-width:40ch;
+          margin-bottom:32px;
+        }
+        .hAB-sub b{ color:var(--cream); font-weight:500; }
+        .hAB-sub .fn{ font-family:'Geist Mono',ui-monospace,monospace; font-size:11px; color:var(--ochre); vertical-align:super; line-height:0; margin-right:2px; }
+
+        .hAB-cta{ display:flex; gap:12px; margin-bottom:auto; }
+        .hAB-btn{
+          font-size:15px; font-weight:500; text-decoration:none;
+          padding:14px 22px; border-radius:999px;
+          display:inline-flex; align-items:center; gap:10px;
+          transition:transform .2s, background .2s, color .2s, border-color .2s;
+        }
+        .hAB-btn-1{ background:var(--ochre); color:#241608; }
+        .hAB-btn-1:hover{ background:#241608; color:var(--bg); transform:translateY(-2px); }
+        .hAB-btn-2{ color:var(--cream); border:1px solid var(--line); background:transparent; }
+        .hAB-btn-2:hover{ border-color:var(--cream); transform:translateY(-2px); }
+
+        /* right — AI panel */
+        .hAB-right{ padding:40px 0 36px; display:flex; flex-direction:column; gap:14px; position:relative; }
+
+        .hAB-tabs{
+          display:flex; gap:6px;
+          font-family:'Geist Mono',ui-monospace,monospace; font-size:10.5px;
+          letter-spacing:.14em; text-transform:uppercase;
+        }
+        .hAB-tab{
+          padding:7px 12px; border:1px solid var(--line); border-radius:999px;
+          color:var(--cream-dim); background:transparent; cursor:pointer;
+          transition:color .2s, border-color .2s, background .2s;
+          display:inline-flex; align-items:center; gap:6px;
+        }
+        .hAB-tab .pt{ width:5px; height:5px; border-radius:50%; background:currentColor; opacity:.5; }
+        .hAB-tab.on{ color:var(--cream); border-color:var(--ochre); background:rgba(227,168,91,.08); }
+        .hAB-tab.on .pt{ background:var(--ochre); opacity:1; box-shadow:0 0 0 3px rgba(227,168,91,.18); }
+
+        /* ============================================================
+           PAINEL GEMINI CLARO — override do .hAB-panel e seus filhos
+           ============================================================ */
+        .hAB-panel{
+          /* re-declara variáveis em modo claro Gemini */
+          --cream:#1A1614;            /* texto principal escuro */
+          --cream-dim:#6B6660;        /* texto secundário cinza quente */
+          --ochre:#7B5DD6;            /* accent primário = violeta Gemini */
+          --ochre-deep:#5B3DBD;
+          --line:rgba(26,22,20,0.08); /* hairlines sutis */
+          --g-blue:#4796E3;
+          --g-violet:#7B5DD6;
+          --g-pink:#D63B92;
+          --g-grad:linear-gradient(135deg,#4796E3,#7B5DD6 50%,#D63B92);
+          --g-grad-text:linear-gradient(135deg,#3A82D1,#7B5DD6 55%,#D63B92);
+          flex:1;
+          background:#FFFFFF;
+          border:1px solid rgba(26,22,20,0.06);
+          border-radius:14px;
+          display:flex; flex-direction:column; overflow:hidden;
+          position:relative;
+          box-shadow:
+            0 30px 80px -32px rgba(26,22,20,.22),
+            0 8px 24px -12px rgba(123,93,214,.16),
+            inset 0 1px 0 rgba(255,255,255,1);
+        }
+        /* Borda gradient sutil (mask trick) */
+        .hAB-panel::before{
+          content:""; position:absolute; inset:0; padding:1.5px; border-radius:14px;
+          background:linear-gradient(135deg,rgba(71,150,227,.7),rgba(123,93,214,.7) 50%,rgba(214,59,146,.7));
+          -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+          -webkit-mask-composite:xor; mask-composite:exclude;
+          pointer-events:none;
+        }
+
+        .hAB-pane-head{
+          display:flex; align-items:center; gap:10px; padding:14px 18px;
+          border-bottom:1px solid var(--line);
+          font-family:'Geist Mono',ui-monospace,monospace; font-size:11px;
+          color:var(--cream-dim); letter-spacing:.06em;
+          background:linear-gradient(180deg,#FCFBFF,#FFFFFF);
+        }
+        .hAB-pane-head .pulse{
+          width:7px; height:7px; border-radius:50%; background:#34B17B;
+          box-shadow:0 0 0 0 rgba(52,177,123,.55); animation:hAB-pulse 1.8s infinite;
+        }
+        @keyframes hAB-pulse{ 0%{box-shadow:0 0 0 0 rgba(52,177,123,.55)} 70%{box-shadow:0 0 0 8px rgba(52,177,123,0)} 100%{box-shadow:0 0 0 0 rgba(52,177,123,0)} }
+        .hAB-pane-head b{ color:var(--cream); font-weight:600; }
+        .hAB-pane-head .right{ margin-left:auto; color:var(--cream-dim); }
+
+        .hAB-pane{ padding:18px 20px; display:flex; flex-direction:column; gap:14px; flex:1; min-height:0; }
+
+        .hAB-msg{ display:flex; gap:12px; }
+        .hAB-msg .av{
+          flex:0 0 28px; width:28px; height:28px; border-radius:8px;
+          display:flex; align-items:center; justify-content:center;
+          font-family:'Geist Mono',monospace; font-size:11px; font-weight:600;
+          border:1px solid transparent;
+        }
+        .hAB-msg.u .av{ background:#E8F1FB; color:#3A82D1; border-color:transparent; }
+        .hAB-msg.a .av{
+          background:var(--g-grad); color:#fff; border:0; box-shadow:0 4px 12px -2px rgba(123,93,214,.45);
+        }
+        .hAB-msg.a .av svg{ width:14px; height:14px; fill:#fff; }
+        .hAB-msg .bd{ flex:1; min-width:0; }
+        .hAB-msg .who{
+          font-family:'Geist Mono',monospace; font-size:10.5px; letter-spacing:.14em;
+          text-transform:uppercase; color:var(--cream-dim); margin-bottom:5px;
+        }
+        .hAB-msg.a .who .gradtag{
+          background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
+        }
+        .hAB-msg .txt{ font-size:14.5px; color:var(--cream); line-height:1.55; }
+        .hAB-cur{ display:inline-block; width:7px; height:14px; background:var(--g-violet); margin-left:2px; vertical-align:-2px; animation:hAB-blink 1s steps(2) infinite; }
+        @keyframes hAB-blink{ 50%{opacity:0} }
+
+        /* recommendation card (claro Gemini) */
+        .hAB-rec{
+          background:linear-gradient(180deg,#FCFAFF,#FFFFFF);
+          border:1px solid rgba(123,93,214,.20);
+          border-radius:12px; padding:14px 16px; display:flex; align-items:center; gap:14px;
+          position:relative; overflow:hidden;
+        }
+        .hAB-rec::before{
+          content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+          background:var(--g-grad);
+        }
+        .hAB-rec .mark{
+          font-family:'Geist Mono',monospace; font-size:9.5px; letter-spacing:.18em;
+          color:#fff; background:var(--g-grad); padding:4px 9px; border-radius:5px;
+          display:inline-flex; align-items:center; gap:5px; flex-shrink:0;
+          box-shadow:0 4px 12px -2px rgba(123,93,214,.4);
+        }
+        .hAB-rec .mark .st{ font-family:'Fraunces',serif; font-style:italic; }
+        .hAB-rec .body{ flex:1; min-width:0; }
+        .hAB-rec .name{ font-family:'Fraunces',serif; font-size:22px; color:var(--cream); line-height:1.1; margin-bottom:3px; letter-spacing:-.012em; font-weight:400; }
+        .hAB-rec .name em{ font-style:italic; color:var(--g-violet); font-weight:400; }
+        .hAB-rec .meta{ font-size:12.5px; color:var(--cream-dim); display:flex; gap:8px; align-items:center; }
+        .hAB-rec .meta .dot{ width:3px; height:3px; border-radius:50%; background:var(--cream-dim); }
+        .hAB-rec .meta .open{ color:#34B17B; font-weight:500; }
+        .hAB-rec .built{
+          font-family:'Geist Mono',monospace; font-size:9.5px;
+          background:var(--g-grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
+          letter-spacing:.16em; text-transform:uppercase; margin-top:7px;
+          display:inline-flex; align-items:center; gap:6px;
+        }
+        .hAB-rec .built::before{ content:""; width:14px; height:1px; background:var(--g-violet); }
+
+        .hAB-others{
+          padding:0 2px; display:flex; flex-direction:column; gap:8px;
+        }
+        .hAB-others .lbl{
+          font-family:'Geist Mono',monospace; font-size:10px; color:var(--cream-dim);
+          letter-spacing:.16em; text-transform:uppercase; margin-bottom:2px;
+        }
+        .hAB-other{
+          display:flex; align-items:center; gap:10px; padding:8px 12px;
+          border:1px solid rgba(26,22,20,0.08); border-radius:8px;
+          font-size:13px; color:var(--cream-dim); background:#FAFAFB;
+        }
+        .hAB-other .gr{
+          flex:1; height:3px; background:rgba(26,22,20,0.06); border-radius:2px;
+          position:relative; overflow:hidden; max-width:140px;
+        }
+        .hAB-other .gr::after{
+          content:""; position:absolute; left:0; top:0; bottom:0;
+          background:linear-gradient(90deg,#4796E3,#7B5DD6); border-radius:2px;
+        }
+        .hAB-other.n1 .gr::after{ width:64%; }
+        .hAB-other.n2 .gr::after{ width:48%; }
+        .hAB-other.n3 .gr::after{ width:36%; }
+
+        .hAB-cites{ display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
+        .hAB-cite{
+          font-family:'Geist Mono',monospace; font-size:10px;
+          padding:5px 9px; border:1px solid rgba(26,22,20,0.10); border-radius:6px;
+          color:var(--cream-dim); letter-spacing:.04em; background:#fff;
+          display:inline-flex; align-items:center; gap:5px;
+        }
+        .hAB-cite::before{ content:"⌕"; color:var(--g-violet); font-size:11px; font-weight:600; }
+
+        /* ============================================================
+           bottom strip — sem alteração
+           ============================================================ */
+        .hAB-bottom{
+          position:absolute; left:0; right:0; bottom:0; height:84px; z-index:4;
+          display:grid; grid-template-columns: 84px 1fr 1fr 1fr; align-items:center;
+          padding:0 56px 0 0; border-top:1px solid var(--line);
+        }
+        .hAB-bottom .cell{ padding:0 28px; height:100%; display:flex; flex-direction:column; justify-content:center; gap:6px; border-right:1px solid var(--line); }
+        .hAB-bottom .cell:last-child{ border-right:0; }
+        .hAB-bottom .lbl{ font-family:'Geist Mono',ui-monospace,monospace; font-size:10px; color:var(--cream-dim); letter-spacing:.18em; text-transform:uppercase; }
+        .hAB-bottom .val{ font-size:14.5px; color:var(--cream); }
+        .hAB-bottom .val .sep{ color:var(--cream-dim); margin:0 7px; }
+        .hAB-meter{ display:flex; align-items:center; gap:12px; }
+        .hAB-meter .bar{ flex:1; height:4px; background:rgba(34,26,18,.10); border-radius:2px; position:relative; overflow:hidden; }
+        .hAB-meter .bar::after{ content:""; position:absolute; inset:0; right:8%; background:linear-gradient(90deg, var(--ochre-deep), var(--ochre)); border-radius:2px; }
+        .hAB-meter .pct{ font-family:'Fraunces',serif; font-style:italic; font-size:20px; color:var(--ochre); }
+        .hAB-meter .pct .small{ font-family:'Geist Mono',ui-monospace,monospace; font-size:10px; color:var(--cream-dim); font-style:normal; margin-left:2px; vertical-align:2px; }
+      </style>
+
+      <nav class="hAB-nav">
+        <div class="hAB-logo"><span>Luis</span><span>Morais</span></div>
+        <div class="hAB-links">
+          <a>Trabalhos</a><a>Serviços</a><a>Sobre</a><a>Notas</a>
+          <a class="hAB-wa">WhatsApp<svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
-        <div class="pane">
-          <!-- User message -->
-          <div class="msg u">
-            <div class="av">U</div>
-            <div class="bd">
-              <div class="who">prompt</div>
-              <div class="txt">Clínicas de estética perto de mim com bons resultados</div>
-            </div>
+      </nav>
+
+      <div class="hAB-stage">
+        <div class="hAB-spine">
+          <div class="vlabel">Portfolio</div>
+          <div style="font-family:'Geist Mono',monospace;font-size:10px;color:var(--cream-dim);letter-spacing:.16em;line-height:1.6">22°54′S<br>47°03′W</div>
+        </div>
+
+        <div class="hAB-center">
+          <div class="hAB-kicker"><span class="tick"></span><span>Estúdio web independente</span><span style="opacity:.4">·</span><b>Campinas / SP</b></div>
+          <h1 class="hAB-h1">Faço sites <span class="qt">que o</span><br>Google <span class="qt">ranqueia</span><br><span class="em">— e a IA recomenda.</span><sup>01</sup></h1>
+          <p class="hAB-sub"><span class="fn">01</span>Sites sob medida, <b>ultra-rápidos</b> e feitos à mão. Bonitos pra quem vê, estruturados pra quem busca — humanos ou máquinas.</p>
+          <div class="hAB-cta">
+            <a class="hAB-btn hAB-btn-1">Quero meu site<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="hAB-btn hAB-btn-2">Ver trabalhos</a>
           </div>
-          <!-- AI message -->
-          <div class="msg a">
-            <div class="av"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12 2c.6 5.7 4.3 9.4 10 10-5.7.6-9.4 4.3-10 10-.6-5.7-4.3-9.4-10-10 5.7-.6 9.4-4.3 10-10z"/></svg></div>
-            <div class="bd">
-              <div class="who"><span class="gradtag">resposta · gemini</span></div>
-              <div class="txt" style="margin-bottom:10px">Com base em avaliações e presença online recentes, a melhor opção é:</div>
-              <div class="rec">
-                <div class="mark"><span class="st">✦</span> destaque</div>
-                <div class="body">
-                  <div class="name">Clínica <em>Aurora Estética</em></div>
-                  <div class="meta">
-                    <span>Cambuí · Campinas/SP</span>
-                    <span class="dot"></span>
-                    <span class="open">● aberto agora</span>
-                  </div>
-                  <div class="built">site por Luis Morais</div>
+        </div>
+
+        <div class="hAB-right">
+          <div class="hAB-tabs">
+            <button class="hAB-tab on"><span class="pt"></span>Clínica de estética</button>
+            <button class="hAB-tab"><span class="pt"></span>Escritório de advocacia</button>
+            <button class="hAB-tab"><span class="pt"></span>Negócio local</button>
+          </div>
+          <div class="hAB-panel">
+            <div class="hAB-pane-head">
+              <span class="pulse"></span>
+              <span>conversa com IA · <b>estética</b></span>
+              <span class="right">resposta gerada · agora</span>
+            </div>
+            <div class="hAB-pane">
+              <div class="hAB-msg u">
+                <div class="av">U</div>
+                <div class="bd">
+                  <div class="who">prompt</div>
+                  <div class="txt">Clínicas de estética perto de mim com bons resultados</div>
                 </div>
               </div>
-              <div class="others" style="margin-top:14px">
-                <div class="lbl">também encontrados</div>
-                <div class="other n1"><span style="flex:0 0 auto">Estúdio Belle</span><span class="gr"></span></div>
-                <div class="other n2"><span style="flex:0 0 auto">Spa Lumière</span><span class="gr"></span></div>
-                <div class="other n3"><span style="flex:0 0 auto">Clínica Vida</span><span class="gr"></span></div>
-              </div>
-              <div class="cites">
-                <div class="cite">aurora-estetica.com.br</div>
-                <div class="cite">Google · 4.9★ (213)</div>
-                <div class="cite">Instagram · 18k</div>
+              <div class="hAB-msg a hAB-flip">
+                <div class="av"><svg viewBox="0 0 24 24"><path fill="#fff" d="M12 2c.6 5.7 4.3 9.4 10 10-5.7.6-9.4 4.3-10 10-.6-5.7-4.3-9.4-10-10 5.7-.6 9.4-4.3 10-10z"/></svg></div>
+                <div class="bd">
+                  <div class="who"><span class="gradtag">resposta · gemini</span></div>
+                  <div class="txt" style="margin-bottom:10px">Com base em avaliações e presença online recentes, a melhor opção é:</div>
+                  <div class="hAB-rec">
+                    <div class="mark"><span class="st">✦</span> destaque</div>
+                    <div class="body">
+                      <div class="name">Clínica <em>Aurora Estética</em></div>
+                      <div class="meta">
+                        <span>Cambuí · Campinas/SP</span>
+                        <span class="dot"></span>
+                        <span class="open">● aberto agora</span>
+                      </div>
+                      <div class="built">site por Luis Morais</div>
+                    </div>
+                  </div>
+                  <div class="hAB-others" style="margin-top:12px">
+                    <div class="lbl">também encontrados</div>
+                    <div class="hAB-other n1"><span style="flex:0 0 auto">Estúdio Belle</span><span class="gr"></span></div>
+                    <div class="hAB-other n2"><span style="flex:0 0 auto">Spa Lumière</span><span class="gr"></span></div>
+                    <div class="hAB-other n3"><span style="flex:0 0 auto">Clínica Vida</span><span class="gr"></span></div>
+                  </div>
+                  <div class="hAB-cites">
+                    <div class="hAB-cite">aurora-estetica.com.br</div>
+                    <div class="hAB-cite">Google · 4.9★ (213)</div>
+                    <div class="hAB-cite">Instagram · 18k</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div></div>
       </div>
-    </div>
 
-  </div>
+      <div class="hAB-bottom">
+        <div style="padding-left:56px">
+          <div style="font-family:'Geist Mono',monospace;font-size:10px;color:var(--cream-dim);letter-spacing:.18em">SCROLL</div>
+          <div style="font-family:Fraunces,serif;font-style:italic;font-size:18px;color:var(--cream);margin-top:4px">↓</div>
+        </div>
+        <div class="cell"><div class="lbl">Ferramentas</div><div class="val">Webflow<span class="sep">/</span>Figma<span class="sep">/</span>Shopify</div></div>
+        <div class="cell"><div class="lbl">Especialidades</div><div class="val">SEO<span class="sep">·</span>GEO<span class="sep">·</span>Core Web Vitals</div></div>
+        <div class="cell"><div class="lbl">Discoverability Score</div><div class="hAB-meter"><div class="bar"></div><div class="pct">92<span class="small">/100</span></div></div></div>
+      </div>
 
-  <!-- BOTTOM -->
-  <div class="bottom">
-    <div class="left">
-      <div class="l1">scroll</div>
-      <div class="l2">↓</div>
-    </div>
-    <div class="cell"><div class="lbl">Ferramentas</div><div class="val">Webflow<span class="sep">/</span>Figma<span class="sep">/</span>Shopify</div></div>
-    <div class="cell"><div class="lbl">Especialidades</div><div class="val">SEO<span class="sep">·</span>GEO<span class="sep">·</span>Core Web Vitals</div></div>
-    <div class="cell"><div class="lbl">Discoverability Score</div><div class="meter"><div class="bar"></div><div class="pct">92<span class="small">/100</span></div></div></div>
-  </div>
+</div>
 
+</div>
 </div>
 
 </body>
