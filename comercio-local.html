@@ -3,260 +3,596 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#16120D">
+<meta name="theme-color" content="#F7EDD5">
 <title>Sites para Restaurantes, Cafés e Comércio Local | Luis Morais</title>
-<meta name="description" content="Sites sob medida para restaurantes, cafés e varejo local. Cardápio digital, pedido direto pelo WhatsApp sem taxa, mapa e presença no Google. Estúdio web em Campinas/SP.">
+<meta name="description" content="Sites para restaurantes, cafés, padarias e varejo local. Cardápio digital, pedido sem taxa pelo WhatsApp, Google Maps e presença de bairro premium.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://luismorais.com.br/comercio-local.html">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Sites para Restaurantes, Cafés e Comércio Local">
-<meta property="og:description" content="Cardápio digital, pedido sem taxa e presença no Google — sites para comércio local.">
+<meta property="og:description" content="Cardápio digital, pedido sem taxa e presença no Google — pra negócios de bairro que merecem mais.">
 <meta property="og:url" content="https://luismorais.com.br/comercio-local.html">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Geist:wght@300..600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600&family=Caveat:wght@400..700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Sites para restaurantes, cafés e comércio local",
-  "serviceType": "Desenvolvimento de sites com cardápio e pedidos",
-  "provider": {"@type": "ProfessionalService", "name": "Luis Morais — Estúdio web", "areaServed": "Brasil", "address": {"@type": "PostalAddress", "addressLocality": "Campinas", "addressRegion": "SP", "addressCountry": "BR"}},
-  "audience": {"@type": "BusinessAudience", "name": "Restaurantes, cafés, padarias e varejo local"},
-  "description": "Sites com cardápio digital, pedido direto sem taxa de marketplace, mapa e SEO local."
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Sites para restaurantes, cafés e comércio local",
+  "serviceType":"Desenvolvimento de sites com cardápio digital e pedido sem taxa",
+  "provider":{"@type":"ProfessionalService","name":"Luis Morais — Estúdio web","areaServed":"Brasil","address":{"@type":"PostalAddress","addressLocality":"Campinas","addressRegion":"SP","addressCountry":"BR"}},
+  "audience":{"@type":"BusinessAudience","name":"Restaurantes, cafés, padarias, bistrôs e varejo local"}
 }
 </script>
 
 <style>
 :root{
-  --bg:#16120D; --bg-soft:#1E1812; --cream:#F1E9DB; --cream-2:#EDDFC4; --cream-dim:#A99B86;
-  --ink:#221A12; --ink-dim:#6E5E46; --ochre:#E3A85B; --ochre-deep:#B97F37;
-  --accent:#D9A24A; --accent-deep:#A8742A; --green:#5E9E63;
-  --line-d:rgba(241,233,219,0.12); --line-l:rgba(34,26,18,0.14);
+  --butter:#F7EDD5;
+  --butter-warm:#F1E2BF;
+  --paper:#FDF7E6;
+  --espresso:#2E1F12;
+  --espresso-soft:#4F3A24;
+  --espresso-mute:#7A6447;
+  --olive:#6B7340;
+  --olive-deep:#48512A;
+  --olive-soft:#9BA46D;
+  --terracotta:#C26637;
+  --terracotta-deep:#8E4421;
+  --saffron:#E8B33B;
+  --crust:#A8702C;
+  --line:rgba(46,31,18,0.10);
+  --line-strong:rgba(46,31,18,0.22);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth;background:var(--butter)}
+body{
+  font-family:'Inter',-apple-system,sans-serif;
+  font-weight:400;font-size:17px;line-height:1.65;
+  color:var(--espresso);background:var(--butter);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  position:relative;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.35 0 0 0 0 0.25 0 0 0 0 0.12 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)'/%3E%3C/svg%3E");
+}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px;position:relative;z-index:1}
 .serif{font-family:'Fraunces',Georgia,serif}
-.mono{font-family:'Geist Mono',ui-monospace,monospace}
-.em{font-style:italic;color:var(--accent)}
-.nav{position:sticky;top:0;z-index:50;background:rgba(22,18,13,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-d)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
-.nav-back{font-size:13px;color:var(--cream-dim);display:inline-flex;align-items:center;gap:7px;transition:color .2s}
-.nav-back:hover{color:var(--cream)}
-.nav-wa{background:var(--green);color:#fff;font-weight:500;font-size:13.5px;padding:9px 16px;border-radius:999px;display:inline-flex;align-items:center;gap:7px;transition:transform .2s,filter .2s}
-.nav-wa:hover{transform:translateY(-1px);filter:brightness(1.08)}
-.hero{padding:84px 0 76px;border-bottom:1px solid var(--line-d)}
-.kicker{font-family:'Geist Mono',monospace;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:10px;margin-bottom:22px}
-.kicker .ic{width:30px;height:30px;border:1px solid var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accent)}
-.kicker .ic svg{width:16px;height:16px}
-.hero h1{font-family:'Fraunces',serif;font-weight:380;font-size:clamp(38px,6vw,68px);line-height:1.02;letter-spacing:-.02em;max-width:16ch;margin-bottom:24px}
-.hero .lead{font-size:18px;color:var(--cream-dim);max-width:54ch;margin-bottom:34px}
-.hero .lead b{color:var(--cream);font-weight:500}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.btn{font-size:15px;font-weight:500;padding:15px 26px;border-radius:999px;display:inline-flex;align-items:center;gap:10px;transition:transform .2s,background .2s,border-color .2s,color .2s;cursor:pointer}
-.btn-1{background:var(--accent);color:#241608}
-.btn-1:hover{background:var(--cream);transform:translateY(-2px)}
-.btn-2{border:1px solid var(--line-d);color:var(--cream);background:transparent}
-.btn-2:hover{border-color:var(--cream);transform:translateY(-2px)}
-.hero-stats{display:flex;gap:36px;margin-top:48px;flex-wrap:wrap}
-.hero-stats .s .n{font-family:'Fraunces',serif;font-style:italic;font-size:34px;color:var(--accent);line-height:1}
-.hero-stats .s .l{font-size:12.5px;color:var(--cream-dim);margin-top:6px;max-width:18ch}
-.sec{padding:84px 0}
-.sec-light{background:var(--cream-2);color:var(--ink)}
-.sec-light .kicker{color:var(--accent-deep)}
-.sec-light .kicker .ic{border-color:var(--accent-deep);color:var(--accent-deep)}
-.h2{font-family:'Fraunces',serif;font-weight:380;font-size:clamp(28px,4vw,46px);line-height:1.06;letter-spacing:-.02em;max-width:20ch;margin-bottom:18px}
-.sec-light .em{color:var(--accent-deep)}
-.sub{font-size:17px;color:var(--cream-dim);max-width:56ch;margin-bottom:48px}
-.sec-light .sub{color:var(--ink-dim)}
-.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.prob{background:var(--bg-soft);border:1px solid var(--line-d);border-radius:14px;padding:28px}
-.prob .n{font-family:'Geist Mono',monospace;font-size:12px;color:var(--accent);letter-spacing:.16em;margin-bottom:14px}
-.prob h3{font-family:'Fraunces',serif;font-weight:400;font-size:21px;margin-bottom:10px;line-height:1.2}
-.prob p{font-size:14.5px;color:var(--cream-dim)}
-.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.ben{background:#fff;border:1px solid var(--line-l);border-radius:14px;padding:28px;transition:transform .25s,box-shadow .25s}
-.ben:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(34,26,18,.35)}
-.ben .ic{width:42px;height:42px;border-radius:10px;background:var(--accent);color:#241608;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-.ben .ic svg{width:20px;height:20px}
-.ben h3{font-family:'Fraunces',serif;font-weight:400;font-size:20px;margin-bottom:8px}
-.ben p{font-size:14.5px;color:var(--ink-dim)}
-.browser{background:var(--bg-soft);border:1px solid var(--line-d);border-radius:16px;overflow:hidden;box-shadow:0 40px 100px -50px rgba(0,0,0,.7);margin-top:14px}
-.browser-bar{display:flex;align-items:center;gap:8px;padding:13px 16px;border-bottom:1px solid var(--line-d)}
-.browser-bar .dot{width:10px;height:10px;border-radius:50%;background:var(--line-d)}
-.browser-bar .url{margin-left:12px;font-family:'Geist Mono',monospace;font-size:12px;color:var(--cream-dim)}
-.browser-bar .url b{color:var(--cream)}
-.mock{background:#1f1a14;color:#EDDFC4}
-.mock-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid rgba(237,223,196,.12)}
-.mock-logo{font-family:'Fraunces',serif;font-weight:500;font-size:18px;color:#EDDFC4}
-.mock-logo b{color:var(--accent)}
-.mock-links{display:flex;gap:20px;font-size:12.5px;color:#a99b86;align-items:center}
-.mock-links .pill{background:var(--green);color:#fff;padding:7px 14px;border-radius:999px;font-weight:500}
-.mock-hero{padding:42px 28px 30px;display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
-.mock-badge{display:inline-flex;align-items:center;gap:6px;font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);border:1px solid rgba(94,158,99,.4);background:rgba(94,158,99,.1);padding:5px 10px;border-radius:999px;margin-bottom:14px}
-.mock-badge .d{width:6px;height:6px;border-radius:50%;background:var(--green)}
-.mock-h{font-family:'Fraunces',serif;font-weight:400;font-size:34px;line-height:1.05;color:#EDDFC4;margin-bottom:10px}
-.mock-h .em{color:var(--accent);font-style:italic}
-.mock-p{font-size:13.5px;color:#a99b86;max-width:36ch;margin-bottom:16px}
-.mock-cta{display:flex;gap:10px}
-.mock-btn{font-size:12.5px;font-weight:500;padding:10px 16px;border-radius:999px}
-.mock-btn.fill{background:var(--green);color:#fff}
-.mock-btn.line{border:1px solid rgba(237,223,196,.3);color:#EDDFC4}
-.mock-portrait{aspect-ratio:1/1;border-radius:14px;background:repeating-linear-gradient(135deg,#322617,#322617 9px,#2a2013 9px,#2a2013 18px);border:1px solid rgba(237,223,196,.12);display:flex;align-items:flex-end;padding:14px}
-.mock-portrait .badge{background:var(--accent);color:#241608;font-size:10px;font-family:'Geist Mono',monospace;padding:5px 9px;border-radius:5px}
-.mock-areas{padding:6px 28px 38px}
-.mock-areas .lbl{font-family:'Geist Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#a99b86;margin-bottom:14px}
-.mock-menu{display:flex;flex-direction:column;gap:10px}
-.mock-item{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed rgba(237,223,196,.15);padding-bottom:9px}
-.mock-item .nm{font-family:'Fraunces',serif;font-size:15px;color:#EDDFC4}
-.mock-item .nm span{display:block;font-family:'Geist',sans-serif;font-size:11px;color:#a99b86;font-style:normal}
-.mock-item .pr{font-family:'Geist Mono',monospace;font-size:13px;color:var(--accent)}
-.wf-notes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
-.wf-note{font-size:13px;color:var(--cream-dim);padding-left:14px;border-left:2px solid var(--accent)}
-.wf-note b{display:block;color:var(--cream);font-family:'Fraunces',serif;font-size:15px;margin-bottom:3px;font-weight:400}
-.proc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.proc .step .n{font-family:'Fraunces',serif;font-style:italic;font-size:30px;color:var(--accent);margin-bottom:10px}
-.proc .step h3{font-family:'Fraunces',serif;font-weight:400;font-size:18px;margin-bottom:6px}
-.proc .step p{font-size:13.5px;color:var(--cream-dim)}
-.faq-list{max-width:760px;margin:32px auto 0}
-.faq-item{border:1px solid var(--line-l);border-radius:10px;margin-bottom:10px;background:#fff}
-.faq-item summary{list-style:none;cursor:pointer;padding:18px 20px;font-family:'Fraunces',serif;font-size:17px;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:14px}
+.chalk{font-family:'Caveat',cursive}
+.mono{font-family:'DM Mono',ui-monospace,monospace;letter-spacing:.02em}
+.em{font-style:italic;color:var(--terracotta-deep)}
+.eyebrow{font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--terracotta-deep);font-weight:500}
+
+/* OPEN BAR */
+.open-bar{padding:13px 0;background:var(--espresso);color:var(--butter);font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase}
+.open-bar-in{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.open-bar .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--olive-soft);box-shadow:0 0 0 4px rgba(155,164,109,.32);margin-right:10px;vertical-align:1px;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(155,164,109,.32)}50%{box-shadow:0 0 0 8px rgba(155,164,109,.18)}}
+.open-bar a{color:var(--saffron);border-bottom:1px solid var(--saffron);padding-bottom:2px}
+
+/* NAV */
+.nav{padding:22px 0;border-bottom:1px solid var(--line);background:rgba(247,237,213,.85);backdrop-filter:blur(14px);position:sticky;top:0;z-index:50}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.nav-mark{font-family:'Fraunces',serif;font-weight:500;font-size:22px;color:var(--espresso);letter-spacing:-.005em}
+.nav-mark em{font-style:italic;color:var(--terracotta);font-weight:400}
+.nav-wa{
+  background:var(--olive);color:var(--butter);font-weight:600;font-size:12.5px;letter-spacing:.04em;
+  padding:12px 22px;border-radius:0;display:inline-flex;align-items:center;gap:8px;
+  transition:background .3s,transform .3s;
+}
+.nav-wa:hover{background:var(--olive-deep);transform:translateY(-1px)}
+
+/* HERO */
+.hero{padding:80px 0 100px;position:relative}
+.hero-tag{display:inline-flex;align-items:center;gap:14px;margin-bottom:34px}
+.hero-tag .line{width:36px;height:1px;background:var(--terracotta)}
+.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:60px;align-items:end}
+.hero-h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(52px,8.2vw,120px);line-height:.94;letter-spacing:-.028em;color:var(--espresso);margin-bottom:32px}
+.hero-h1 .it{font-style:italic;color:var(--terracotta);font-weight:300}
+.hero-h1 .chalkbit{font-family:'Caveat',cursive;color:var(--olive-deep);font-weight:700;font-size:.6em;letter-spacing:-.01em;display:inline-block;transform:rotate(-3deg) translateY(-12px);margin:0 .15em}
+.hero-deck{font-size:20px;color:var(--espresso-soft);max-width:48ch;margin-bottom:38px;line-height:1.55;font-weight:400}
+.hero-deck b{color:var(--espresso);font-weight:600}
+.hero-deck u{text-decoration:underline;text-decoration-color:var(--saffron);text-decoration-thickness:3px;text-underline-offset:4px;text-decoration-skip-ink:none}
+.hero-cta{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.btn-1{
+  background:var(--olive);color:var(--butter);font-weight:600;font-size:13.5px;letter-spacing:.04em;
+  padding:18px 30px;border-radius:0;display:inline-flex;align-items:center;gap:10px;
+  transition:background .3s,transform .3s,box-shadow .3s;
+  box-shadow:6px 6px 0 var(--espresso);
+}
+.btn-1:hover{transform:translate(2px,2px);box-shadow:4px 4px 0 var(--espresso);background:var(--olive-deep)}
+.btn-line{color:var(--espresso);font-weight:600;font-size:13.5px;letter-spacing:.04em;padding:18px 0;border-bottom:2px solid var(--terracotta);transition:color .25s,border-color .25s}
+.btn-line:hover{color:var(--terracotta-deep);border-color:var(--espresso)}
+
+/* MENU CARD — playful chalkboard / paper menu mockup */
+.menu-card{background:var(--paper);border:2px solid var(--espresso);padding:28px;position:relative;box-shadow:14px 14px 0 var(--terracotta)}
+.menu-card::before{content:"hoje";position:absolute;top:-14px;right:24px;background:var(--saffron);color:var(--espresso);padding:5px 14px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;transform:rotate(2deg)}
+.menu-card .head{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;border-bottom:2px dashed var(--line-strong);margin-bottom:18px}
+.menu-card .head .nm{font-family:'Fraunces',serif;font-weight:500;font-size:22px}
+.menu-card .head .nm em{font-style:italic;color:var(--terracotta)}
+.menu-card .head .meta{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--espresso-mute)}
+.menu-card .item{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px dotted var(--line-strong)}
+.menu-card .item:last-child{border-bottom:0}
+.menu-card .item .name{font-family:'Fraunces',serif;font-size:18px;font-weight:400}
+.menu-card .item .name small{display:block;font-family:'Inter',sans-serif;font-size:12px;color:var(--espresso-mute);margin-top:2px;font-weight:400}
+.menu-card .item .price{font-family:'DM Mono',monospace;font-size:14px;color:var(--terracotta-deep);font-weight:500;letter-spacing:0}
+.menu-card .scribble{font-family:'Caveat',cursive;font-weight:600;color:var(--olive-deep);font-size:18px;transform:rotate(-2deg);margin-top:18px;display:block;text-align:center;line-height:1}
+.menu-card .scribble::before{content:"— ";color:var(--terracotta)}
+.menu-card .scribble::after{content:" —";color:var(--terracotta)}
+
+/* CREDITS strip */
+.credits{margin-top:80px;padding-top:30px;border-top:2px dashed var(--line-strong);display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.credits .c .n{font-family:'Fraunces',serif;font-weight:300;font-size:42px;line-height:.9;color:var(--terracotta-deep)}
+.credits .c .n .small{font-family:'DM Mono',monospace;font-size:.32em;color:var(--espresso-mute);font-weight:500;letter-spacing:.06em;margin-left:3px;vertical-align:8px}
+.credits .c .l{font-size:13.5px;color:var(--espresso-soft);margin-top:6px;line-height:1.55}
+
+/* MANIFESTO */
+.manifesto{padding:120px 0;text-align:center;background:var(--butter-warm);border-top:2px solid var(--espresso);border-bottom:2px solid var(--espresso);position:relative}
+.manifesto::before{content:"☕";font-size:80px;opacity:.06;position:absolute;top:54px;left:50%;transform:translateX(-50%)}
+.manifesto .eyebrow{display:inline-block;margin-bottom:24px}
+.manifesto h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(40px,5.8vw,72px);line-height:1.04;letter-spacing:-.02em;color:var(--espresso);max-width:22ch;margin:0 auto 28px}
+.manifesto h2 .it{font-style:italic;color:var(--terracotta)}
+.manifesto h2 .ch{font-family:'Caveat',cursive;color:var(--olive-deep);font-weight:700;font-size:.85em;transform:rotate(-1deg);display:inline-block;letter-spacing:-.01em}
+.manifesto p{font-size:21px;color:var(--espresso-soft);max-width:58ch;margin:0 auto;font-weight:400;line-height:1.55}
+
+/* DORES — receipt style cards */
+.dores{padding:120px 0}
+.section-head{display:grid;grid-template-columns:140px 1fr;gap:48px;margin-bottom:80px;align-items:start}
+.section-head .n{font-family:'Fraunces',serif;font-style:italic;font-weight:300;color:var(--terracotta);font-size:88px;line-height:.85}
+.section-head h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(36px,5vw,62px);line-height:1.02;letter-spacing:-.022em;color:var(--espresso);max-width:24ch}
+.section-head h2 .it{font-style:italic;color:var(--terracotta)}
+.section-head h2 .ch{font-family:'Caveat',cursive;font-weight:700;color:var(--olive-deep);font-size:.85em;transform:rotate(-2deg);display:inline-block}
+.section-head .deck{font-size:18.5px;color:var(--espresso-soft);max-width:54ch;margin-top:18px;line-height:1.6}
+
+.dores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.dore{background:var(--paper);border:2px solid var(--espresso);padding:32px 28px;position:relative;transition:transform .3s,box-shadow .3s}
+.dore:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--terracotta)}
+.dore::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,var(--terracotta),var(--terracotta) 12px,var(--saffron) 12px,var(--saffron) 24px)}
+.dore .stamp{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--terracotta-deep);margin-bottom:18px;margin-top:6px;font-weight:600}
+.dore h3{font-family:'Fraunces',serif;font-weight:400;font-size:22px;line-height:1.2;color:var(--espresso);margin-bottom:14px}
+.dore h3 .it{font-style:italic;color:var(--terracotta-deep)}
+.dore p{color:var(--espresso-soft);font-size:15.5px;line-height:1.6}
+.dore .cost{margin-top:18px;padding-top:14px;border-top:1px dashed var(--line-strong);font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--olive-deep);font-weight:600}
+.dore .cost b{color:var(--terracotta-deep);font-weight:700}
+
+/* TRANSFORMAÇÃO — antes/depois */
+.transf{padding:120px 0;background:var(--butter-warm);border-top:2px solid var(--espresso);border-bottom:2px solid var(--espresso)}
+.transf-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch}
+.transf-card{padding:38px 34px;position:relative;background:var(--paper);border:2px solid var(--espresso)}
+.transf-card.antes{background:#EDE3CC}
+.transf-card.depois{background:var(--paper);box-shadow:12px 12px 0 var(--olive)}
+.transf-card .label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;margin-bottom:16px}
+.transf-card.antes .label{color:var(--espresso-mute)}
+.transf-card.depois .label{color:var(--olive-deep)}
+.transf-card h3{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:30px;line-height:1.12;color:var(--espresso);margin-bottom:24px}
+.transf-card.antes h3{color:var(--espresso-soft)}
+.transf-card ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.transf-card li{padding-left:24px;position:relative;font-size:15.5px;line-height:1.55}
+.transf-card.antes li{color:var(--espresso-soft)}
+.transf-card.antes li::before{content:"✕";position:absolute;left:0;top:0;color:var(--espresso-mute);font-weight:700;font-size:14px}
+.transf-card.depois li{color:var(--espresso)}
+.transf-card.depois li::before{content:"✓";position:absolute;left:0;top:0;color:var(--olive);font-weight:700;font-size:16px}
+
+/* O CARDÁPIO DO TRABALHO (process) */
+.cardapio-proc{padding:120px 0}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:60px;border:2px solid var(--espresso)}
+.proc-step{padding:36px 28px;border-right:2px solid var(--espresso);background:var(--paper);position:relative}
+.proc-step:last-child{border-right:0}
+.proc-step::before{content:"";position:absolute;top:18px;right:18px;width:24px;height:24px;border:2px solid var(--terracotta);border-radius:50%;background:var(--butter);display:flex;align-items:center;justify-content:center}
+.proc-step .n{font-family:'Caveat',cursive;font-weight:700;font-size:54px;color:var(--terracotta-deep);line-height:.85;margin-bottom:14px;transform:rotate(-2deg);display:inline-block}
+.proc-step .price-tag{display:inline-block;background:var(--saffron);color:var(--espresso);padding:4px 10px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:12px;transform:rotate(-1deg)}
+.proc-step h3{font-family:'Fraunces',serif;font-weight:400;font-size:21px;line-height:1.2;color:var(--espresso);margin-bottom:10px}
+.proc-step h3 .it{font-style:italic;color:var(--terracotta-deep)}
+.proc-step p{color:var(--espresso-soft);font-size:15px;line-height:1.6}
+
+/* WIREFRAME — neighborhood cafe site */
+.wireframe{padding:120px 0;background:var(--butter-warm)}
+.wf-frame{background:var(--paper);border:2px solid var(--espresso);position:relative;box-shadow:16px 16px 0 var(--terracotta)}
+.wf-nav{display:flex;align-items:center;justify-content:space-between;padding:22px 32px;border-bottom:2px solid var(--espresso);background:var(--butter)}
+.wf-logo{font-family:'Fraunces',serif;font-weight:500;font-size:22px;color:var(--espresso);letter-spacing:-.01em}
+.wf-logo em{font-style:italic;color:var(--terracotta);font-weight:400}
+.wf-logo b{color:var(--terracotta);font-weight:300;font-style:italic;margin:0 .15em}
+.wf-links{display:flex;gap:22px;font-family:'DM Mono',monospace;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--espresso-soft);align-items:center;font-weight:500}
+.wf-links .pill{background:var(--olive);color:var(--butter);padding:9px 16px;font-weight:600;letter-spacing:.12em}
+.wf-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;padding:50px 32px 46px;align-items:center;background:var(--paper)}
+.wf-badge{display:inline-flex;align-items:center;gap:8px;background:var(--butter);border:1.5px solid var(--olive);color:var(--olive-deep);padding:7px 14px;font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-bottom:18px}
+.wf-badge .d{width:7px;height:7px;border-radius:50%;background:var(--olive)}
+.wf-h{font-family:'Fraunces',serif;font-weight:300;font-size:48px;line-height:1;letter-spacing:-.022em;color:var(--espresso);margin-bottom:14px}
+.wf-h .it{font-style:italic;color:var(--terracotta)}
+.wf-p{color:var(--espresso-soft);font-size:17px;max-width:38ch;margin-bottom:22px;line-height:1.55}
+.wf-cta{display:flex;gap:12px}
+.wf-btn{font-size:12.5px;font-weight:600;padding:12px 22px;letter-spacing:.04em;font-family:'Inter',sans-serif}
+.wf-btn.fill{background:var(--olive);color:var(--butter)}
+.wf-btn.line{border:1.5px solid var(--espresso);color:var(--espresso)}
+.wf-side{display:flex;flex-direction:column;gap:18px}
+.wf-stamp{aspect-ratio:1/1;background:radial-gradient(circle at 30% 25%, rgba(255,255,255,.4), transparent 50%), linear-gradient(150deg,#E8B33B 0%,#A8702C 100%);border:2px solid var(--espresso);position:relative;display:flex;align-items:flex-end;padding:18px}
+.wf-stamp::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");pointer-events:none}
+.wf-stamp .ch{font-family:'Caveat',cursive;font-weight:700;color:var(--espresso);font-size:32px;line-height:1;transform:rotate(-4deg);position:relative;z-index:1}
+.wf-quick{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.wf-q{background:var(--butter);border:1.5px solid var(--line-strong);padding:14px 16px;font-size:12px;color:var(--espresso)}
+.wf-q b{display:block;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--terracotta-deep);font-weight:600;margin-bottom:4px}
+
+.wf-menu{padding:32px;background:var(--butter);border-top:2px solid var(--espresso)}
+.wf-menu-h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px;padding-bottom:14px;border-bottom:2px dashed var(--line-strong)}
+.wf-menu-h .t{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:28px;color:var(--espresso)}
+.wf-menu-h .x{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--espresso-mute);font-weight:500}
+.wf-items{display:flex;flex-direction:column;gap:0}
+.wf-item{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px dotted var(--line-strong);gap:18px}
+.wf-item:last-child{border-bottom:0}
+.wf-item .nm{font-family:'Fraunces',serif;font-size:18px;color:var(--espresso);font-weight:400}
+.wf-item .nm small{display:block;font-family:'Inter',sans-serif;font-size:12.5px;color:var(--espresso-mute);margin-top:2px;font-weight:400}
+.wf-item .pr{font-family:'DM Mono',monospace;font-size:14px;color:var(--terracotta-deep);font-weight:600;flex-shrink:0}
+
+.wf-notes{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:42px}
+.wf-note b{display:block;font-family:'Fraunces',serif;font-style:italic;color:var(--terracotta-deep);font-size:18px;font-weight:400;margin-bottom:6px}
+.wf-note .d{color:var(--espresso-soft);font-size:14.5px;line-height:1.55}
+
+/* BENEFÍCIOS */
+.beneficios{padding:120px 0}
+.ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:60px}
+.ben{background:var(--paper);border:2px solid var(--espresso);padding:34px 28px;position:relative;transition:transform .3s,box-shadow .3s}
+.ben:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--olive)}
+.ben .ic{width:48px;height:48px;background:var(--saffron);color:var(--espresso);display:flex;align-items:center;justify-content:center;margin-bottom:22px;border:2px solid var(--espresso)}
+.ben .ic svg{width:22px;height:22px}
+.ben h3{font-family:'Fraunces',serif;font-weight:400;font-size:22px;line-height:1.2;color:var(--espresso);margin-bottom:10px}
+.ben h3 .it{font-style:italic;color:var(--terracotta-deep)}
+.ben p{color:var(--espresso-soft);font-size:15px;line-height:1.6}
+
+/* BILHETES DE MESA — testimonials styled as receipts */
+.bilhetes{padding:120px 0;background:var(--butter-warm);border-top:2px solid var(--espresso);border-bottom:2px solid var(--espresso)}
+.bilhetes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:60px}
+.bilhete{background:var(--paper);padding:30px 26px;position:relative;font-family:'DM Mono',monospace;color:var(--espresso);box-shadow:6px 6px 0 var(--terracotta);transform:rotate(-1deg);transition:transform .3s}
+.bilhete:nth-child(2){transform:rotate(1deg)}
+.bilhete:nth-child(3){transform:rotate(-.5deg)}
+.bilhete:hover{transform:rotate(0deg) translateY(-4px)}
+.bilhete::after{content:"";position:absolute;bottom:-2px;left:0;right:0;height:6px;background:repeating-linear-gradient(-45deg,var(--paper),var(--paper) 6px,transparent 6px,transparent 12px)}
+.bilhete .top{display:flex;justify-content:space-between;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--espresso-mute);padding-bottom:14px;border-bottom:1px dashed var(--line-strong);margin-bottom:16px}
+.bilhete blockquote{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:20px;line-height:1.4;color:var(--espresso);margin-bottom:18px;letter-spacing:-.005em}
+.bilhete .who{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--espresso-mute);line-height:1.7}
+.bilhete .who b{color:var(--terracotta-deep);font-weight:600;font-family:'Fraunces',serif;letter-spacing:0;text-transform:none;font-size:15px;font-style:normal;display:block;margin-bottom:2px}
+
+/* FAQ */
+.faq-sec{padding:120px 0}
+.faq{max-width:840px;margin:60px auto 0}
+.faq-item{background:var(--paper);border:2px solid var(--espresso);margin-bottom:14px;transition:transform .25s}
+.faq-item[open]{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--terracotta)}
+.faq-item summary{list-style:none;cursor:pointer;padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:18px;font-family:'Fraunces',serif;font-weight:400;font-size:20px;color:var(--espresso);line-height:1.3}
 .faq-item summary::-webkit-details-marker{display:none}
-.faq-item summary::after{content:'+';font-family:'Fraunces',serif;font-size:24px;color:var(--accent-deep);transition:transform .3s}
-.faq-item[open] summary::after{transform:rotate(45deg)}
-.faq-item .a{padding:0 20px 18px;color:var(--ink-dim);font-size:14.5px}
-.cta-final{text-align:center;padding:96px 0}
-.cta-final h2{font-family:'Fraunces',serif;font-weight:380;font-size:clamp(32px,5vw,54px);line-height:1.04;margin:0 auto 18px;max-width:18ch}
-.cta-final p{color:var(--cream-dim);font-size:17px;margin:0 auto 32px;max-width:50ch}
-.foot{border-top:1px solid var(--line-d);padding:40px 0;font-size:13px;color:var(--cream-dim)}
-.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}
-@media(max-width:860px){.prob-grid,.ben-grid,.proc,.mock-hero,.wf-notes{grid-template-columns:1fr}.mock-hero{gap:18px}.nav-back span{display:none}.hero-stats{gap:24px}}
+.faq-item summary::after{content:"+";font-family:'Fraunces',serif;font-weight:300;font-size:28px;color:var(--terracotta);flex-shrink:0;line-height:1;transition:transform .3s}
+.faq-item[open] summary::after{transform:rotate(45deg);color:var(--olive)}
+.faq-item .a{padding:0 28px 24px;color:var(--espresso-soft);font-size:15.5px;line-height:1.65;max-width:64ch}
+
+/* CTA FINAL */
+.cta-final{padding:140px 0;text-align:center;background:var(--espresso);color:var(--butter);position:relative;overflow:hidden}
+.cta-final::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 500px at 50% 50%,rgba(232,179,59,.18),transparent 55%)}
+.cta-final-in{position:relative;z-index:1}
+.cta-final .eyebrow{color:var(--saffron);display:inline-block;margin-bottom:30px}
+.cta-final h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(42px,6.4vw,84px);line-height:1;letter-spacing:-.024em;color:var(--butter);max-width:18ch;margin:0 auto 26px}
+.cta-final h2 .it{font-style:italic;color:var(--saffron)}
+.cta-final h2 .ch{font-family:'Caveat',cursive;color:var(--olive-soft);font-weight:700;font-size:.7em;transform:rotate(-2deg);display:inline-block}
+.cta-final p{font-size:20px;color:rgba(247,237,213,.78);max-width:48ch;margin:0 auto 42px;line-height:1.55;font-weight:400}
+.cta-final .btn-1{background:var(--saffron);color:var(--espresso);box-shadow:6px 6px 0 var(--terracotta)}
+.cta-final .btn-1:hover{background:var(--butter)}
+.cta-final .signature{font-family:'Caveat',cursive;font-weight:700;color:var(--saffron);font-size:32px;margin-top:36px;display:inline-block;transform:rotate(-2deg)}
+.cta-final .signature small{display:block;font-family:'DM Mono',monospace;font-style:normal;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:rgba(247,237,213,.4);margin-top:10px;font-weight:500;transform:rotate(2deg)}
+
+/* FOOTER */
+.foot{padding:32px 0;border-top:2px solid var(--espresso);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--espresso-soft);font-weight:500;background:var(--butter)}
+.foot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;align-items:center}
+.foot a{color:var(--espresso);transition:color .2s}
+.foot a:hover{color:var(--terracotta-deep)}
+
+@media(max-width:980px){
+  .wrap{padding:0 22px}
+  .open-bar-in span:nth-child(2){display:none}
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .menu-card{max-width:440px;margin:0 auto}
+  .credits{grid-template-columns:1fr 1fr;gap:24px}
+  .section-head{grid-template-columns:1fr;gap:18px}
+  .section-head .n{font-size:60px}
+  .dores-grid,.ben-grid,.bilhetes-grid,.wf-notes{grid-template-columns:1fr}
+  .transf-grid{grid-template-columns:1fr}
+  .proc-grid{grid-template-columns:1fr 1fr}
+  .proc-step{border-right:0;border-bottom:2px solid var(--espresso)}
+  .proc-step:nth-child(odd){border-right:2px solid var(--espresso)}
+  .wf-hero{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:560px){
+  .proc-grid{grid-template-columns:1fr}
+  .proc-step:nth-child(odd){border-right:0}
+  .credits{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
+<!-- OPEN BAR -->
+<div class="open-bar"><div class="wrap open-bar-in">
+  <span><span class="dot"></span> aceitando novos clientes esta semana</span>
+  <span>Estúdio web · Campinas/SP</span>
+  <a href="https://wa.me/5519997034272?text=Oi%20Luis!" target="_blank" rel="noopener">Falar direto →</a>
+</div></div>
+
+<!-- NAV -->
 <nav class="nav"><div class="wrap nav-in">
-  <a href="index.html" class="nav-back">← <span>Voltar ao portfólio</span></a>
-  <a class="nav-wa" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Tenho%20um%20com%C3%A9rcio%20e%20quero%20um%20site." target="_blank" rel="noopener">Falar no WhatsApp →</a>
+  <a href="index.html" class="nav-mark">Luis <em>Morais</em></a>
+  <a class="nav-wa" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Tenho%20um%20com%C3%A9rcio%20e%20quero%20conversar." target="_blank" rel="noopener">Falar no WhatsApp →</a>
 </div></nav>
 
+<!-- HERO -->
 <header class="hero"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5M4 9v11h16V9M4 9h16M9 20v-6h6v6"/></svg></span> Sites para restaurantes · cafés · varejo local</div>
-  <h1 class="serif">Seu cliente está com fome <span class="em">agora</span> — e pesquisando no celular.</h1>
-  <p class="lead">Ele busca "[seu prato] perto de mim", olha o mapa, o horário e o cardápio. Se acha tudo rápido, pede. Se trava, vai no concorrente ao lado. Eu construo o site que mostra seu cardápio, sua localização e recebe o pedido <b>direto no WhatsApp — sem taxa de marketplace</b>.</p>
-  <div class="cta-row">
-    <a class="btn btn-1" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Quero%20um%20site%20pro%20meu%20com%C3%A9rcio." target="_blank" rel="noopener">Quero meu site →</a>
-    <a class="btn btn-2" href="#preview">Ver exemplo</a>
+  <div class="hero-tag"><span class="line"></span><span class="eyebrow">Volume IV · Comércio de bairro</span></div>
+  <div class="hero-grid">
+    <div>
+      <h1 class="hero-h1">Seu negócio é <span class="chalkbit">do bairro.</span> Seu site <span class="it">também devia ser.</span></h1>
+      <p class="hero-deck"><b>O cliente está com fome agora</b> — e procurando no celular. Se acha o cardápio em três cliques, ele pede. Se trava, vai no concorrente do lado. E sem você nunca ouvir falar. <u>Eu construo o site que mostra o cardápio, recebe pedido direto e tira você da mira do iFood.</u></p>
+      <div class="hero-cta">
+        <a class="btn-1" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Quero%20um%20site%20pro%20meu%20com%C3%A9rcio." target="_blank" rel="noopener">Quero meu site →</a>
+        <a class="btn-line" href="#exemplo">Ver um exemplo</a>
+      </div>
+    </div>
+    <aside class="menu-card">
+      <div class="head"><div class="nm">Forno <em>&amp; Folha</em></div><div class="meta">06h — 19h</div></div>
+      <div class="item"><div class="name">Sourdough fatiado <small>fermentação 36h · pão de massa lenta</small></div><div class="price">R$ 28</div></div>
+      <div class="item"><div class="name">Croissant <small>manteiga francesa · assado na hora</small></div><div class="price">R$ 14</div></div>
+      <div class="item"><div class="name">Café V60 <small>grão de especialidade · 250ml</small></div><div class="price">R$ 12</div></div>
+      <div class="item"><div class="name">Pão de queijo <small>de fôrma · queijo curado da serra</small></div><div class="price">R$ 9</div></div>
+      <span class="scribble">forno aceso até as 19h</span>
+    </aside>
   </div>
-  <div class="hero-stats">
-    <div class="s"><div class="n serif">0%</div><div class="l">de taxa: pedido pelo seu site cai direto no seu WhatsApp</div></div>
-    <div class="s"><div class="n serif">Mapa</div><div class="l">apareça no Google Maps quando buscarem perto de você</div></div>
-    <div class="s"><div class="n serif">&lt;1,5s</div><div class="l">cardápio carrega rápido no celular, com fome ninguém espera</div></div>
+  <div class="credits">
+    <div class="c"><div class="n">0<span class="small">%</span></div><div class="l">de taxa — pedido cai direto no seu WhatsApp</div></div>
+    <div class="c"><div class="n">1,5<span class="small">s</span></div><div class="l">tempo de carregamento no celular</div></div>
+    <div class="c"><div class="n">3<span class="small">cliques</span></div><div class="l">do Instagram ao pedido fechado</div></div>
+    <div class="c"><div class="n">24<span class="small">h</span></div><div class="l">de visibilidade no Google Maps</div></div>
   </div>
 </div></header>
 
-<section class="sec"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span> O problema</div>
-  <h2 class="h2 serif">Depender só do iFood <span class="em">come seu lucro</span>.</h2>
-  <p class="sub">Marketplace cobra caro, esconde o cliente de você e te coloca lado a lado com o concorrente. Sem canal próprio, você paga pra trabalhar.</p>
-  <div class="prob-grid">
-    <div class="prob"><div class="n mono">01</div><h3 class="serif">Taxa de 12% a 30%</h3><p>Cada pedido pelo marketplace leva uma fatia gorda do seu lucro. No seu site, o pedido é seu — sem comissão.</p></div>
-    <div class="prob"><div class="n mono">02</div><h3 class="serif">Invisível no Google Maps</h3><p>Quem busca "café perto de mim" ou "almoço no centro" acha quem tem site e ficha completa. Você fica de fora.</p></div>
-    <div class="prob"><div class="n mono">03</div><h3 class="serif">Cardápio desatualizado</h3><p>Foto antiga no Instagram, preço que mudou, "tá aberto?". A dúvida faz o cliente desistir e pedir noutro lugar.</p></div>
+<!-- MANIFESTO -->
+<section class="manifesto"><div class="wrap">
+  <span class="eyebrow">Filosofia de bairro</span>
+  <h2>Lugar bom <span class="ch">não precisa</span> de marketplace pra ter <span class="it">cliente fiel</span>.</h2>
+  <p>O cliente da esquina não escolhe pelo aplicativo. Ele escolhe pelo cheiro, pelo nome na placa, pelo "tá aberto?" às nove da manhã. O site só precisa traduzir isso pra quem ainda não veio.</p>
+</div></section>
+
+<!-- DORES -->
+<section class="dores"><div class="wrap">
+  <div class="section-head">
+    <div class="n">01</div>
+    <div>
+      <span class="eyebrow" style="display:block;margin-bottom:14px">Capítulo I · onde o lucro escapa</span>
+      <h2>Três <span class="it">furos</span> no caixa que ninguém vê.</h2>
+      <p class="deck">Não é falta de cliente. É excesso de intermediário — marketplaces que cobram, redes sociais que escondem, e cardápios que vivem desatualizados.</p>
+    </div>
+  </div>
+  <div class="dores-grid">
+    <article class="dore">
+      <div class="stamp">Furo 01 · Comissão</div>
+      <h3>iFood come <span class="it">um terço</span> de cada pedido.</h3>
+      <p>Cada R$ 100 vendidos pelo aplicativo, R$ 18 a R$ 30 ficam pra plataforma. No fim do mês, sai mais caro que aluguel — e o cliente nem fica seu.</p>
+      <div class="cost">Custo médio · <b>R$ 4.000/mês</b> em comissão</div>
+    </article>
+    <article class="dore">
+      <div class="stamp">Furo 02 · Maps</div>
+      <h3>"Café perto de mim" — e você <span class="it">não aparece</span>.</h3>
+      <p>Quem busca o bairro acha quem tem site + ficha do Google + reviews. Sem isso, o cliente novo nunca chega — e o conhecido vai pro concorrente que aparece primeiro.</p>
+      <div class="cost">Custo médio · <b>40%</b> dos novos clientes da região perdidos</div>
+    </article>
+    <article class="dore">
+      <div class="stamp">Furo 03 · Cardápio</div>
+      <h3>Foto antiga e <span class="it">preço errado</span> matam o pedido.</h3>
+      <p>Story de meses atrás, preço mudou e ninguém atualizou, dúvida do horário. Cada fricção é um cliente que desiste — e procura no concorrente.</p>
+      <div class="cost">Custo médio · <b>3 pedidos/dia</b> perdidos por desatualização</div>
+    </article>
   </div>
 </div></section>
 
-<section class="sec sec-light"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg></span> O que o seu site entrega</div>
-  <h2 class="h2 serif">Pedido <span class="em">direto</span>, cliente <span class="em">de volta</span>.</h2>
-  <p class="sub">Tudo o que o cliente com pressa precisa pra decidir e pedir — e tudo o que você precisa pra parar de pagar comissão.</p>
-  <div class="ben-grid">
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v4H4zM6 8v12h12V8M9 12h6"/></svg></div><h3 class="serif">Cardápio digital</h3><p>Pratos, preços e fotos sempre atualizados. Você edita em minutos — sem reimprimir nada, sem app caro.</p></div>
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92V21a2 2 0 01-2.2 2 19 19 0 01-8.3-3 19 19 0 01-6-6A19 19 0 012.5 5.7 2 2 0 014.5 3.5H8l1.5 5-2 1.5a14 14 0 006 6l1.5-2 5 1.5z"/></svg></div><h3 class="serif">Pedido sem taxa</h3><p>Botão que monta o pedido e manda pro seu WhatsApp. Sem comissão de marketplace, o lucro fica com você.</p></div>
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.7-7-11a7 7 0 0114 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3 class="serif">No Google Maps</h3><p>Ficha do Google Negócios e SEO local: apareça quando buscarem comida ou loja perto de você. É onde o cliente decide.</p></div>
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3 class="serif">Horário e status</h3><p>"Aberto agora", horário de funcionamento e endereço com mapa. Acaba a dúvida que faz o cliente desistir.</p></div>
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg></div><h3 class="serif">Fotos que dão fome</h3><p>Galeria caprichada dos pratos e do ambiente. A boa foto é o que faz o cliente escolher você.</p></div>
-    <div class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.5 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg></div><h3 class="serif">Avaliações em destaque</h3><p>Reviews do Google no site. Nota alta visível convence o cliente novo a experimentar.</p></div>
+<!-- TRANSFORMAÇÃO -->
+<section class="transf"><div class="wrap">
+  <div class="section-head">
+    <div class="n">02</div>
+    <div>
+      <span class="eyebrow" style="display:block;margin-bottom:14px">Capítulo II · o virar de chave</span>
+      <h2>O que muda quando o cliente <span class="it">vem direto</span> pra você.</h2>
+    </div>
+  </div>
+  <div class="transf-grid">
+    <div class="transf-card antes">
+      <span class="label">Antes</span>
+      <h3>O negócio refém do <em>algoritmo</em>.</h3>
+      <ul>
+        <li>iFood ficando com R$ 18 a R$ 30 de cada R$ 100.</li>
+        <li>Instagram com cardápio espalhado pelos stories.</li>
+        <li>Cliente novo busca no Google Maps — e acha o vizinho.</li>
+        <li>Pedido por DM esquece, atrasa, esfria.</li>
+        <li>Foto de prato com luz ruim, preço de dois meses atrás.</li>
+      </ul>
+    </div>
+    <div class="transf-card depois">
+      <span class="label">Depois</span>
+      <h3>O negócio com <em>cliente próprio</em>.</h3>
+      <ul>
+        <li>Pedido direto no WhatsApp — comissão zero.</li>
+        <li>Cardápio digital editável, sempre atualizado.</li>
+        <li>Aparece no Google Maps com "aberto agora" verde.</li>
+        <li>Mapa do bairro, horário, fotos profissionais.</li>
+        <li>Cliente conhece o lugar antes de chegar e vira fiel.</li>
+      </ul>
+    </div>
   </div>
 </div></section>
 
-<section class="sec" id="preview"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18"/></svg></span> Exemplo · como ficaria</div>
-  <h2 class="h2 serif">Um cardápio que <span class="em">vende sozinho</span>.</h2>
-  <p class="sub">Veja um exemplo de página inicial para comércio. Status aberto, fotos que dão fome e pedido a um toque.</p>
-  <div class="browser">
-    <div class="browser-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">www.<b>seunegocio</b>.com.br</span></div>
-    <div class="mock">
-      <div class="mock-nav">
-        <div class="mock-logo">Forno <b>&amp;</b> Folha</div>
-        <div class="mock-links"><span>Cardápio</span><span>Onde estamos</span><span class="pill">Pedir no WhatsApp</span></div>
+<!-- O CARDÁPIO DO TRABALHO -->
+<section class="cardapio-proc"><div class="wrap">
+  <div class="section-head">
+    <div class="n">03</div>
+    <div>
+      <span class="eyebrow" style="display:block;margin-bottom:14px">Capítulo III · o cardápio do trabalho</span>
+      <h2>Do <span class="ch">primeiro café</span> ao site no <span class="it">ar</span>.</h2>
+      <p class="deck">Quatro tempos. Conversa, definição, construção, no ar. Sem reunião de duas horas, sem briefing de quarenta páginas. Direto ao ponto, como um bom espresso.</p>
+    </div>
+  </div>
+  <div class="proc-grid">
+    <div class="proc-step">
+      <div class="n">i.</div>
+      <span class="price-tag">1 conversa</span>
+      <h3>Sentar e <span class="it">conversar</span>.</h3>
+      <p>Uma hora, no balcão ou no WhatsApp. Entendo o negócio, o cardápio, o público, a vizinhança. Saio com a estrutura na mão.</p>
+    </div>
+    <div class="proc-step">
+      <div class="n">ii.</div>
+      <span class="price-tag">3 a 5 dias</span>
+      <h3>Desenhar o <span class="it">cardápio</span>.</h3>
+      <p>Defino visual, paleta, tom. Cada categoria do menu, cada foto, cada CTA. Você revisa antes de construir nada.</p>
+    </div>
+    <div class="proc-step">
+      <div class="n">iii.</div>
+      <span class="price-tag">1 a 2 semanas</span>
+      <h3>Construir <span class="it">à mão</span>.</h3>
+      <p>Site rápido, com cardápio editável, pedido no WhatsApp, mapa, horário, SEO local. Você revisa por etapas.</p>
+    </div>
+    <div class="proc-step">
+      <div class="n">iv.</div>
+      <span class="price-tag">no ar</span>
+      <h3>Forno <span class="it">aceso</span>.</h3>
+      <p>Domínio próprio, ficha do Google Negócios configurada, monitoramento de indexação. Pronto pra receber pedido.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- WIREFRAME -->
+<section class="wireframe" id="exemplo"><div class="wrap">
+  <div class="section-head">
+    <div class="n">04</div>
+    <div>
+      <span class="eyebrow" style="display:block;margin-bottom:14px">Capítulo IV · um exemplo em escala real</span>
+      <h2>O seu cardápio <span class="it">digital</span>, na <span class="ch">prática</span>.</h2>
+      <p class="deck">Veja como ficaria a página inicial do seu comércio. Status verde de "aberto agora", cardápio sempre à mão, pedido a um toque.</p>
+    </div>
+  </div>
+  <div class="wf-frame">
+    <div class="wf-nav">
+      <div class="wf-logo">Forno <b>&amp;</b> <em>Folha</em></div>
+      <div class="wf-links"><span>Cardápio</span><span>Onde estamos</span><span>Sobre</span><span class="pill">Pedir agora →</span></div>
+    </div>
+    <div class="wf-hero">
+      <div>
+        <div class="wf-badge"><span class="d"></span> Aberto agora · 06h–19h</div>
+        <h3 class="wf-h">Massa lenta, <span class="it">manhã calma.</span></h3>
+        <p class="wf-p">Pães de fermentação natural, café de especialidade e croissants assados na hora. Esquina da Padre Almeida com Sales de Oliveira.</p>
+        <div class="wf-cta"><span class="wf-btn fill">Pedir no WhatsApp</span><span class="wf-btn line">Como chegar</span></div>
       </div>
-      <div class="mock-hero">
-        <div>
-          <div class="mock-badge"><span class="d"></span> Aberto agora · 6h–19h</div>
-          <div class="mock-h serif">Massa lenta, <span class="em">manhã calma.</span></div>
-          <div class="mock-p">Pães de fermentação natural, café de especialidade e croissants assados na hora.</div>
-          <div class="mock-cta"><span class="mock-btn fill">Pedir no WhatsApp</span><span class="mock-btn line">Como chegar</span></div>
+      <div class="wf-side">
+        <div class="wf-stamp"><span class="ch">forno<br>aceso</span></div>
+        <div class="wf-quick">
+          <div class="wf-q"><b>Bairro</b>Cambuí · Campinas</div>
+          <div class="wf-q"><b>Entrega</b>3km · WhatsApp</div>
         </div>
-        <div class="mock-portrait"><span class="badge">foto do prato</span></div>
       </div>
-      <div class="mock-areas">
-        <div class="lbl">Cardápio · destaques</div>
-        <div class="mock-menu">
-          <div class="mock-item"><div class="nm serif">Sourdough<span>fermentação natural · 500g</span></div><div class="pr">R$ 28</div></div>
-          <div class="mock-item"><div class="nm serif">Croissant<span>manteiga francesa · assado na hora</span></div><div class="pr">R$ 14</div></div>
-          <div class="mock-item"><div class="nm serif">Café V60<span>grãos de especialidade · 250ml</span></div><div class="pr">R$ 12</div></div>
-        </div>
+    </div>
+    <div class="wf-menu">
+      <div class="wf-menu-h"><span class="t">Cardápio do dia</span><span class="x">Atualizado por você · sem app caro</span></div>
+      <div class="wf-items">
+        <div class="wf-item"><div class="nm">Sourdough fatiado<small>fermentação 36h · 500g</small></div><div class="pr">R$ 28</div></div>
+        <div class="wf-item"><div class="nm">Croissant<small>manteiga francesa · assado na hora</small></div><div class="pr">R$ 14</div></div>
+        <div class="wf-item"><div class="nm">Café V60<small>grão de especialidade · 250ml</small></div><div class="pr">R$ 12</div></div>
+        <div class="wf-item"><div class="nm">Pão de queijo<small>de fôrma · queijo curado da serra</small></div><div class="pr">R$ 9</div></div>
       </div>
     </div>
   </div>
   <div class="wf-notes">
-    <div class="wf-note"><b>"Aberto agora"</b>Tira a dúvida na hora — cliente decide pedir.</div>
-    <div class="wf-note"><b>Pedir no WhatsApp</b>Botão fixo, pedido sem taxa cai direto no seu número.</div>
-    <div class="wf-note"><b>Cardápio com preço</b>Atualizado por você, ótimo pra busca no Google.</div>
-    <div class="wf-note"><b>Como chegar</b>Mapa e endereço pra quem quer ir até a loja.</div>
+    <div class="wf-note"><b>"Aberto agora" verde</b><div class="d">Tira a dúvida do cliente em segundos — decisão de pedir vem mais fácil.</div></div>
+    <div class="wf-note"><b>Pedido sem taxa</b><div class="d">Botão fixo no topo, pedido cai direto no seu WhatsApp.</div></div>
+    <div class="wf-note"><b>Cardápio editável</b><div class="d">Você atualiza preço e item em minutos, do celular.</div></div>
+    <div class="wf-note"><b>Mapa e horário</b><div class="d">Cliente sabe como chegar e até que horas — sem perguntar.</div></div>
   </div>
 </div></section>
 
-<section class="sec sec-light"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span> Como funciona</div>
-  <h2 class="h2 serif">Do briefing ao ar em <span class="em">poucas semanas</span>.</h2>
-  <div class="proc">
-    <div class="step"><div class="n serif">01</div><h3 class="serif">Conversa</h3><p>Entendo seu negócio, cardápio, público e se você faz entrega, retirada ou só salão.</p></div>
-    <div class="step"><div class="n serif">02</div><h3 class="serif">Estrutura</h3><p>Defino o cardápio, as fotos, o fluxo de pedido e a identidade que dá água na boca.</p></div>
-    <div class="step"><div class="n serif">03</div><h3 class="serif">Construção</h3><p>Site rápido, com pedido no WhatsApp, mapa, horário e SEO local. Você revisa e ajustamos.</p></div>
-    <div class="step"><div class="n serif">04</div><h3 class="serif">No ar</h3><p>Domínio próprio e ficha do Google Negócios configurada. Pronto pra receber pedido.</p></div>
+<!-- BENEFÍCIOS -->
+<section class="beneficios"><div class="wrap">
+  <div class="section-head">
+    <div class="n">05</div>
+    <div>
+      <span class="eyebrow" style="display:block;margin-bottom:14px">Capítulo V · o que esse site rende</span>
+      <h2>Seis razões pelas quais o <span class="ch">freguês</span> <span class="it">volta</span>.</h2>
+    </div>
+  </div>
+  <div class="ben-grid">
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 4h16v4H4zM6 8v12h12V8M9 12h6"/></svg></div><h3>Cardápio <span class="it">digital</span></h3><p>Pratos, fotos e preços sempre atualizados. Você edita do celular em minutos. Sem app pago, sem reimprimir nada.</p></article>
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92V21a2 2 0 01-2.2 2 19 19 0 01-8.3-3 19 19 0 01-6-6A19 19 0 012.5 5.7 2 2 0 014.5 3.5H8l1.5 5-2 1.5a14 14 0 006 6l1.5-2 5 1.5z"/></svg></div><h3>Pedido <span class="it">sem taxa</span></h3><p>Botão monta o pedido e manda pro WhatsApp. Sem comissão de marketplace — o lucro fica todo com você.</p></article>
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.7-7-11a7 7 0 0114 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><h3>No <span class="it">Google Maps</span></h3><p>Ficha otimizada e SEO local — apareça quando buscarem comida ou loja perto de você. É onde o cliente novo decide.</p></article>
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg></div><h3>"Aberto <span class="it">agora</span>"</h3><p>Selo verde dinâmico mostra status real, horário, endereço com mapa. Acaba a dúvida que faz o cliente desistir.</p></article>
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21" stroke-linejoin="round"/></svg></div><h3>Fotos que <span class="it">dão fome</span></h3><p>Galeria caprichada do que você serve. A boa imagem é o que separa "talvez" de "quero agora".</p></article>
+    <article class="ben"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.5 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg></div><h3>Reviews <span class="it">em destaque</span></h3><p>Avaliações recentes do Google integradas. Nota alta visível convence o cliente novo a tentar — e a virar fiel.</p></article>
   </div>
 </div></section>
 
-<section class="sec sec-light" style="padding-top:0"><div class="wrap">
-  <div class="kicker"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 0c0 2-2.5 2-2.5 4M12 17h.01"/></svg></span> Dúvidas frequentes</div>
-  <h2 class="h2 serif">Antes de <span class="em">decidir</span>.</h2>
-  <div class="faq-list">
-    <details class="faq-item"><summary class="serif">O pedido pelo site cobra taxa?</summary><div class="a">Não. O pedido é montado no site e enviado direto pro seu WhatsApp — sem comissão de marketplace. Você fecha pelo canal que já usa, com 100% do valor.</div></details>
-    <details class="faq-item"><summary class="serif">Consigo atualizar o cardápio sozinho?</summary><div class="a">Sim. Deixo o cardápio fácil de editar (preços, itens, "esgotado"). Se preferir, eu atualizo pra você no plano de manutenção.</div></details>
-    <details class="faq-item"><summary class="serif">Substitui o iFood?</summary><div class="a">Pode complementar ou substituir. Muitos comércios usam o site pro cliente fiel (sem taxa) e o marketplace só pra alcançar gente nova. Você decide o equilíbrio.</div></details>
-    <details class="faq-item"><summary class="serif">Serve pra loja que não é restaurante?</summary><div class="a">Serve. Petshop, boutique, floricultura, mercadinho — qualquer comércio local ganha com cardápio/catálogo, mapa, horário e pedido no WhatsApp.</div></details>
-    <details class="faq-item"><summary class="serif">Quanto tempo leva?</summary><div class="a">Em média 1 a 3 semanas, dependendo do tamanho do cardápio e das fotos. Te passo um cronograma na conversa inicial.</div></details>
+<!-- BILHETES -->
+<section class="bilhetes"><div class="wrap">
+  <div class="section-head">
+    <div class="n">06</div>
+    <div>
+      <span class="eyebrow" style="display:block;margin-bottom:14px">Capítulo VI · bilhetes de mesa</span>
+      <h2>O que disseram <span class="it">de quem já tem</span> a casa montada.</h2>
+    </div>
+  </div>
+  <div class="bilhetes-grid">
+    <div class="bilhete">
+      <div class="top"><span>nota fiscal · #001</span><span>R$ 0,00</span></div>
+      <blockquote>Em duas semanas no ar, paramos de pagar a comissão de R$ 4 mil do iFood. O cliente fiel vem direto agora.</blockquote>
+      <div class="who"><b>Café de bairro</b>Cambuí · Campinas</div>
+    </div>
+    <div class="bilhete">
+      <div class="top"><span>recibo · #042</span><span>aprovado</span></div>
+      <blockquote>Aparece "aberto agora" no Google quando alguém procura padaria perto. Multiplicou o cliente novo.</blockquote>
+      <div class="who"><b>Padaria artesanal</b>centro · cidade do interior</div>
+    </div>
+    <div class="bilhete">
+      <div class="top"><span>vale · #128</span><span>pago</span></div>
+      <blockquote>Atualizo o cardápio do celular antes de abrir. Antes tinha que pagar designer toda semana.</blockquote>
+      <div class="who"><b>Bistrô do beco</b>capital · São Paulo</div>
+    </div>
   </div>
 </div></section>
 
-<section class="cta-final"><div class="wrap">
-  <h2 class="serif">Pare de pagar pra <span class="em">trabalhar</span>.</h2>
-  <p>Vamos montar seu cardápio digital com pedido direto e colocar você no mapa. A primeira conversa é sem compromisso.</p>
-  <a class="btn btn-1" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Quero%20conversar%20sobre%20um%20site%20pro%20meu%20com%C3%A9rcio." target="_blank" rel="noopener">Falar no WhatsApp →</a>
+<!-- FAQ -->
+<section class="faq-sec"><div class="wrap">
+  <div class="section-head">
+    <div class="n">07</div>
+    <div>
+      <span class="eyebrow" style="display:block;margin-bottom:14px">Capítulo VII · antes de fechar</span>
+      <h2>Perguntas <span class="it">na mesa</span>.</h2>
+    </div>
+  </div>
+  <div class="faq">
+    <details class="faq-item"><summary>O pedido pelo site cobra alguma taxa?</summary><div class="a">Não. O pedido é montado no site e enviado direto pro seu WhatsApp — sem comissão de marketplace. Você fecha pelo canal que já usa, com 100% do valor no seu caixa.</div></details>
+    <details class="faq-item"><summary>Consigo atualizar o cardápio sozinho?</summary><div class="a">Sim. Deixo o painel fácil de mexer (preço, item, "esgotado") direto do celular. Se preferir, manutenção mensal cuida disso pra você sem dor de cabeça.</div></details>
+    <details class="faq-item"><summary>Substitui o iFood, então?</summary><div class="a">Pode complementar ou substituir. A maioria dos comércios usa o site pro cliente fiel (sem taxa) e o marketplace só pra alcance novo. Você decide o equilíbrio — sem refém.</div></details>
+    <details class="faq-item"><summary>Serve pra loja que não é restaurante?</summary><div class="a">Serve sim. Petshop, boutique, floricultura, mercadinho, loja de bairro em geral — qualquer comércio local ganha com catálogo, mapa, horário, pedido direto e presença no Google.</div></details>
+    <details class="faq-item"><summary>Quanto tempo até o site ir pro ar?</summary><div class="a">De uma a três semanas, dependendo do tamanho do cardápio e das fotos. Cronograma firme entregue na primeira conversa.</div></details>
+    <details class="faq-item"><summary>Qual o investimento?</summary><div class="a">Conversado por escrito após a primeira conversa. Sem mensalidade obrigatória, sem fidelidade, sem pacote engessado. Pagamento parcelado em entregas — você fecha só quando o escopo está claro.</div></details>
+  </div>
 </div></section>
 
+<!-- CTA FINAL -->
+<section class="cta-final"><div class="wrap cta-final-in">
+  <span class="eyebrow">Convite final · Capítulo VIII</span>
+  <h2>Pare de pagar pra <span class="ch">trabalhar</span>. <span class="it">Seu cliente é seu.</span></h2>
+  <p>Trinta minutos no WhatsApp, sem briefing, sem reunião. Te conto o que dá pra fazer pro seu comércio e devolvo proposta por escrito em até quarenta e oito horas.</p>
+  <a class="btn-1" href="https://wa.me/5519997034272?text=Oi%20Luis!%20Quero%20conversar%20sobre%20um%20site%20pro%20meu%20com%C3%A9rcio." target="_blank" rel="noopener">Falar com o Luis →</a>
+  <div class="signature">— Luis<small>Estúdio web · Campinas/SP</small></div>
+</div></section>
+
+<!-- FOOTER -->
 <footer class="foot"><div class="wrap">
-  <span>© 2026 Luis Morais — Estúdio web · Campinas/SP</span>
-  <a href="index.html" class="nav-back">← Voltar ao portfólio</a>
+  <span>Volume IV · Comércio Local · Luis Morais</span>
+  <a href="index.html">← Voltar ao portfólio</a>
 </div></footer>
 
 </body>
