@@ -2037,6 +2037,7 @@
 (function(){
   var BP = 760;            // below this -> mobile frame
   var MOBILE_MAX = 1.18;   // cap mobile upscale, then center
+  var DESKTOP_MAX = 1.20;  // cap desktop upscale (20% max zoom) -> moldura editorial
   function fit(){
     var vw = document.documentElement.clientWidth;
     var mobile = vw < BP;
@@ -2056,12 +2057,8 @@
       var nh = +active.getAttribute('data-h');
       var scale = cw / nw;
       if (useM && scale > MOBILE_MAX) scale = MOBILE_MAX;
-      // Hero (topo) no desktop: cap pela altura do viewport pra nunca passar de 100vh
-      if (sec.id === 'topo' && !useM) {
-        var vh = window.innerHeight || document.documentElement.clientHeight;
-        var scaleByH = vh / nh;
-        if (scaleByH < scale) scale = scaleByH;
-      }
+      // Desktop: cap em 1.20 (20% max zoom). Em telas largas, espresso bg nas laterais.
+      if (!useM && scale > DESKTOP_MAX) scale = DESKTOP_MAX;
       var scaledW = nw * scale;
       var left = Math.max(0, (cw - scaledW) / 2);
       active.style.transform = 'scale(' + scale + ')';
